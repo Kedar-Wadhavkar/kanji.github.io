@@ -40,8 +40,8 @@ body{
 	text-align: right;
 	position: absolute;
 	right: 50%;
-        top: 140px;
-	font-size: 2.5rem;
+        top: 130px;
+	font-size: 3rem;
 	font-weight: bold;
 }
 
@@ -56,8 +56,8 @@ body{
 	text-align: left;
 	position: absolute;
 	left: 50%;
-        top: 140px;
-	font-size: 2.5rem;
+        top: 130px;
+	font-size: 3rem;
 	color: #2dcac2;
 	font-weight: bold;
 }
@@ -67,7 +67,7 @@ body{
   	top: 225px;
 	width: 100%;
 	/*background: red;*/
-	bottom: 125px;
+	bottom: 110px;
 	z-index: -10;
 	overflow: scroll;
 }
@@ -143,30 +143,23 @@ body{
 	width: 33%;
 	background-color: #2dcac2;
 	border: none;
-	padding: 0.75em 0;
+	padding: 0.5em 0;
 	border-radius: 10px 10px 0 0;
 	font-weight: bold;
 	font-size: 1.3rem;
 	border-color: #3f3f3f;
 	border-width: 3px;
+	border-left-style: ridge;
+	border-top-style: ridge;
+	border-right-style: groove;
 }
 
 .but2{
 	margin-left: 0.5%;
-	border-color: #3f3f3f;
-	border-width: 3px;
-	border-left-style: ridge ! important;
-	border-top-style: ridge ! important;
-	border-right-style: groove ! important;
 }
 
 .but3{
 	margin-left: 0.5%;
-	border-color: #3f3f3f;
-	border-width: 3px;
-	border-left-style: groove ! important;
-	border-top-style: groove ! important;
-	border-right-style: ridge ! important;
 }
 
 
