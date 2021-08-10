@@ -67,7 +67,7 @@ body{
   	top: 225px;
 	width: 100%;
 	/*background: red;*/
-	bottom: 100px;
+	bottom: 125px;
 	z-index: -10;
 	overflow: scroll;
 }
