@@ -156,6 +156,7 @@ body{
 	border-top-style: ridge;
 	border-right-style: groove;
 	outline: none;
+	cursor: pointer;
 }
 /*
 .but2{

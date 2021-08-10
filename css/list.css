@@ -34,13 +34,14 @@ body{
 	display: block;
 	position: relative;
 	background-color: #2dcac2;
-	padding: 10px 12px 10px 12px;
+	padding: 10px 15px 10px 12px;
 	font-weight: bold;
 	margin: 3%;
 	outline: none;
 	border: none;
 	border-radius: 5px;
 	font-size: 1.1rem;
+	cursor: pointer;
 }
 
 .midcontainer{
@@ -110,6 +111,7 @@ body{
 	border-top-style: ridge;
 	border-right-style: groove;
 	outline: none;
+	cursor: pointer;
 }
 
 .but1, .but2{
