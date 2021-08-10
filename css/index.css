@@ -21,7 +21,11 @@ body{
 }
 
 .upper{
+	display: block;
+	position: fixed;	
+	width: 100%;
 	height: 200px;
+	top: 0;
 }
 
 .lefthalf{
@@ -36,8 +40,8 @@ body{
 	text-align: right;
 	position: absolute;
 	right: 50%;
-        top: 145px;
-	font-size: 2rem;
+        top: 140px;
+	font-size: 2.5rem;
 	font-weight: bold;
 }
 
@@ -52,28 +56,27 @@ body{
 	text-align: left;
 	position: absolute;
 	left: 50%;
-        top: 145px;
-	font-size: 2rem;
+        top: 140px;
+	font-size: 2.5rem;
 	color: #2dcac2;
 	font-weight: bold;
 }
 
 .midcontainer{
+	position: absolute;
+  	top: 225px;
 	width: 100%;
-	margin-top: 10%;
-	height: 350px;
-	/*background: pink;*/
-	padding: 0 ! important;
+	/*background: red;*/
+	bottom: 80px;
+	z-index: -10;
+	overflow: scroll;
 }
 
 .scrolldiv{
 	width: 96%;
-	/*background: green;*/
-	height: 100%;
 	margin-left: 2%;
-	overflow: scroll;
-	padding-top: 0px ! important;
 	color: #fff;
+	font-size: 1.5rem;
 }
 
 #customers {
@@ -118,21 +121,18 @@ body{
 	width: 100%;
 }
 
-
-
 .bottomcontainer{
 	display: block;
-	position: absolute;	
+	position: fixed;	
 	width: 100%;
 	bottom: 0;
-	/*background: yellow;*/
+	/*background: #000;*/
 	height: auto;
 }
 
 .together{
 	width: 99%;
 	margin-left: 0.5%;
-	margin-top: 1%;
 	/*background: red;*/
 	display: flex;
 	flex-wrap: wrap;
@@ -143,9 +143,10 @@ body{
 	width: 33%;
 	background-color: #2dcac2;
 	border: none;
-	padding: 0.3em 0;
+	padding: 1em 0;
 	border-radius: 10px 10px 0 0;
 	font-weight: bold;
+	font-size: 1rem;
 }
 
 .but2{
