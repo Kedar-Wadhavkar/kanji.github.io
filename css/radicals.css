@@ -33,15 +33,16 @@ body{
 	background-color: #2dcac2;
 	padding: 12px 15px 12px 15px;
 	font-weight: bold;
-	margin: 2%;
+	margin: 3%;
 	outline: none;
 	border: none;
 	border-radius: 5px;
+	font-size: 1.2rem;
 }
 
 .midcontainer{
 	position: absolute;
-  	top: 12%;
+  	top: 80px;
 	width: 100%;
 	/*background: red;*/
 	bottom: 100px;
@@ -60,18 +61,18 @@ body{
 
 .row a{
 	width: 43%;
-	background-color: yellow;
 	text-decoration: none;
 	border-radius: 3px;
 	font-weight: bold;
 	color: #000;
 	background-color: #ffffff;
-	opacity: 0.95;
-	padding: 5px 0 5px 0;
+	opacity: 0.9;
+	padding: 8px 0 8px 0;
+	font-size: 1.2rem;
 }
 
 .row a:nth-child(2){
-	margin-left: 4%;
+	margin-left: 3.5%;
 }
 
 .bottomcontainer{
