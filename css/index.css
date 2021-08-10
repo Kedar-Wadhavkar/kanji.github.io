@@ -1,0 +1,167 @@
+
+html{
+  scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	display: block;
+	background: #121212;
+	background-image: url("media/backimg.jpg");
+	background-repeat: repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.upper{
+	height: 200px;
+}
+
+.lefthalf{
+	width: 50%;
+	height: 100%;
+	background-color: #2dcac2;
+	float: left;
+}
+
+.lefthalf span{
+	display: block;
+	text-align: right;
+	position: absolute;
+	right: 50%;
+        top: 145px;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.righthalf{
+	width: 50%;
+	height: 100%;	
+	float: right;
+}
+
+.righthalf span{
+	display: block;
+	text-align: left;
+	position: absolute;
+	left: 50%;
+        top: 145px;
+	font-size: 2rem;
+	color: #2dcac2;
+	font-weight: bold;
+}
+
+.midcontainer{
+	width: 100%;
+	margin-top: 10%;
+	height: 350px;
+	/*background: pink;*/
+	padding: 0 ! important;
+}
+
+.scrolldiv{
+	width: 96%;
+	/*background: green;*/
+	height: 100%;
+	margin-left: 2%;
+	overflow: scroll;
+	padding-top: 0px ! important;
+	color: #fff;
+}
+
+#customers {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#customers td, #customers th {
+	padding: 8px;
+	font-weight: bold;
+}
+
+#customers th:first-child{
+	width: 35%;
+	text-align: right;
+}
+
+#customers td:first-child{
+	width: 35%;
+	text-align: right;
+}
+
+#customers th:nth-child(2){
+	width: 10%;
+	/*background: red;*/
+}
+
+#customers td:nth-child(2){
+	width: 10%;
+	/*background: red;*/
+}
+
+#customers th:nth-child(3){
+	width: 55%;
+}
+
+#customers td:nth-child(3){
+	width: 55%;
+}
+
+#customers img{
+	width: 100%;
+}
+
+
+
+.bottomcontainer{
+	display: block;
+	position: absolute;	
+	width: 100%;
+	bottom: 0;
+	/*background: yellow;*/
+	height: auto;
+}
+
+.together{
+	width: 99%;
+	margin-left: 0.5%;
+	margin-top: 1%;
+	/*background: red;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.together button{
+	width: 33%;
+	background-color: #2dcac2;
+	border: none;
+	padding: 0.3em 0;
+	border-radius: 10px 10px 0 0;
+	font-weight: bold;
+}
+
+.but2{
+	margin-left: 0.5%;
+}
+
+.but3{
+	margin-left: 0.5%;
+}
+
+
+
+
+
+
+
+
+
+
