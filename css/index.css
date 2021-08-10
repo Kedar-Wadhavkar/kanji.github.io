@@ -67,7 +67,7 @@ body{
   	top: 225px;
 	width: 100%;
 	/*background: red;*/
-	bottom: 80px;
+	bottom: 100px;
 	z-index: -10;
 	overflow: scroll;
 }
@@ -118,7 +118,7 @@ body{
 }
 
 #customers img{
-	width: 100%;
+	width: 120%;
 }
 
 .bottomcontainer{
@@ -143,10 +143,10 @@ body{
 	width: 33%;
 	background-color: #2dcac2;
 	border: none;
-	padding: 1em 0;
+	padding: 0.75em 0;
 	border-radius: 10px 10px 0 0;
 	font-weight: bold;
-	font-size: 1rem;
+	font-size: 1.3rem;
 }
 
 .but2{
