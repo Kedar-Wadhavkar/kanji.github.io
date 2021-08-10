@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
 
 html{
 	scroll-behavior: smooth;
@@ -7,6 +8,7 @@ html{
 *,
 *:after,
 *:before {
+	font-family: 'Merriweather', serif;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -46,7 +48,7 @@ body{
   	top: 75px;
 	width: 100%;
 	/*background: red;*/
-	bottom: 90px;
+	bottom: 95px;
 	z-index: -10;
 	overflow: scroll;
 }
@@ -57,7 +59,7 @@ body{
 	justify-content: center;
 	width: 100%;
 	text-align: center;
-	margin-bottom: 2%;
+	margin-bottom: 2.5%;
 }
 
 .row a{
@@ -70,10 +72,6 @@ body{
 	opacity: 0.9;
 	padding: 8px 0 8px 0;
 	font-size: 1.2rem;
-}
-
-.row a:nth-child(2){
-	margin-left: 3.5%;
 }
 
 .bottomcontainer{
