@@ -1,6 +1,7 @@
 
 html{
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
+	user-select: none;
 }
 
 *,
@@ -42,10 +43,10 @@ body{
 
 .midcontainer{
 	position: absolute;
-  	top: 80px;
+  	top: 75px;
 	width: 100%;
 	/*background: red;*/
-	bottom: 100px;
+	bottom: 90px;
 	z-index: -10;
 	overflow: scroll;
 }
@@ -100,7 +101,7 @@ body{
 	padding: 0.5em 0;
 	border-radius: 10px 10px 0 0;
 	font-weight: bold;
-	font-size: 1.25rem;
+	font-size: 1.2rem;
 	border-color: #3f3f3f;
 	border-width: 3px;
 	border-left-style: ridge;
