@@ -147,14 +147,26 @@ body{
 	border-radius: 10px 10px 0 0;
 	font-weight: bold;
 	font-size: 1.3rem;
+	border-color: #3f3f3f;
+	border-width: 3px;
 }
 
 .but2{
 	margin-left: 0.5%;
+	border-color: #3f3f3f;
+	border-width: 3px;
+	border-left-style: ridge ! important;
+	border-top-style: ridge ! important;
+	border-right-style: groove ! important;
 }
 
 .but3{
 	margin-left: 0.5%;
+	border-color: #3f3f3f;
+	border-width: 3px;
+	border-left-style: groove ! important;
+	border-top-style: groove ! important;
+	border-right-style: ridge ! important;
 }
 
 
