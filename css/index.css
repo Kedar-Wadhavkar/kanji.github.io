@@ -64,10 +64,10 @@ body{
 
 .midcontainer{
 	position: absolute;
-  	top: 225px;
+  	top: 235px;
 	width: 100%;
 	/*background: red;*/
-	bottom: 110px;
+	bottom: 120px;
 	z-index: -10;
 	overflow: scroll;
 }
@@ -76,7 +76,7 @@ body{
 	width: 96%;
 	margin-left: 2%;
 	color: #fff;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 }
 
 #customers {
@@ -140,7 +140,7 @@ body{
 }
 
 .together button{
-	width: 33%;
+	width: 33.3%;
 	background-color: #2dcac2;
 	border: none;
 	padding: 0.5em 0;
@@ -153,14 +153,14 @@ body{
 	border-top-style: ridge;
 	border-right-style: groove;
 }
-
+/*
 .but2{
 	margin-left: 0.5%;
 }
 
 .but3{
 	margin-left: 0.5%;
-}
+}*/
 
 
 
