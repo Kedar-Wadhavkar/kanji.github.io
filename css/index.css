@@ -86,7 +86,7 @@ body{
 
 #customers td, #customers th {
 	padding: 8px;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 #customers th:first-child{
@@ -118,7 +118,7 @@ body{
 }
 
 #customers img{
-	width: 120%;
+	width: 150%;
 }
 
 .bottomcontainer{
