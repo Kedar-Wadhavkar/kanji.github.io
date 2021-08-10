@@ -67,7 +67,7 @@ body{
   	top: 310px;
 	width: 100%;
 	/*background: red;*/
-	bottom: 120px;
+	bottom: 110px;
 	z-index: -10;
 	overflow: scroll;
 }
@@ -146,7 +146,7 @@ body{
 	padding: 0.5em 0;
 	border-radius: 10px 10px 0 0;
 	font-weight: bold;
-	font-size: 1.3rem;
+	font-size: 1.25rem;
 	border-color: #3f3f3f;
 	border-width: 3px;
 	border-left-style: ridge;
