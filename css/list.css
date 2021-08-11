@@ -64,10 +64,9 @@ body{
 }
 
 .row a{
-	width: 43%;
+	width: 16%;
 	text-decoration: none;
-	border-radius: 4px;
-	font-weight: bold;
+	border-radius: 2px;
 	color: #000;
 	background-color: #ffffff;
 	opacity: 0.9;
@@ -75,8 +74,8 @@ body{
 	font-size: 1.2rem;
 }
 
-.row a:nth-child(2){
-	margin-left: 3.5%;
+.row a:nth-child(n+1){
+	margin-left: 2.5%;
 }
 
 .bottomcontainer{

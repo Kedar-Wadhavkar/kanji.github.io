@@ -41,7 +41,6 @@ body{
 	border: none;
 	border-radius: 5px;
 	font-size: 1.1rem;
-	cursor: pointer;
 }
 
 .midcontainer{
@@ -72,7 +71,7 @@ body{
 	color: #000;
 	background-color: #ffffff;
 	opacity: 0.9;
-	padding: 12px 32px 12px 36px;
+	padding: 18px 46px 18px 46px;
 	font-size: 1.2rem;
 }
 
@@ -83,8 +82,8 @@ body{
 	width: 0;
 	left: 100%;
 	top: 0;
-	border: 24px solid transparent;
-	border-left: 24px solid rgb(255,255,255,1);
+	border: 30px solid transparent;
+	border-left: 30px solid rgb(255,255,255,1);
 }
 
 .bottomcontainer{
