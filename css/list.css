@@ -71,11 +71,20 @@ body{
 	background-color: #ffffff;
 	opacity: 0.9;
 	padding: 8px 0 8px 0;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
+	font-weight: bold;
 }
 
 .row a:nth-child(n+1){
 	margin-left: 2.5%;
+}
+
+.row a:first-child{
+	margin-left: 5%;
+}
+
+.row a:nth-child(5){
+	margin-right: 5%;
 }
 
 .bottomcontainer{
