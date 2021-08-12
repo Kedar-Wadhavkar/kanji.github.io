@@ -24,8 +24,7 @@ body{
 }
 
 .uppercontainer{
-	display: flex;
-	flex-wrap: wrap;
+	display: block;
 	position: fixed;	
 	width: 100%;
 	top: 0;
@@ -42,21 +41,7 @@ body{
 	border: none;
 	border-radius: 5px;
 	font-size: 1.1rem;
-	z-index: 10;
-}
-
-.page{
-	display: block;
-	position: absolute;
-	width: 80%;
-	/*background-color: yellow;*/
-	text-align: center;
-	padding: 8px 0px 8px 0px;
-	font-weight: bold;
-	margin: 3%;
-	margin-left: 10%;
-	color: #fff;
-	font-size: 1.2rem;
+	cursor: pointer;
 }
 
 .midcontainer{
@@ -87,8 +72,9 @@ body{
 	color: #000;
 	background-color: #ffffff;
 	opacity: 0.9;
-	padding: 18px 46px 18px 46px;
+	padding: 15px 45px 15px 45px;
 	font-size: 1.2rem;
+	margin-left: -5%;
 }
 
 .row a:after{
@@ -98,8 +84,8 @@ body{
 	width: 0;
 	left: 100%;
 	top: 0;
-	border: 44px solid transparent;
-	border-left: 25px solid rgb(255,255,255,1);
+	border: 42px solid transparent;
+	border-left: 23px solid rgb(255,255,255,1);
 }
 
 strong{
