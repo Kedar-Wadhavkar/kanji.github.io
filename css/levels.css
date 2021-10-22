@@ -33,6 +33,7 @@ body{
 .backbtn{
 	display: block;
 	position: relative;
+	height: 42px;
 	background-color: #2dcac2;
 	padding: 10px 15px 10px 12px;
 	font-weight: bold;
@@ -42,6 +43,7 @@ body{
 	border-radius: 5px;
 	font-size: 1.1rem;
 	cursor: pointer;
+	z-index: 10;
 }
 
 .midcontainer{
