@@ -43,20 +43,28 @@ body{
         bottom: 20px;
 }
 
-.backbtn{
+.backbtn, .homebtn{
 	display: block;
 	position: relative;
 	height: 42px;
 	background-color: #2dcac2;
-	padding: 10px 15px 10px 12px;
-	font-weight: bold;
+	padding: 7px 16px 6px 16px;
 	margin: 3%;
 	outline: none;
 	border: none;
 	border-radius: 5px;
-	font-size: 1.1rem;
 	cursor: pointer;
 	z-index: 10;
+}
+
+.homebtn{
+	position: absolute;
+	top: 3%;
+	right: 0;
+}
+
+.backbtn img, .homebtn img{
+	width: 28px;
 }
 
 .center{
