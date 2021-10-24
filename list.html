@@ -20,8 +20,9 @@
 	<button button onclick = "location.href='index.html'" type = "button"  class = "homebtn"><img src="css/media/homebtn.png"></button>
 </div>
 
+	<input type="text" name="" id="myInput" placeholder=" Search a Kanji.." onkeyup="searchFun()">
+
 <div class="maincontainer">
-	<input type="text" name="" id="myInput" placeholder="Search a Kanji" onkeyup="searchFun()">
 			
 	<table id="myTable">
 
@@ -35,8 +36,21 @@
 	</table>
 </div>
 
-</body>
+<div class = "bottomcontainer">
+	<div class = "together">
+		<button onclick = "location.href='radicals.html'" type = "button" class = "but1">Radicals<br/>部首</button>
+
+		<button onclick = "location.href='levels.html'" type = "button" class = "but2">JLPT Levels<br/>レベル</button>
+
+		<button onclick = "location.href='list.html'" type = "button" class = "but3">List<br/>リスト</button>
+
+	</div>
+</div>
+
+
 
 	<script src = "js/navigation.js"></script>
+
+</body>
 
 </html>

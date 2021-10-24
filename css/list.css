@@ -66,21 +66,33 @@ body{
 	width: 28px;
 }
 
+#myInput{
+	display: block;
+	position: fixed;
+	
+        top: 75px;
+	width: 60%;
+	margin-left: 20%;
+	font-size: 1.5rem;
+	border-radius: 5px 5px 5px 5px;
+	margin-bottom: 2%;
+}
+
 .maincontainer{
         position: absolute;
 	left: 0;
-        top: 75px;
+        top: 120px;
         width: 100%;
         z-index: -10;
-        overflow: scroll !important;  
-        bottom: 20px;
+        overflow: scroll !important;
+	bottom: 95px;
 }
+
+
 
 table{
   	width: 86%;
   	margin-left: 7%;
-	font-size: 1.8rem;
-  	text-align: center;
   	color: white; 
  	border-collapse: separate;
   	border-spacing: 0px 10px;
@@ -92,24 +104,70 @@ table tr td:first-child div{
 	height: 80%;
 	border-radius: 8px 0 0 8px;
 	border: 10px solid rgba(255,255,255,0.9);
+	font-size: 1.8rem;
+  	text-align: center;
 }
 
 table tr td:nth-child(2){
 	background-color: #ffffff;
 	opacity: 0.9;
 	color: #000;
+	font-size: 1.25rem;
+  	text-align: left;
+	padding-left: 75px;
+	font-weight: bold;
 }
 
 table tr td:nth-child(3){
 	background-color: #ffffff;
 	opacity: 0.9;
   	text-align: right;
-	padding-right: 50px;
+	padding-right: 30px;
 	border-radius: 0 8px 8px 0;
 	color: #000;
+	font-size: 1rem;
 }
 
+.bottomcontainer{
+	display: block;
+	position: fixed;	
+	width: 100%;
+	bottom: 0;
+	/*background: #000;*/
+	height: auto;
+}
 
+.together{
+	width: 99%;
+	margin-left: 0.5%;
+	/*background: red;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.together button{
+	width: 33.3%;
+	background-color: #2dcac2;
+	border: none;
+	padding: 0.5em 0;
+	border-radius: 10px 10px 0 0;
+	font-weight: bold;
+	font-size: 1.2rem;
+	border-color: #3f3f3f;
+	border-width: 3px;
+	border-left-style: ridge;
+	border-top-style: ridge;
+	border-right-style: groove;
+	outline: none;
+	cursor: pointer;
+}
+
+.but1, .but2{
+	background-color: #121212 !important;
+	color: #fff !important;
+	font-weight: normal !important;
+}
 
 
 
