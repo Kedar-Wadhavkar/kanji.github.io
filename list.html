@@ -9,154 +9,34 @@
 	<title>Keddy-Kanji</title>
 	<link rel = "icon" href =  "css/media/K.png" type = "image/x-icon">
 	
-	<link rel = "stylesheet" href = "css/list.css">	
+	<link rel="stylesheet" href="css/list.css">
+	<script src = "js/list.js"></script>
 </head>
 
 <body>
-
-<div class = "uppercontainer">
-	<button class = "backbtn" id = "back">< Back</button>
 	
+<div class="uppercontainer">
+	<button class = "backbtn" id = "back"><img src="css/media/backarr.png"></button>
+	<button button onclick = "location.href='index.html'" type = "button"  class = "homebtn"><img src="css/media/homebtn.png"></button>
 </div>
 
-<div class = "midcontainer">
+<div class="maincontainer">
+	<input type="text" name="" id="myInput" placeholder="Search a Kanji" onkeyup="searchFun()">
+			
+	<table id="myTable">
 
-	<div class = "row">
-		<a href = "">海</a>	<a href = "">泳</a>	<a href = "">温</a>	<a href = "">活</a>	<a href = "">洋</a>
-	</div>
+		<tr onclick="window.location='n5level/ichi.html';"><td><div>一</div></td><td>one</td><td>JLPT N5</td></tr>
+		<tr onclick="window.location='n5level/ichi.html';"><td><div>二</div></td><td>two</td><td>JLPT N5</td></tr>
+		<tr onclick="window.location='n5level/ichi.html';"><td><div>三</div></td><td>three</td><td>JLPT N5</td></tr>
+		<tr onclick="window.location='n5level/ichi.html';"><td><div>四</div></td><td>four</td><td>JLPT N5</td></tr>
+		<tr onclick="window.location='n5level/ichi.html';"><td><div>五</div></td><td>five</td><td>JLPT N5</td></tr>
+		<tr onclick="window.location='n5level/ichi.html';"><td><div>六</div></td><td>six</td><td>JLPT N5</td></tr>
 
-	<div class = "row">
-		<a href = "">酒</a>	<a href = "">消</a>	<a href = "">法</a>	<a href = "">漢</a>	<a href = "">港</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">池</a>	<a href = "">満</a>	<a href = "">渡</a>	<a href = "">湯</a>	<a href = "">減</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">混</a>	<a href = "">濃</a>	<a href = "">油</a>	<a href = "">湖</a>	<a href = "">測</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">汗</a>	<a href = "">涙</a>	<a href = "">泊</a>	<a href = "">治</a>	<a href = "">汚</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">泣</a>	<a href = "">決</a>	<a href = "">流</a>	<a href = "">済</a>	<a href = "">波</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">洗</a>	<a href = "">注</a>	<a href = "">深</a>	<a href = "">河</a>	<a href = "">浅</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">演</a>	<a href = "">濯</a>	<a href = "">液</a>	<a href = "">浴</a>	<a href = "">測</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">一</a>	<a href = "">二</a>	<a href = "">三</a>	<a href = "">四</a>	<a href = "">五</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">六</a>	<a href = "">七</a>	<a href = "">八</a>	<a href = "">九</a>	<a href = "">十</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">一</a>	<a href = "">二</a>	<a href = "">三</a>	<a href = "">四</a>	<a href = "">五</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">六</a>	<a href = "">七</a>	<a href = "">八</a>	<a href = "">九</a>	<a href = "">十</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">一</a>	<a href = "">二</a>	<a href = "">三</a>	<a href = "">四</a>	<a href = "">五</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">六</a>	<a href = "">七</a>	<a href = "">八</a>	<a href = "">九</a>	<a href = "">十</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">一</a>	<a href = "">二</a>	<a href = "">三</a>	<a href = "">四</a>	<a href = "">五</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">六</a>	<a href = "">七</a>	<a href = "">八</a>	<a href = "">九</a>	<a href = "">十</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">一</a>	<a href = "">二</a>	<a href = "">三</a>	<a href = "">四</a>	<a href = "">五</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">六</a>	<a href = "">七</a>	<a href = "">八</a>	<a href = "">九</a>	<a href = "">十</a>
-	</div>
+	</table>
 </div>
-
-
-<div class = "bottomcontainer">
-	<div class = "together">
-		<button onclick = "location.href='radicals.html'" type = "button" class = "but1">Radicals<br/>部首</button>
-
-		<button onclick = "location.href='levels.html'" type = "button" class = "but2">JLPT Levels<br/>レベル</button>
-
-		<button onclick = "location.href='list.html'" type = "button" class = "but3">List<br/>リスト</button>
-
-	</div>
-</div>
-
-	<script src = "js/navigation.js"></script>
 
 </body>
 
+	<script src = "js/navigation.js"></script>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
