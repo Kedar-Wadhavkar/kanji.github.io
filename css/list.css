@@ -70,12 +70,11 @@ body{
 	display: block;
 	position: fixed;
 	height: 40px;
-        top: 75px;
+        top: 70px;
 	width: 60%;
 	margin-left: 20%;
 	font-size: 1.1rem;
 	border-radius: 5px 5px 5px 5px;
-	margin-bottom: 2%;
 	border-radius: 20px;
 	padding-left: 18px;
 }
@@ -100,14 +99,12 @@ body{
 .maincontainer{
         position: absolute;
 	left: 0;
-        top: 120px;
+        top: 125px;
         width: 100%;
         z-index: -10;
         overflow: scroll !important;
 	bottom: 95px;
 }
-
-
 
 table{
   	width: 86%;
@@ -115,11 +112,11 @@ table{
   	color: white; 
  	border-collapse: separate;
   	border-spacing: 0px 10px;
+	margin-top: -10px;
 }
 
 table tr td:first-child{
 	width: 18%;
-	
 }
 
 table tr td:first-child div{
