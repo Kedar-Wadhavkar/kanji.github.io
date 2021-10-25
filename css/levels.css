@@ -28,22 +28,40 @@ body{
 	position: fixed;	
 	width: 100%;
 	top: 0;
+        z-index: 5;
 }
 
-.backbtn{
+.backbtn, .homebtn{
 	display: block;
 	position: relative;
 	height: 42px;
 	background-color: #2dcac2;
-	padding: 10px 15px 10px 12px;
-	font-weight: bold;
 	margin: 3%;
 	outline: none;
 	border: none;
 	border-radius: 5px;
-	font-size: 1.1rem;
 	cursor: pointer;
 	z-index: 10;
+}
+
+.backbtn{	
+	padding: 9px 16px 6px 16px;
+}
+
+.homebtn{
+	position: absolute;
+	top: 3%;
+	right: 0;
+	padding: 7px 16px 6px 16px;
+}
+
+.backbtn img{
+	width: 28px;
+	height: 24px;
+}
+
+.homebtn img{
+	width: 28px;
 }
 
 .midcontainer{
@@ -62,14 +80,14 @@ body{
 	justify-content: center;
 	width: 100%;
 	text-align: center;
-	margin-bottom: 2.5%;
+	margin-bottom: 3%;
 }
 
 .row a{
 	position: relative;
 	width: auto;
 	text-decoration: none;
-	border-radius: 4px 0 0 4px;
+	border-radius: 10px 0 0 10px;
 	font-weight: bold;
 	color: #000;
 	background-color: #ffffff;
