@@ -116,7 +116,7 @@ table{
 }
 
 table tr td:first-child{
-	width: 18%;
+	width: 19%;
 }
 
 table tr td:first-child div{
@@ -140,12 +140,11 @@ table tr td:nth-child(2){
 table tr td:nth-child(3){
 	background-color: #ffffff;
 	opacity: 0.9;
-  	text-align: right;
-	padding-right: 30px;
+  	text-align: left;
 	border-radius: 0 8px 8px 0;
 	color: #000;
 	font-size: 1rem;
-	width: 18%;
+	width: 11%;
 }
 
 .bottomcontainer{
