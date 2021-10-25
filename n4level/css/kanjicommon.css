@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
+html{
+	scroll-behavior: smooth;
+	user-select: none;
+}
+
+*,
+*:after,
+*:before {
+	font-family: 'Merriweather', serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	display: block;
+	background: #121212;
+	background-image: url("media/backimg.jpg");
+	background-repeat: repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+@media only screen and (max-width: 576px){
+
+.uppercontainer{
+	display: block;
+	position: fixed;	
+	width: 100%;
+	top: 0;
+        z-index: 5;
+}
+
+.backbtn, .homebtn{
+	display: block;
+	position: relative;
+	height: 42px;
+	background-color: #2dcac2;
+	margin: 3%;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.backbtn{	
+	padding: 9px 16px 6px 16px;
+}
+
+.homebtn{
+	position: absolute;
+	top: 3%;
+	right: 0;
+	padding: 7px 16px 6px 16px;
+}
+
+.backbtn img{
+	width: 28px;
+	height: 24px;
+}
+
+.homebtn img{
+	width: 28px;
+}
+
+.maincontainer{
+        position: absolute;
+	left: 0;
+        top: 75px;
+        width: 100%;
+        z-index: -10;
+        overflow: scroll !important;  
+        bottom: 20px;
+}
+
+.center{
+  	display: block;
+  	position: relative;
+  	left: calc(50% - 70px);
+ 	margin-bottom: 20px;
+  	width: 150px;
+  	height: 150px;
+	border: 4px solid #888;
+}
+
+.uppertable{
+  	width: 88%;
+  	margin-left: 6%;
+  	font-size: 17px;
+  	text-align: left;
+  	color: white;
+  	border-collapse: separate;
+  	border-spacing: 3px 10px;
+}
+
+.lowertable{
+  	width: 92%;
+  	margin-left: 4%;
+  	font-size: 16px;
+  	text-align: left;
+  	color: white; 
+ 	border-collapse: separate;
+  	border-spacing: 3px 12px;
+}
+
+.column1{
+  	width: 22%;
+}
+
+.column2{
+  	width: 6%;
+  	text-align: center;
+}
+
+.column3{
+  	width: 72%;
+}
+
+.column4{
+  	width: 24%;
+}
+
+.column5{
+  	width: 36%;
+}
+
+.column6{
+  	width: 32%;
+}
+}
+
+
+
+
