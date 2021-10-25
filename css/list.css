@@ -84,7 +84,7 @@ body{
 	width: 20px;
 	top: 80px;
 	right: 24.5%;
-	opacity: 0.5;
+	opacity: 0.4;
 }
 
 #myInput:focus::placeholder {
