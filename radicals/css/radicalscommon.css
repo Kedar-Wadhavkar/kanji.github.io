@@ -55,7 +55,7 @@ body{
 
 .homebtn{
 	position: absolute;
-	top: 3%;
+	top: calc(3% - 0px);
 	right: 0;
 	padding: 7px 16px 6px 16px;
 }
