@@ -1,6 +1,6 @@
 const searchFun = () =>{
 
-	let filter = document.getElementById('myInput').value;
+	let filter = document.getElementById('myInput').value.toUpperCase();
 
 	let myTable = document.getElementById('myTable');
 
@@ -18,7 +18,7 @@ const searchFun = () =>{
 			if(textValue.indexOf(filter) > -1){
 				tr[i].style.display = "";
 			}
-			else if(textValue2.indexOf(filter) > -1){
+			else if(textValue2.toUpperCase().indexOf(filter) > -1){
 				tr[i].style.display = "";
 			}
 			else{
