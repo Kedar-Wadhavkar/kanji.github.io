@@ -19,60 +19,51 @@
 	<button onclick = "location.href='index.html'" type = "button"  class = "homebtn"><img src="css/media/homebtn.png"></button>
 </div>
 
+<div class = "bar">
+	<input type="text" name="" id="myInput" placeholder=" Search Radical" onkeyup="searchFun()" autocomplete="off">
+	<img src="css/media/search.png" class="mag">
+</div>
+
 <div class = "midcontainer">
 
-	<div class = "row">
-		<a href = "radicals/sanzui.html">氵</br>[さんずい]</a>		<a href = "radicals/ninben.html">亻</br>[にんべん]</a>
-	</div>
+<div class="tab">		
+	<table id="myTable1">
 
-	<div class = "row">
-		<a href = "">辶</br>[しんにょう]</a>	<a href = "">木</br>[きへん]</a>
-	</div>
+		<tr><td onclick="window.location='radicals/sanzui.html';"><div>氵</br>[さんずい]</div></td>
+		<tr><td onclick="window.location='';"><div>辶</br>[しんにょう]</div></td>
+		<tr><td onclick="window.location='';"><div>宀</br>[うかんむり]</div></td>
+		<tr><td onclick="window.location='';"><div>訁</br>[ごんべん]</div></td>
+		<tr><td onclick="window.location='';"><div>艹</br>[くさかんむり]</div></td>
+		<tr><td onclick="window.location='';"><div>扌</br>[てへん]</div></td>
+		<tr><td onclick="window.location='';"><div>日</br>[ひへん]</div></td>
+		<tr><td onclick="window.location='';"><div>亠</br>[なべぶた]</div></td>
+		<tr><td onclick="window.location='';"><div>竹</br>[たけかんむり]</div></td>
+		<tr><td onclick="window.location='';"><div>广</br>[まだれ]</div></td>
+		<tr><td onclick="window.location='';"><div>女</br>[おんなへん]</div></td>
+		<tr><td onclick="window.location='';"><div>門</br>[もんがまえ]</div></td>
+		<tr><td onclick="window.location='radicals/ta.html';"><div>⽥</br>[た]</div></td>
 
-	<div class = "row">
-		<a href = "">宀</br>[うかんむり]</a>	<a href = "">糹</br>[いとへん]</a>
-	</div>
+	</table>
 
-	<div class = "row">
-		<a href = "">訁</br>[ごんべん]</a>		<a href = "">木</br>[き]</a>
-	</div>
+		
+	<table id="myTable2">
 
-	<div class = "row">
-		<a href = "">艹</br>[くさかんむり]</a>	<a href = "">㣺</br>[したごころ]</a>
-	</div>
+		<tr><td onclick="window.location='radicals/ninben.html';"><div>亻</br>[にんべん]</div></td>
+		<tr><td onclick="window.location='';"><div>木</br>[きへん]</div></td>
+		<tr><td onclick="window.location='';"><div>糹</br>[いとへん]</div></td>
+		<tr><td onclick="window.location='';"><div>木</br>[き]</div></td>
+		<tr><td onclick="window.location='';"><div>㣺</br>[したごころ]</div></td>
+		<tr><td onclick="window.location='';"><div>大</br>[だい]</div></td>
+		<tr><td onclick="window.location='';"><div>貝</br>[かいへん]</div></td>
+		<tr><td onclick="window.location='';"><div>禾</br>[のぎへん]</div></td>
+		<tr><td onclick="window.location='';"><div>彳</br>[ぎょうにんべん]</div></td>
+		<tr><td onclick="window.location='';"><div>阝</br>[こざとへん]</div></td>
+		<tr><td onclick="window.location='';"><div>灬</br>[れっか]</div></td>
+		<tr><td onclick="window.location='';"><div>囗</br>[くにがまえ]</div></td>
+		<tr><td onclick="window.location='radicals/kokoro.html';"><div>心</br>[こころ]</div></td>
 
-	<div class = "row">
-		<a href = "">扌</br>[てへん]</a>		<a href = "">大</br>[だい]</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">日</br>[ひへん]</a>		<a href = "">貝</br>[かいへん]</a>	
-	</div>
-
-	<div class = "row">
-		<a href = "">亠</br>[なべぶた]</a>	<a href = "">禾</br>[のぎへん]</a>	
-	</div>
-
-	<div class = "row">
-		<a href = "">竹</br>[たけかんむり]</a>	<a href = "">彳</br>[ぎょうにんべん]</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">广</br>[まだれ]</a>		<a href = "">阝</br>[こざとへん]</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">女</br>[おんなへん]</a>	<a href = "">灬</br>[れっか]</a>
-	</div>
-
-	<div class = "row">
-		<a href = "">門</br>[もんがまえ]</a>	<a href = "">囗</br>[くにがまえ]</a>
-	</div>
-
-	<div class = "row">
-		<a href = "radicals/ta.html">⽥</br>[た]</a>	<a href = "radicals/kokoro.html">心</br>[こころ]</a>
-	</div>
-
+	</table>	
+</div>
 </div>
 
 
@@ -88,6 +79,7 @@
 </div>
 
 	<script src = "js/navigation.js"></script>
+	<script src = "js/radicals.js"></script>
 
 </body>
 

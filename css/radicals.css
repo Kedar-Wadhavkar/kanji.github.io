@@ -66,36 +66,48 @@ body{
 
 .midcontainer{
 	position: absolute;
-  	top: 75px;
 	width: 100%;
-	/*background: red;*/
+	left: 0;
+  	top: 123px;
 	bottom: 95px;
 	z-index: -10;
 	overflow: scroll;
 }
 
-.row{
+.tab{
+	width: 93%;
+	margin-left: 3.5%;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	text-align: center;
-	margin-bottom: 2.5%;
 }
 
-.row a{
-	width: 43%;
-	text-decoration: none;
+table{
+  	width: 46%;
+  	color: #000;
+ 	border-collapse: separate;
+  	border-spacing: 0px 12px !important;
+	border-color: black;
+	margin: auto;
+	margin-top: -10px;
+}
+
+tbody {
+    vertical-align: top;
+}
+
+table tr td:first-child{
+	width: 19%;
+	background: rgba(255,255,255,0.9);
 	border-radius: 4px;
-	color: #000;
-	background-color: #ffffff;
-	opacity: 0.9;
-	padding: 8px 0 8px 0;
-	font-size: 1.2rem;
+	left: 50px;
 }
 
-.row a:nth-child(2){
-	margin-left: 3.5%;
+table tr td:first-child div{
+        position: relative;
+	height: 100%;
+	font-size: 1.2rem;
+  	text-align: center;
+	padding: 8px 0 8px 0;
 }
 
 .bottomcontainer{
@@ -141,16 +153,34 @@ body{
 
 
 
+#myInput{
+	display: block;
+	position: fixed;
+	height: 40px;
+        top: 70px;
+	width: 60%;
+	margin-left: 20%;
+	font-size: 1.1rem;
+	border-radius: 5px 5px 5px 5px;
+	border-radius: 20px;
+	padding-left: 18px;
+}
 
+.bar img{
+	position: absolute;
+	width: 20px;
+	top: 80px;
+	right: 24.5%;
+	opacity: 0.4;
+}
 
+#myInput:focus::placeholder {
+  	color: transparent;
+}
 
-
-
-
-
-
-
-
-
+#myInput:focus{
+	z-index: 10;
+	outline: none;
+}
 
 
