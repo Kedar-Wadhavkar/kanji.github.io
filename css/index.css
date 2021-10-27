@@ -159,8 +159,8 @@ body{
 	cursor: pointer;
 }
 
-.together button{
-	pointer-events: none;
+.together button:active{
+	background-color: red;
 }
 
 
