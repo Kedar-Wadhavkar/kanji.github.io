@@ -160,8 +160,31 @@ body{
 }
 
 .together button:focus{
-	decoration: none;
+	background-color: #2dcac2;
+	border: none;
+	padding: 0.5em 0;
+	border-radius: 10px 10px 0 0;
+	border-color: #3f3f3f;
+	border-width: 3px;
+	border-left-style: ridge;
+	border-top-style: ridge;
+	border-right-style: groove;
+	outline: none;
 }
+
+.together button:hover{
+	background-color: #2dcac2;
+	border: none;
+	padding: 0.5em 0;
+	border-radius: 10px 10px 0 0;
+	border-color: #3f3f3f;
+	border-width: 3px;
+	border-left-style: ridge;
+	border-top-style: ridge;
+	border-right-style: groove;
+	outline: none;
+}
+
 
 
 
