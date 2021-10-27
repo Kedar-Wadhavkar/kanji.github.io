@@ -159,7 +159,7 @@ body{
 	cursor: pointer;
 }
 
-.together button:focus{
+.together button{
 	pointer-events: none;
 }
 
