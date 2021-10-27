@@ -82,45 +82,45 @@ body{
 	font-size: 1.4rem;
 }
 
-#customers {
+#rad {
 	border-collapse: collapse;
 	width: 100%;
 }
 
-#customers td, #customers th {
+#rad td, #rad th {
 	padding: 8px;
 	font-weight: normal;
 }
 
-#customers th:first-child{
+#rad th:first-child{
 	width: 35%;
 	text-align: right;
 }
 
-#customers td:first-child{
+#rad td:first-child{
 	width: 35%;
 	text-align: right;
 }
 
-#customers th:nth-child(2){
+#rad th:nth-child(2){
 	width: 10%;
 	/*background: red;*/
 }
 
-#customers td:nth-child(2){
+#rad td:nth-child(2){
 	width: 10%;
 	/*background: red;*/
 }
 
-#customers th:nth-child(3){
+#rad th:nth-child(3){
 	width: 55%;
 }
 
-#customers td:nth-child(3){
+#rad td:nth-child(3){
 	width: 55%;
 }
 
-#customers img{
+#rad img{
 	width: 150%;
 }
 
@@ -158,15 +158,10 @@ body{
 	outline: none;
 	cursor: pointer;
 }
-/*
-.but2{
-	margin-left: 0.5%;
+
+.together button:focus{
+	decoration: none;
 }
-
-.but3{
-	margin-left: 0.5%;
-}*/
-
 
 
 
