@@ -157,6 +157,7 @@ body{
 	border-right-style: groove;
 	outline: none;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 }
 
 

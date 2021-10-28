@@ -180,6 +180,7 @@ table tr td:nth-child(3){
 	border-right-style: groove;
 	outline: none;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .but1, .but2{

@@ -161,6 +161,7 @@ body{
 	border-right-style: groove;
 	outline: none;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .but2, .but3{
