@@ -161,11 +161,9 @@ table tr td:first-child div{
 
 .together button{
 	width: 33.3%;
-	background-color: #2dcac2;
 	border: none;
 	padding: 0.5em 0;
 	border-radius: 10px 10px 0 0;
-	font-weight: bold;
 	font-size: 1.2rem;
 	border-color: #3f3f3f;
 	border-width: 3px;
@@ -176,10 +174,15 @@ table tr td:first-child div{
 	cursor: pointer;
 }
 
+.but1{
+	background-color: #2dcac2;
+	font-weight: bold !important;
+}
+
 .but2, .but3{
-	background-color: #121212 !important;
-	color: #fff !important;
-	font-weight: normal !important;
+	background-color: #121212;
+	color: #fff;
+	font-weight: normal;
 }
 
 

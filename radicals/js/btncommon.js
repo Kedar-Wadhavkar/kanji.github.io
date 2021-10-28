@@ -1,8 +1,8 @@
 function down(btn) {	
 	btn.style.color = "#2dcac2";
-	btn.style.backgroundColor = "#121212";
+	btn.style.fontWeight = "bold";
 }
 function up(btn) {
-	btn.style.color = "#121212";
-	btn.style.backgroundColor = "#2dcac2";
+	btn.style.color = "#fff";
+	btn.style.fontWeight = "normal";
 }
