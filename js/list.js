@@ -27,3 +27,14 @@ const searchFun = () =>{
 		}
 	}
 }
+
+
+function sel(selbck) {	
+	selbck.style.opacity = "1";
+	selbck.style.backgroundColor = "rgb(45, 202, 194)";
+	selbck.style.borderRadius = "8px";
+}
+function unsel(selbck) {
+	selbck.style.backgroundColor = "inherit";
+}	
+
