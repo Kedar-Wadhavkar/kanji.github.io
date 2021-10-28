@@ -12,6 +12,7 @@ html{
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body{
@@ -173,7 +174,6 @@ table tr td:first-child div{
 	border-right-style: groove;
 	outline: none;
 	cursor: pointer;
-	-webkit-tap-highlight-color: transparent;
 }
 
 .but2, .but3{
