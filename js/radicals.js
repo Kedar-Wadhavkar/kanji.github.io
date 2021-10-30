@@ -45,16 +45,22 @@ const searchFun = () =>{
 }
 
 
-function down2(btn) {		
-	btn.style.backgroundColor = "rgba(255,255,255,0.2)";	
-	btn.style.color = "#fff";	
-	btn.style.fontWeight = "bold";
+function sel(selbck) {	
+	selbck.style.backgroundColor = "rgba(255,255,255,0.2)";	
+	selbck.style.color = "#fff";	
+	selbck.style.fontWeight = "bold";
 
 	setTimeout(() => {
-		btn.style.color = "#000";
-		btn.style.backgroundColor = "rgba(255,255,255,0.9)";
-		btn.style.fontWeight = "normal";
+		selbck.style.color = "#000";
+		selbck.style.backgroundColor = "rgba(255,255,255,0.9)";
+		selbck.style.fontWeight = "normal";
 	}, 500);
+}
+
+function unsel(selbck) {
+		selbck.style.color = "#000";
+		selbck.style.backgroundColor = "rgba(255,255,255,0.9)";
+		selbck.style.fontWeight = "normal";
 }
 
 

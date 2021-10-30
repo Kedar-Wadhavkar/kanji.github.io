@@ -7,3 +7,8 @@ function down(btn) {
 	btn.style.fontWeight = "normal";
 	}, 500);
 }
+
+function up(btn) {
+	btn.style.color = "#fff";
+	btn.style.fontWeight = "normal";	
+}

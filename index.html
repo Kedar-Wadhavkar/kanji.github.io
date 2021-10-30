@@ -77,11 +77,11 @@
 
 <div class = "bottomcontainer">
 	<div class = "together">
-		<button onclick = "location.href='radicals.html'" class = "but1" ontouchstart="down(this);">Radicals<br/>部首</button>
+		<button onclick = "location.href='radicals.html'" class = "but1" ontouchstart="down(this);" ontouchend="up(this);">Radicals<br/>部首</button>
 
-		<button onclick = "location.href='levels.html'" class = "but2" ontouchstart="down(this);">JLPT Levels<br/>レベル</button>
+		<button onclick = "location.href='levels.html'" class = "but2" ontouchstart="down(this);" ontouchend="up(this);">JLPT Levels<br/>レベル</button>
 
-		<button onclick = "location.href='list.html'" class = "but3" ontouchstart="down(this);">List<br/>リスト</button>
+		<button onclick = "location.href='list.html'" class = "but3" ontouchstart="down(this);" ontouchend="up(this);">List<br/>リスト</button>
 	</div>
 </div>
 
@@ -96,6 +96,11 @@ function down(btn) {
 		btn.style.color = "#000";
 		btn.style.backgroundColor = "#2dcac2";
 	}, 500);
+}
+
+function up(btn) {
+	btn.style.color = "#000";
+	btn.style.backgroundColor = "#2dcac2";
 }
 
 </script>	
