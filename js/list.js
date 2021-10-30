@@ -42,3 +42,8 @@ function sel(selbck) {
 	}, 500);
 }
 
+function unsel(selbck) {	
+	selbck.style.backgroundColor = "rgba(255,255,255,0.9)";
+	selbck.style.color = "#000";
+}	
+
