@@ -29,12 +29,16 @@ const searchFun = () =>{
 }
 
 
-function sel(selbck) {	
+
+function sel(selbck) {		
 	selbck.style.opacity = "1";
-	selbck.style.backgroundColor = "rgb(45, 202, 194)";
+	selbck.style.backgroundColor = "rgba(255,255,255,0.2)";
 	selbck.style.borderRadius = "8px";
+	selbck.style.color = "#fff"
+
+	setTimeout(() => {
+		selbck.style.backgroundColor = "rgba(255,255,255,0.9)";
+		selbck.style.color = "#000";
+	}, 500);
 }
-function unsel(selbck) {
-	selbck.style.backgroundColor = "inherit";
-}	
 
