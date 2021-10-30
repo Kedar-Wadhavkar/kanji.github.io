@@ -45,4 +45,14 @@ const searchFun = () =>{
 }
 
 
+function down2(btn) {		
+	btn.style.backgroundColor = "rgba(255,255,255,0.15)";	
+	btn.style.color = "#fff";
+
+	setTimeout(() => {
+		btn.style.color = "#000";
+		btn.style.backgroundColor = "rgba(255,255,255,0.9)";
+	}, 500);
+}
+
 
