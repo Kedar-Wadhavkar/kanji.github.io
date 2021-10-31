@@ -5,6 +5,24 @@ html{
 	user-select: none;
 }
 
+:root {
+  	--bdrbck1: rgba(255,255,255,0.9);
+	--bck1: rgba(255,255,255,0.9);
+	--txt1: #000;
+
+  	--bdrbck2: rgba(255,255,255,0.9);
+	--bck2: rgba(255,255,255,0.9);
+	--txt2: #000;
+
+  	--bdrbck3: rgba(255,255,255,0.9);
+	--bck3: rgba(255,255,255,0.9);
+	--txt3: #000;
+
+  	--bdrbck4: rgba(255,255,255,0.9);
+	--bck4: rgba(255,255,255,0.9);
+	--txt4: #000;
+}
+
 *,
 *:after,
 *:before {
@@ -81,7 +99,7 @@ body{
 	justify-content: center;
 	width: 100%;
 	text-align: center;
-	margin-bottom: 3%;
+	color: #000;
 }
 
 .row a{
@@ -90,23 +108,61 @@ body{
 	text-decoration: none;
 	border-radius: 10px 0 0 10px;
 	font-weight: bold;
-	color: #000;
-	background-color: #ffffff;
-	opacity: 0.9;
 	padding: 15px 45px 15px 45px;
 	font-size: 1.2rem;
 	margin-left: -5%;
+	margin-bottom: 3%;
 }
 
-.row a:after{
+.row a:before{
 	content: "";
 	position: absolute;
 	height: 0;
 	width: 0;
 	left: 100%;
 	top: 0;
+	padding: -10%;
 	border: 41px solid transparent;
-	border-left: 23px solid rgb(255,255,255,1);
+	border-right: 0px;
+	border-left: 23px;
+	border-left-style: solid;
+	border-left-color: rgba(255,255,255,0.9);
+}
+
+.row #a1{
+	color: var(--txt1);
+	background-color: var(--bck1);
+}
+
+.row #a1:before{
+	border-left-color: var(--bdrbck1);
+}
+
+.row #a2{
+	color: var(--txt2);
+	background-color: var(--bck2);
+}
+
+.row #a2:before{
+	border-left-color: var(--bdrbck2);
+}
+
+.row #a3{
+	color: var(--txt3);
+	background-color: var(--bck3);
+}
+
+.row #a3:before{
+	border-left-color: var(--bdrbck3);
+}
+
+.row #a4{
+	color: var(--txt4);
+	background-color: var(--bck4);
+}
+
+.row #a4:before{
+	border-left-color: var(--bdrbck4);
 }
 
 strong{
