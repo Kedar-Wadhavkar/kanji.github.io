@@ -17,8 +17,8 @@
 <body>
 
 <div class="uppercontainer">
-	<button class = "backbtn" id = "back"><img src="css/media/backarr.png"></button>
-	<button onclick = "location.href='index.html'" type = "button"  class = "homebtn"><img src="css/media/homebtn.png"></button>
+	<button class = "backbtn" id = "back" ontouchstart="imgdown1(this);" ontouchend="imgup1(this);"><img src="js/backarr.png" id = "bck"></button>
+	<button onclick = "location.href='index.html'" type = "button" class = "homebtn" ontouchstart="imgdown2(this);" ontouchend="imgup2(this);"><img src="js/homebtn.png" id = "hom"></button>
 </div>
 
 <div class = "midcontainer">
@@ -52,6 +52,7 @@
 
 	</div>
 </div>
+
 
 	<script src = "js/navigation.js"></script>
 
