@@ -89,8 +89,8 @@ body{
 	width: 100%;
 	text-align: center;
 	margin-bottom: 3.5%;
-	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-
+	font-feature-settings: "palt" 1;
+	font-family: "UD Digi Kyokasho NK-R", sans-serif;
 }
 
 .row a{
