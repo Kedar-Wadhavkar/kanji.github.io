@@ -1,14 +1,14 @@
 function sel(selbck) {	
-	selbck.style.backgroundColor = "rgba(255,255,255,0.2)";	
-	selbck.style.color = "#fff";	
+	selbck.style.color = "#2dcac2";	
+	selbck.style.borderColor = "#aaa";	
 
 	setTimeout(() => {
-		selbck.style.color = "#000";
-		selbck.style.backgroundColor = "rgba(255,255,255,0.9)";
+		selbck.style.color = "#fff";
+		selbck.style.borderColor = "#2dcac2";
 	}, 500);
 }
 
 function unsel(selbck) {
-		selbck.style.color = "#000";
-		selbck.style.backgroundColor = "rgba(255,255,255,0.9)";
+		selbck.style.color = "#fff";
+		selbck.style.borderColor = "#2dcac2";
 }
