@@ -105,21 +105,18 @@ body{
 	width: 16%;
 	text-decoration: none;
 	/*border-radius: 2px;
-	color: #000;
-	background-color: rgba(255,255,255,0.9);*/
 	padding: 3px 0 3px 0;
 	font-size: 1.8rem;
 
 	background-color: #121212;
 	border-radius: 4px;
-	color: #2dcac2;
-	border-color: #3f3f3f;
+	border-color: #2dcac2;
+	color: #3f3f3f;
 	border-width: 2px;
-	/*border-left-style: ridge;
+	border-left-style: ridge;
 	border-top-style: ridge;
 	border-right-style: groove;
-	border-bottom-style: groove;*/
-	border-style: ridge;
+	border-bottom-style: groove;
 }
 
 .row a:nth-child(n+1){
