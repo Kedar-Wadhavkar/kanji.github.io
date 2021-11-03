@@ -1,6 +1,6 @@
 function sel(selbck) {			
 	selbck.style.color = "#2dcac2";	
-	selbck.style.boxShadow = "inset -1px -1px 2px rgba(45,202,194),inset 3px 3px 6px rgba(0,0,0,1)";
+	selbck.style.boxShadow = "inset -1px -1px 2px rgba(45,202,194,0.8),inset 4px 4px 8px rgba(0,0,0,1)";
 
 	setTimeout(() => {
 		selbck.style.color = "#fff";
