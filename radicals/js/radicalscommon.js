@@ -1,6 +1,6 @@
 function sel(selbck) {	
 	selbck.style.color = "#2dcac2";	
-	selbck.style.borderColor = "#aaa";	
+	selbck.style.borderColor = "#aaa";
 
 	setTimeout(() => {
 		selbck.style.color = "#fff";
