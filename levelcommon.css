@@ -91,24 +91,23 @@ body{
 	margin-bottom: 3.5%;
 }
 
-.row:first-child{
-	margin-top: 4px;
-}
-
 .row a{
 	width: 16%;
 	text-decoration: none;
+	border-radius: 6px;
+	color: #fff;
+	/*background-color: rgba(255,255,255,0.9);*/
+	background-color: rgba(255,255,255,0.05);
 	padding: 3px 0 3px 0;
 	font-size: 1.8rem;
 	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-
-	border-radius: 4px;
-	color: #fff;
-	background-color: #121212;
+	
 	border-color: #2dcac2;
 	border-width: 2px;
-	box-shadow: -1px -1px 3px rgba(45,202,194),
-		     2px 2px 6px rgba(0,0,0,1);
+	border-left-style: ridge;
+	border-top-style: ridge;
+	border-right-style: groove;
+	border-bottom-style: groove;
 }
 
 .row a:nth-child(n+1){
