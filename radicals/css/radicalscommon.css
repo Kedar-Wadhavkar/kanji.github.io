@@ -110,8 +110,9 @@ body{
 	background-color: #121212;
 	border-radius: 4px;
 	border-color: #2dcac2;
-	color: #3f3f3f;
-	border-width: 2px;
+	/*color: #3f3f3f;*/
+	color: #fff;
+	border-width: 1px;
 	border-left-style: ridge;
 	border-top-style: ridge;
 	border-right-style: groove;
