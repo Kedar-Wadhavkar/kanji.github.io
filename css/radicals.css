@@ -117,9 +117,8 @@ table{
   	color: #000;
  	border-collapse: separate;
   	border-spacing: 0px 12px !important;
-	border-color: black;
 	margin: auto;
-	margin-top: -10px;
+	margin-top: -8px;
 }
 
 tbody {
@@ -128,9 +127,15 @@ tbody {
 
 table tr td:first-child{
 	width: 19%;
-	background: rgba(255,255,255,0.9);
+	/*background: rgba(255,255,255,0.9);*/
 	border-radius: 4px;
 	left: 50px;
+	
+	color: #fff;
+	background-color: #1f1f1f;
+	border-color: #2dcac2;
+	box-shadow: -2px -2px 3px rgba(45,202,194),
+		     3px 3px 6px rgba(0,0,0,1);
 }
 
 table tr td:first-child div{
