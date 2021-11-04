@@ -47,19 +47,19 @@ const searchFun = () =>{
 
 function sel(selbck) {	
 	selbck.style.backgroundColor = "rgba(255,255,255,0.2)";	
-	selbck.style.color = "#fff";	
+	selbck.style.color = "#2dcac2";	
 	selbck.style.fontWeight = "bold";
 
 	setTimeout(() => {
-		selbck.style.color = "#000";
-		selbck.style.backgroundColor = "rgba(255,255,255,0.9)";
+		selbck.style.color = "#fff";
+		selbck.style.backgroundColor = "#1f1f1f";
 		selbck.style.fontWeight = "normal";
 	}, 500);
 }
 
 function unsel(selbck) {
-		selbck.style.color = "#000";
-		selbck.style.backgroundColor = "rgba(255,255,255,0.9)";
+		selbck.style.color = "#fff";
+		selbck.style.backgroundColor = "#1f1f1f";
 		selbck.style.fontWeight = "normal";
 }
 
