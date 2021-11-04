@@ -112,28 +112,31 @@ table{
   	margin-left: 7%;
   	color: white; 
  	border-collapse: separate;
-  	border-spacing: 0px 10px;
+  	border-spacing: 0px 14px;
 	margin-top: -10px;
 }
 
 table tr{	
-	background-color: rgba(255,255,255,0.9);
-	color: #000;
+	background-color: #1f1f1f;
+	color: #fff;
+	border-radius: 8px;
+	box-shadow: -2px -2px 3px rgba(45,202,194),
+		     3px 3px 6px rgba(0,0,0,1);
 	
 }
 
 table tr td:first-child{
-	width: 19%;	
-	border-radius: 8px 0 0 8px;
+	width: 19%;
+	border-radius: 8px 0 0 8px;	
 }
 
 table tr td:first-child div{
         position: relative;
 	height: 80%;
-	border-radius: 8px 8px 8px 8px;
 	border: 10px solid rgba(255,255,255,0);
 	font-size: 1.8rem;
   	text-align: center;
+	border-radius: 4px;
 }
 
 #myTable span{
@@ -147,15 +150,15 @@ table tr td:first-child div{
 
 table tr td:nth-child(2){
 	font-size: 1.25rem;
-	font-weight: bold;
+	/*font-weight: bold;*/
   	text-align: center;
 }
 
 table tr td:nth-child(3){
   	text-align: left;
-	border-radius: 0 8px 8px 0;
 	font-size: 1rem;
 	width: 11%;
+	border-radius: 0 8px 8px 0;
 }
 
 .bottomcontainer{
