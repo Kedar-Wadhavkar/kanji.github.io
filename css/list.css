@@ -76,6 +76,7 @@ body{
 	border-radius: 5px 5px 5px 5px;
 	border-radius: 20px;
 	padding-left: 18px;
+	font-weight: bold;
 }
 
 .bar img{
@@ -155,8 +156,8 @@ table tr td:first-child div{
 
 table tr td:nth-child(2){
 	font-size: 1.25rem;
-	/*font-weight: bold;*/
   	text-align: center;
+	padding-right: 10px;
 }
 
 table tr td:nth-child(3){
