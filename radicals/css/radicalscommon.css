@@ -101,22 +101,27 @@ body{
 	margin-bottom: 3.5%;
 }
 
+.row:first-child{
+	margin-top: 3px;
+}
+
+.row:last-child{
+	margin-bottom: -3.5%;	
+}
+
+
 .row a{
 	width: 16%;
 	text-decoration: none;
 	padding: 3px 0 3px 0;
 	font-size: 1.8rem;
 
-	background-color: #1a1a1a;
 	border-radius: 4px;
-	border-color: #2dcac2;
-	/*color: #3f3f3f;*/
 	color: #fff;
-	border-width: 1px;
-	border-left-style: ridge;
-	border-top-style: ridge;
-	border-right-style: groove;
-	border-bottom-style: groove;
+	background-color: #1f1f1f;
+	border-color: #2dcac2;
+	box-shadow: -2px -2px 3px rgba(45,202,194),
+		     3px 3px 6px rgba(0,0,0,1);
 }
 
 .row a:nth-child(n+1){
