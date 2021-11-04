@@ -46,21 +46,24 @@ const searchFun = () =>{
 
 
 function sel(selbck) {	
-	selbck.style.backgroundColor = "rgba(255,255,255,0.2)";	
+	selbck.style.backgroundColor = "#2d2d2d";	
 	selbck.style.color = "#2dcac2";	
-	selbck.style.fontWeight = "bold";
+	selbck.style.fontWeight = "bold";	
+	selbck.style.boxShadow = "inset 0px 0px 0px rgba(0,0,0,1),inset 0px 0px 0px rgba(0,0,0,1)";
 
 	setTimeout(() => {
 		selbck.style.color = "#fff";
 		selbck.style.backgroundColor = "#1f1f1f";
-		selbck.style.fontWeight = "normal";
+		selbck.style.fontWeight = "normal";	
+		selbck.style.boxShadow = "-2px -2px 3px rgba(45,202,194),3px 3px 6px rgba(0,0,0,1)";
 	}, 500);
 }
 
 function unsel(selbck) {
 		selbck.style.color = "#fff";
 		selbck.style.backgroundColor = "#1f1f1f";
-		selbck.style.fontWeight = "normal";
+		selbck.style.fontWeight = "normal";	
+		selbck.style.boxShadow = "-2px -2px 3px rgba(45,202,194),3px 3px 6px rgba(0,0,0,1)";
 }
 
 
