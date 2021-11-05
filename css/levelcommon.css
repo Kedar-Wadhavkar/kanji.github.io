@@ -104,7 +104,8 @@ body{
 	text-decoration: none;
 	padding: 3px 0 3px 0;
 	font-size: 1.8rem;
-
+	font-family: "Japanese Radicals", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", MS-Gothic, sans-serif;
+	
 	border-radius: 4px;
 	color: #fff;
 	background-color: #1f1f1f;
