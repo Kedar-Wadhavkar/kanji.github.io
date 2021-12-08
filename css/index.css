@@ -71,7 +71,7 @@ body{
   	top: 310px;
 	width: 100%;
 	/*background: red;*/
-	bottom: 100px;
+	bottom: 125px;
 	z-index: -10;
 	overflow: scroll;
 }
@@ -130,14 +130,13 @@ body{
 	position: fixed;	
 	width: 100%;
 	bottom: 0;
-	/*background: #000;*/
 	height: auto;
+	margin-top: 500px;
 }
 
 .together{
 	width: 99%;
 	margin-left: 0.5%;
-	/*background: red;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -145,24 +144,56 @@ body{
 
 .together button{
 	width: 33.3%;
-	background-color: #2dcac2;
+	height: 65px;
+	background-color: #333;
 	border: none;
-	padding: 0.5em 0;
-	border-radius: 10px 10px 0 0;
+	padding: 0.5rem 0 0.5em 0;
 	font-weight: bold;
 	font-size: 1.2rem;
-	border-color: #3f3f3f;
-	border-width: 3px;
-	border-left-style: ridge;
-	border-top-style: ridge;
-	border-right-style: groove;
 	outline: none;
 	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
+.butImg{
+	position: absolute;
+	margin: 0;
+	top: -45px;
+	background-color: #2dcac2;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	border-radius: 60px;
+	border: 8px solid black;
+}
 
+.butImg::before{
+	
+}
 
+.butImg::after{
+	
+}
 
+.butImg img{
+	width: 35px;
+}
+
+.butName{
+	position: absolute;
+	margin: 0;
+	/*background-color: red;*/
+	top: 38px;
+	color: #2dcac2;
+}
 
 
 
