@@ -170,7 +170,8 @@ body{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	padding: 15px;
+	width: 81px !important;
+	height: 81px !important;
 	border-radius: 70px;
 	border: 8px solid black;
 }
