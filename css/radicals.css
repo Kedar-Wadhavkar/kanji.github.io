@@ -101,7 +101,7 @@ body{
 	width: 100%;
 	left: 0;
   	top: 123px;
-	bottom: 95px;
+	bottom: 75px;
 	z-index: -10;
 	overflow: scroll;
 }
@@ -166,7 +166,7 @@ table tr td:first-child div{
 
 .together button{
 	width: 33.3%;
-	height: 65px;
+	height: 60px;
 	background-color: #292929;
 	border: none;
 	padding: 0.5rem 0 0.5em 0;
@@ -212,9 +212,9 @@ table tr td:first-child div{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	width: 81px !important;
-	height: 81px !important;
-	border-radius: 70px;
+	width: 76px;
+	height: 76px;
+	border-radius: 50%;
 	border: 8px solid black;
 }
 
@@ -222,7 +222,7 @@ table tr td:first-child div{
 	content: '';
 	position: absolute;
 	top: 37px;
-	left: -23px;
+	left: -21px;
 	width: 20px;
 	height: 20px;
 	background: transparent;
@@ -234,7 +234,7 @@ table tr td:first-child div{
 	content: '';
 	position: absolute;
 	top: 37px;
-	right: -23px;
+	right: -21px;
 	width: 20px;
 	height: 20px;
 	background: transparent;
@@ -243,11 +243,11 @@ table tr td:first-child div{
 }
 
 .butImg img{
-	width: 35px;
+	width: 30px;
 }
 
 .lisimg{
-	height: 31px !important;
+	height: 26px !important;
 	margin: 2px 0 2px 0 !important;
 }
 
@@ -259,7 +259,7 @@ table tr td:first-child div{
 	display: block;
 	position: absolute;
 	margin: 0;
-	top: 38px;
+	top: 33px;
 	color: #2dcac2;
 }
 
