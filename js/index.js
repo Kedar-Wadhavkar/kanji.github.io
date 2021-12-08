@@ -3,7 +3,7 @@ var i1 = document.getElementById("i1");
 
 function imgdown1() {	
 	i1.style.backgroundColor = "rgba(0,0,0)";	
-	newimg1.src = "js/media/rad_click.png";
+	newimg1.src = "js/media/radical_click.png";
 
 	setTimeout(() => {
 		i1.style.backgroundColor = "#2dcac2";	
@@ -39,7 +39,7 @@ var i3 = document.getElementById("i3");
 
 function imgdown3() {	
 	i3.style.backgroundColor = "rgba(0,0,0)";	
-	newimg3.src = "js/media/level_click.png";
+	newimg3.src = "js/media/list_click.png";
 
 	setTimeout(() => {
 		i3.style.backgroundColor = "#2dcac2";	
