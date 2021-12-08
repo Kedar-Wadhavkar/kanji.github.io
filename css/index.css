@@ -149,7 +149,7 @@ body{
 	border: none;
 	padding: 0.5rem 0 0.5em 0;
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 1.15rem;
 	outline: none;
 	cursor: pointer;
 	display: flex;
@@ -180,7 +180,7 @@ body{
 	content: '';
 	position: absolute;
 	top: 30px;
-	left: -25px;
+	left: -24px;
 	width: 20px;
 	height: 20px;
 	background: transparent;
@@ -192,7 +192,7 @@ body{
 	content: '';
 	position: absolute;
 	top: 30px;
-	right: -25px;
+	right: -24px;
 	width: 20px;
 	height: 20px;
 	background: transparent;

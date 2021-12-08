@@ -39,7 +39,7 @@ html{
 
 body{
 	display: block;
-	background: #121212;
+	background: #000;
 	background-image: url("media/backimg.jpg");
 	background-repeat: repeat;
 	background-size: 100%;
@@ -189,14 +189,13 @@ strong{
 	position: fixed;	
 	width: 100%;
 	bottom: 0;
-	/*background: #000;*/
 	height: auto;
+	margin-top: 500px;
 }
 
 .together{
 	width: 99%;
 	margin-left: 0.5%;
-	/*background: red;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -204,28 +203,101 @@ strong{
 
 .together button{
 	width: 33.3%;
+	height: 60px;
+	background-color: #292929;
 	border: none;
-	padding: 0.5em 0;
-	border-radius: 10px 10px 0 0;
-	font-size: 1.2rem;
-	border-color: #3f3f3f;
-	border-width: 3px;
-	border-left-style: ridge;
-	border-top-style: ridge;
-	border-right-style: groove;
+	padding: 0.5rem 0 0.5em 0;
+	font-weight: bold;
+	font-size: 1.15rem;
 	outline: none;
 	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
-.but2{
-	background-color: #2dcac2;
-	font-weight: bold !important;
-}
-
-.but1, .but3{
-	background-color: #121212;
+.but1 .butImg,
+.but3 .butImg{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	left: calc(50% - 45px);
+	/*left: calc(50% - 52px);
+	padding: 8px 16px 8px 16px;
+	border-radius: 4px;
 	color: #fff;
-	font-weight: normal;
+	background-color: #1f1f1f;
+	border-color: #2dcac2;
+	box-shadow: inset -2px -2px 3px rgba(45,202,194,0),
+		    inset 3px 3px 6px rgba(0,0,0,1);*/
+}
+
+.but2 .butImg{
+	position: absolute;
+	margin: 0;
+	top: -38px;
+	background-color: #2dcac2;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	height: 70px;
+	border-radius: 45%;
+	border: 8px solid black;
+}
+
+.but2 .butImg::before{
+	content: '';
+	position: absolute;
+	top: 30px;
+	left: -24px;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top-right-radius: 20px;
+	box-shadow: 1px -10px 0 0 black;
+}
+
+.but2 .butImg::after{
+	content: '';
+	position: absolute;
+	top: 30px;
+	right: -24px;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top-left-radius: 20px;
+	box-shadow: -1px -10px 0 0 black;	
+}
+
+.butImg img{
+	width: 30px;
+}
+
+.lisimg{
+	height: 26px !important;
+	margin: 2px 0 2px 0 !important;
+}
+
+.butName{
+	display: none;
+}
+
+.but2 .butName{
+	display: block;
+	position: absolute;
+	margin: 0;
+	top: 33px;
+	color: #2dcac2;
 }
 
 
