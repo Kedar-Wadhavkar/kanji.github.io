@@ -6,36 +6,27 @@ btnBack.addEventListener('click', () => {
 
 
 
-var newimg1 = document.getElementById("bck");
-var newimg2 = document.getElementById("hom");
-
 function imgdown1(selimg) {	
-	selimg.style.backgroundColor = "rgba(0,0,0,0)";	
-	newimg1.src = "js/backarr2.png";
+	selimg.style.transform = "scale(0.9)";
 
 	setTimeout(() => {
-		selimg.style.backgroundColor = "#2dcac2";	
-		newimg1.src = "js/backarr.png";
+		selimg.style.transform = "scale(1)";
 	}, 500);
 }
 function imgup1(selimg) {
-		selimg.style.backgroundColor = "#2dcac2";	
-		newimg1.src = "js/backarr.png";
+		selimg.style.transform = "scale(1)";
 }
 
 
 function imgdown2(selimg2) {	
-	selimg2.style.backgroundColor = "rgba(0,0,0,0)";	
-	newimg2.src = "js/homebtn2.png";
+	selimg2.style.transform = "scale(0.9)";
 
 	setTimeout(() => {
-		selimg2.style.backgroundColor = "#2dcac2";	
-		newimg2.src = "js/homebtn.png";
+		selimg2.style.transform = "scale(1)";
 	}, 500);
 }
 function imgup2(selimg2) {
-		selimg2.style.backgroundColor = "#2dcac2";	
-		newimg2.src = "js/homebtn.png";
+		selimg2.style.transform = "scale(1)";
 }
 
 

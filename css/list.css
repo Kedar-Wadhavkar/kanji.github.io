@@ -1,75 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
-
-html{
-	scroll-behavior: smooth;
-	user-select: none;
-}
-
-*,
-*:after,
-*:before {
-	font-family: 'Merriweather', serif;
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	-webkit-tap-highlight-color: transparent;
-}
-
-body{
-	display: block;
-	background: #000;
-	background-image: url("media/backimg.jpg");
-	background-repeat: repeat;
-	background-size: 100%;
-	background-attachment: fixed;
-}
-
-.uppercontainer{
-	display: block;
-	position: fixed;	
-	width: 100%;
-	top: 0;
-        z-index: 5;
-}
-
-.backbtn, .homebtn{
-	display: block;
-	position: relative;
-	height: 42px;
-	background-color: #2dcac2;
-	margin: 3%;
-	outline: none;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	z-index: 10;
-}
-
-.backbtn{
-	padding: 9px 16px 6px 16px;
-}
-
-.homebtn{
-	position: absolute;
-	top: calc(3% - 2px);
-	right: 0;
-	padding: 7px 16px 6px 16px;
-}
-
-.backbtn img{
-	width: 28px;
-	height: 24px;
-}
-
-.homebtn img{
-	width: 28px;
-}
 
 #myInput{
 	display: block;
 	position: fixed;
 	height: 40px;
-        top: 70px;
+        top: 60px;
 	width: 60%;
 	margin-left: 20%;
 	font-size: 0.95rem;
@@ -82,7 +16,7 @@ body{
 .bar img{
 	position: absolute;
 	width: 20px;
-	top: 80px;
+	top: 70px;
 	right: 24.5%;
 	opacity: 0.4;
 }
@@ -101,7 +35,7 @@ body{
 .maincontainer{
         position: absolute;
 	left: 0;
-        top: 125px;
+        top: 115px;
         width: 100%;
         z-index: -10;
         overflow: scroll !important;
@@ -115,6 +49,7 @@ table{
  	border-collapse: separate;
   	border-spacing: 0px 14px;
 	margin-top: -10px;
+	margin-bottom: 10px;
 }
 
 table tr{	
@@ -292,11 +227,11 @@ table tr td:nth-child(3){
 
 .topbdr{
 	position: absolute;
-	height: 10px;
+	height: 11px;
 	background: black;
 	width: 100%;
 	left: 0;
-	top: -10px;
+	top: -11px;
 	z-index: -1;
 }
 
