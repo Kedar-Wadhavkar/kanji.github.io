@@ -57,8 +57,12 @@ table{
 	margin-bottom: 10px;
 }
 
-tbody {
+tbody{
     	vertical-align: top;
+}
+
+table td{	
+	transition: 0.2s;
 }
 
 table tr td:first-child{
