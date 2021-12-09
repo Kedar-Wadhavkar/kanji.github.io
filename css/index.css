@@ -181,6 +181,7 @@ body{
 	border-top-style: ridge;
 	border-right-style: groove;
 	border-bottom-style: groove;*/
+	transition: 0.3s;
 }
 
 .butImg::before{
@@ -228,23 +229,24 @@ body{
 .ridge{
 	position: absolute;
 	margin: 0;
-	top: -36px;
+	top: -35px;
 	background-color: transparent;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	width: 65px;
-	height: 65px;
+	width: 63px;
+	height: 63px;
 	border-radius: 45%;
 	z-index: 10 !important;
 	border-color: #666;
-	border-width: 2px;
+	border-width: 3px;
 	border-left-style: ridge;
 	border-top-style: ridge;
 	border-right-style: groove;
 	border-bottom-style: groove;
+	transition: 0.3s;
 }
 
 
