@@ -1,52 +1,40 @@
-var newimg1 = document.getElementById("b1");
 var i1 = document.getElementById("i1");
 
-function imgdown1() {	
-	i1.style.backgroundColor = "rgba(0,0,0)";	
-	newimg1.src = "js/media/radical_click.png";
+function botimgdown1() {	
+	i1.style.transform = "scale(0.9)";
 
 	setTimeout(() => {
-		i1.style.backgroundColor = "#2dcac2";	
-		newimg1.src = "js/media/radical.png";
+		i1.style.transform = "scale(1)";
 	}, 500);
 }
-function imgup1() {
-		i1.style.backgroundColor = "#2dcac2";	
-		newimg1.src = "js/media/radical.png";
+function botimgup1() {
+		i1.style.transform = "scale(1)";
 }
 
 
-var newimg2 = document.getElementById("b2");
 var i2 = document.getElementById("i2");
 
-function imgdown2() {	
-	i2.style.backgroundColor = "rgba(0,0,0)";	
-	newimg2.src = "js/media/level_click.png";
+function botimgdown2() {	
+	i2.style.transform = "scale(0.9)";
 
 	setTimeout(() => {
-		i2.style.backgroundColor = "#2dcac2";	
-		newimg2.src = "js/media/level.png";
+		i2.style.transform = "scale(1)";
 	}, 500);
 }
-function imgup2() {
-		i2.style.backgroundColor = "#2dcac2";	
-		newimg2.src = "js/media/level.png";
+function botimgup2() {
+		i2.style.transform = "scale(1)";
 }
 
 
-var newimg3 = document.getElementById("b3");
 var i3 = document.getElementById("i3");
 
-function imgdown3() {	
-	i3.style.backgroundColor = "rgba(0,0,0)";	
-	newimg3.src = "js/media/list_click.png";
+function botimgdown3() {	
+	i3.style.transform = "scale(0.9)";
 
 	setTimeout(() => {
-		i3.style.backgroundColor = "#2dcac2";	
-		newimg3.src = "js/media/list.png";
+		i3.style.transform = "scale(1)";
 	}, 500);
 }
-function imgup3() {
-		i3.style.backgroundColor = "#2dcac2";	
-		newimg3.src = "js/media/list.png";
+function botimgup3() {
+		i3.style.transform = "scale(1)";
 }
