@@ -179,10 +179,9 @@ table tr td:nth-child(3){
 }
 
 .together{
-	width: 99%;
-	margin-left: 0.5%;
+	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap:wrap;
 	justify-content: center;
 }
 
@@ -202,6 +201,10 @@ table tr td:nth-child(3){
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+}
+
+.together button:last-child{
+	width: 33.4%;
 }
 
 .but1 .butImg,
