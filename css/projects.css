@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
+html{
+	scroll-behavior: smooth;
+	user-select: none;
+}
+
+*,
+*:after,
+*:before {
+	font-family: 'Merriweather', serif;
+	font-weight: 700;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body{
+	display: block;
+	background: #111;
+}
+
+.buttoncontainer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1rem;
+}
+
+.maindiv{
+	position: relative;
+	display: block;
+	width: 40%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0.6rem 0.5rem 0.6rem 0.5rem;
+	/*background-color: yellow;*/
+}
+
+.buttoneffect{
+	position: relative;
+	height: 3.5rem;
+	border-radius: 10px 10px 10px 10px;
+	transition: 0.5s;
+	/*background-color: #aaa;*/
+	box-shadow: 0 0 5px 2px #000000;
+	align-items: center;
+	text-align: center;
+}
+
+.effect{
+	display: grid;
+	color: #2dcac2;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background-color: #121212;
+	position: absolute;
+	display: block;
+	top: 1px;
+	left: 1px;
+	right: 1px;
+	bottom: 1px;
+	text-align: center;
+	border-radius: 9px 9px 9px 9px;
+	z-index: 1;
+	border: 1.5px solid #555;
+}
+
+.effect::before{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	height: 45%;
+	border-radius: 7px 7px 3px 3px;
+	background-color: #323232;
+	z-index: -1;
+}
+
+.htext{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	border: 1px solid black;
+	border-radius: 10px;
+	z-index: 10;
+	background-color: white;
+	width: 500px;
+	max-width: 80%;
+}
+
+.modal.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.modal-header .close-button {
+	cursor: pointer;
+ 	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.modal-body {
+	padding: 10px 15px;
+}
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	transition: 200ms ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .5);
+	pointer-events: none;
+	z-index: 5;
+}
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
