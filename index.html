@@ -2,106 +2,161 @@
 <html lang = "en">
 
 <head>
-	<meta charset = "UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Projects</title>
-	<link rel = "icon" href =  "css/media/K.png" type = "image/x-icon">
+        <title>Projects</title>
+        <!^^link rel = "icon" href =  "css/media/K.png" type = "image/x-icon"-->
 
-	<link rel = "stylesheet" href = "css/bootstrap.css">
-	<link rel = "stylesheet" href = "css/navbar_styling.css">
-	<link rel = "stylesheet" href = "css/projects.css">
+        <link rel = "stylesheet" href = "css/projects.css">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	
-	<script defer src="js/script.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <script defer src="js/script.js"></script>
 </head>
 
 <body>
 
 <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 buttoncontainer">
 
-	<div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
-		<div class = "buttoneffect">
-			<button class = "effect" data-modal-target="#modal">
-				<span class = "htext">Day</br>Evaluation</span>
-			</button>
-		</div>
-	</div>
+        <div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
+                <div class = "buttoneffect">
+                        <button class = "effect" data-modal-target="#modal" onclick = "unhide1()">
+                                <span class = "htext">Day</br>Evaluation</span>
+                        </button>
+                </div>
+        </div>
 
-	<div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
-		<div class = "buttoneffect">
-			<button class = "effect" data-modal-target="#modal">
-				<span class = "htext">Hobbies,</br>Sleep</span>
-			</button>
-		</div>
-	</div>
+        <div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
+                <div class = "buttoneffect">
+                        <button class = "effect" data-modal-target="#modal" onclick = "unhide2()">
+                                <span class = "htext">Hobbies,</br>Sleep</span>
+                        </button>
+                </div>
+        </div>
 
-	<div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
-		<div class = "buttoneffect">
-			<button class = "effect" data-modal-target="#modal">
-				<span class = "htext">Gratitude,</br>Memories</span>
-			</button>
-		</div>
-	</div>
+        <div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
+                <div class = "buttoneffect">
+                        <button class = "effect" data-modal-target="#modal" onclick = "unhide3()">
+                                <span class = "htext">Gratitude,</br>Memories</span>
+                        </button>
+                </div>
+        </div>
 
-	<div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
-		<div class = "buttoneffect">
-			<button class = "effect" data-modal-target="#modal">
-				<span class = "htext">Meals</span>
-			</button>
-		</div>
-	</div>
+        <div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
+                <div class = "buttoneffect">
+                        <button class = "effect" data-modal-target="#modal" onclick = "unhide4()">
+                                <span class = "htext">Meals</span>
+                        </button>
+                </div>
+        </div>
 
-	<div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
-		<div class = "buttoneffect">
-			<button class = "effect" data-modal-target="#modal">
-				<span class = "htext">Expenses</span>
-			</button>
-		</div>
-	</div>
+        <div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
+                <div class = "buttoneffect">
+                        <button class = "effect" data-modal-target="#modal" onclick = "unhide5()">
+                                <span class = "htext">Expenses</span>
+                        </button>
+                </div>
+        </div>
 
-	<div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
-		<div class = "buttoneffect">
-			<button class = "effect" data-modal-target="#modal">
-				<span class = "htext">Diary</span>
-			</button>
-		</div>
-	</div>
+        <div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
+                <div class = "buttoneffect">
+                        <button class = "effect" data-modal-target="#modal" onclick = "unhide6()">
+                                <span class = "htext">Diary</span>
+                        </button>
+                </div>
+        </div>
 
 </div>
 
 <div class="modal" id="modal">
-	<div class="modal-header">
-		<div class="title">Example Modal</div>
-		<button data-close-button class="close-button">&times;</button>
-	</div>
+        <div class="modal-header">
+                <div class="title">Example Modal</div>
+                <button data-close-button class="close-button">&times;</button>
+        </div>
 
-	<div class="modal-body">
+        <iframe name = "hiddenConfirm"
+                id = "hiddenConfirm"
+                style = "display:none;"
+                onload = "if(submitted){
+                                        closeModal(modal)
+                                        submitted = false
+                                        clearForms()
+                                        }">
+        </iframe>
+
+        <form class = "forms"
+              id = "form1"
+              method = "POST" 
+              action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScKp-XRzV8fDUGnpIf-lX2EjlcA8QTlGJe9mjVP5CkArEtV5A/formResponse"
+              autocomplete = "off"
+              target = "hiddenConfirm"
+              onsubmit = "submitted=true">
+
+                <div class="contactForm">
+                        <div class="formBox">
+                                <div class="inputBox one">
+                                        <input type="text" name="entry.169091002" placeholder="Kedar" required="">
+                                </div>
+                                <div class="inputBox one">
+                                        <input type="text" name="entry.304636504" placeholder="Last Name here" required="">
+                                </div>
+                                <div class="inputBox one">
+                                        <input type="email" name="emailAddress" placeholder="Email ID here" required="">
+                                </div>
+                                <div class="inputBox two">
+                                        <textarea form = "form1" name="entry.1316832838" placeholder="Feedback / Message here..." required=""></textarea>
+                                </div>                        
+                                <div class="inputBox three">
+                                        <input type="submit" name="submit" value="Send">
+                                </div>
+                        </div> 
+                </div>
+        </form>
+
+        <form class = "forms"
+              id = "form2"
+              method = "POST" 
+              action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScKp-XRzV8fDUGnpIf-lX2EjlcA8QTlGJe9mjVP5CkArEtV5A/formResponse"
+              autocomplete = "off"
+              target = "hiddenConfirm"
+              onsubmit = "submitted=true">
+
+                <div class="contactForm">
+                        <div class="formBox">
+                                <div class="inputBox one">
+                                        <input type="text" name="entry.169091002" placeholder="Ash" required="">
+                                </div>
+                                <div class="inputBox one">
+                                        <input type="text" name="entry.304636504" placeholder="Last Name here" required="">
+                                </div>
+                                <div class="inputBox one">
+                                        <input type="email" name="emailAddress" placeholder="Email ID here" required="">
+                                </div>
+                                <div class="inputBox two">
+                                        <textarea form = "form2" name="entry.1316832838" placeholder="Feedback / Message here..." required=""></textarea>
+                                </div>                        
+                                <div class="inputBox three">
+                                        <input type="submit" name="submit" value="Send">
+                                </div>
+                        </div> 
+                </div>
+        </form>
+
+        <!-- div class="modal-body">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
-	</div>
+        </div -->
+
 </div>
 
 <div id="overlay"></div>
 
-
-
-	<!-- scripts required in this program i placed here -->
-	
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/projects.js"></script>
-	<script src="js/common.js"></script>
-	
-	<!--finished-->
+        <!-- scripts required in this program i placed here -->
+        
+        <!--finished-->
 
 
 </body>
 
 </html>
-
-
-
-
-
