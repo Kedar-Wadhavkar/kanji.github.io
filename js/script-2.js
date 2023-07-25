@@ -1,25 +1,3 @@
-const body = document.querySelector('body');
-
-var checkBox = document.getElementById("chkBox");
-
-
-if (localStorage.getItem("theme") === "dark") {
-        body.classList.add('darkBackground');
-        checkBox.checked = true;
-}
-
-function myFunction() {
-
-        if (checkBox.checked == false){
-                body.classList.remove('darkBackground');
-                localStorage.setItem("theme", "light");
-        }
-        else {
-                body.classList.add('darkBackground');
-                localStorage.setItem("theme", "dark");
-        }
-}
-
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 
@@ -72,31 +50,25 @@ function clearForms() {
 
 
 function unhide1() {
-                        document.getElementById("formName").innerHTML = "Day Evaluation"
                         document.getElementById("form1").style.display = "block";
                         }
 
 function unhide2() {
-                        document.getElementById("formName").innerHTML = "Hobbies, Sleep"
                         document.getElementById("form2").style.display = "block";
                         }
 
 function unhide3() {
-                        document.getElementById("formName").innerHTML = "Gratitude, Memories"
                         document.getElementById("form3").style.display = "block";
                         }
 
 function unhide4() {
-                        document.getElementById("formName").innerHTML = "Meals"
                         document.getElementById("form4").style.display = "block";
                         }
 
 function unhide5() {
-                        document.getElementById("formName").innerHTML = "Expenses"
                         document.getElementById("form5").style.display = "block";
                         }
 
 function unhide6() {
-                        document.getElementById("formName").innerHTML = "Diary"
                         document.getElementById("form6").style.display = "block";
                         }
