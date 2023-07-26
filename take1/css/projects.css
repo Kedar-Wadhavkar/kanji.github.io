@@ -27,6 +27,9 @@ body {
 
 }
 
+
+
+
 @media (prefers-color-scheme: dark) {
 
 body {
@@ -50,26 +53,8 @@ body.darkBackground {
 }
 
 
-.optionsContainer{
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-        margin-top: 0.6rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	width: 50%;
-	background-color: #333;
-	border-radius: 0 15px 15px 0;
-	height: 2.6rem;
-	margin-left: -45%;
-	transition: 0.5s;
-}
-
-.optionsContainer:hover{	
-	margin-left: 0%;
-}
-
 .switch {
+        margin-top: 0.8rem;
         margin-left: 0.8rem;
         position: relative;
         display: inline-block;
@@ -129,9 +114,9 @@ input:checked + .slider:before {
 #checkAuto{
         width: 26px;
         height: 26px;
-        margin-top: calc(0rem - 1px);
-        margin-left: 0.2rem;
-	margin-right: 0.5rem;
+        position: absolute;
+        margin-top: calc(0.8rem - 1px);
+        margin-left: 0.5rem;
         border: none;
         outline: none;
         background-color: inherit;
@@ -139,44 +124,24 @@ input:checked + .slider:before {
 }
 
 #autoImg{
+        position: relative;
         height: 26px;
 }
 
-#loginPage{
-	margin-left: 0.6rem;
-}
 
-#gotoSheet{
-	margin-left: 1.2rem;
+#loginPage{
+        position: absolute;
+        margin-top: 0.8rem;
+        right: 1rem;
+        cursor: pointer;
 }
 
 #logout{
-        cursor: pointer;
+        position: relative;
         height: 24px;
-	width: 30px;
+
         -webkit-filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
         filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
-}
-
-#goSheet{
-        cursor: pointer;
-        height: 24px;
-        -webkit-filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
-        filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
-}
-
-.rightArr{
-	position: absolute;
-	margin-left: calc(100% - 1.5rem);
-	/*background-color: red;*/
-	height: 24px;
-	padding-left: 0.5rem;
-}
-
-#takeOut{
-        cursor: pointer;
-        height: 24px;
-	width: 15px;
 }
 
 
@@ -185,7 +150,7 @@ input:checked + .slider:before {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        padding-top: 0.4rem;
+        padding-top: 1rem;
 }
 
 .maindiv{
