@@ -1,9 +1,17 @@
 const body = document.querySelector('body');
 
 var checkBox = document.getElementById("chkBox");
+var checkAuto = document.getElementById("checkAuto");
 
 
-if (localStorage.getItem("theme") === "dark") {
+if (localStorage.getItem("theme") === "auto") {
+        
+}
+else if (localStorage.getItem("theme") === "light") {
+        body.classList.add('lightBackground');
+        checkBox.checked = false;
+}
+else{
         body.classList.add('darkBackground');
         checkBox.checked = true;
 }
@@ -12,13 +20,29 @@ function myFunction() {
 
         if (checkBox.checked == false){
                 body.classList.remove('darkBackground');
+                body.classList.add('lightBackground');
                 localStorage.setItem("theme", "light");
         }
         else {
                 body.classList.add('darkBackground');
+                body.classList.remove('lightBackground');
                 localStorage.setItem("theme", "dark");
         }
 }
+
+function myFunction2() {        
+        
+        localStorage.setItem("theme", "auto");
+
+        if (checkBox.checked == true){
+                body.classList.remove('darkBackground');
+        }
+        else{
+                body.classList.remove('lightBackground');
+        }
+}        
+
+
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
