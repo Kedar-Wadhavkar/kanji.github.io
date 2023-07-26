@@ -169,16 +169,16 @@ input:checked + .slider:before {
 	margin-left: calc(100% - 1.5rem);
 	/*background-color: red;*/
 	height: 24px;
-	padding-left: 0.5rem;
+	padding-left: 0.55rem;
 }
 
 #takeOut{
-	margin-top: 2px;
+	margin-top: 3px;
         cursor: pointer;
-        height: 20px;
-	width: 11px;
-        -webkit-filter: drop-shadow(1px 0px 0 rgba(117,117,117,1));
-        filter: drop-shadow(1px 0px 0 rgba(117,117,117,1));
+        height: 18px;
+	width: 10px;
+        -webkit-filter: drop-shadow(0.5px 0px 0 rgba(117,117,117,1));
+        filter: drop-shadow(0.5px 0px 0 rgba(117,117,117,1));
 }
 
 
