@@ -54,13 +54,12 @@ body.darkBackground {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-        margin-top: 0.6rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+        margin-top: 0.7rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0.6rem;
 	width: 50%;
 	background-color: #333;
-	border-radius: 0 15px 15px 0;
-	height: 2.6rem;
+	border-radius: 0 13px 13px 0;
 	margin-left: -45%;
 	transition: 0.5s;
 }
@@ -177,6 +176,8 @@ input:checked + .slider:before {
         cursor: pointer;
         height: 24px;
 	width: 15px;
+        -webkit-filter: drop-shadow(1px 0px 0 rgba(117,117,117,1));
+        filter: drop-shadow(1px 0px 0 rgba(117,117,117,1));
 }
 
 
