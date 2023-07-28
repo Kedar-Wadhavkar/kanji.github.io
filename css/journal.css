@@ -20,19 +20,103 @@ html{
 
 @media (prefers-color-scheme: light) {
 
-body {
-        background: #efefef;
-        color: #333;
-  }
+body{
+        background-color: #fffff9;
+}
+
+.optionsContainer{
+	background-color: #efefe0;
+}
+
+.effect{
+        color: #1e4b6e;
+        background-color: #efefe2;
+        border: 1.5px solid #bbb;
+        box-shadow: 0 0 6px 0px #ccc;
+	font-weight: bold;
+}
+
+.effect::before{
+        background-color: #fffffa;
+}
+
+#overlay {
+        background-color: rgba(0, 0, 0, .5);
+}
+
+.modal{
+        background-color: #fffffa;
+        box-shadow: 0 0px 25px #444;
+}
+
+.modal-header .title {
+        background: -webkit-linear-gradient(#1e4b6e, #1e4b6e, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.modal-header .close-button, .inputBox input, .inputBox textarea{
+        color: #000;
+}
+
+.inputBox input[type="submit"]{
+        background: -webkit-linear-gradient(#1e4b6e, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-color: #ddd;
+}
 
 }
 
+
+
+
+
 @media (prefers-color-scheme: dark) {
 
-body {
-        background: #111;
-        color: #FFF;
-  }
+body{
+        background-color: #222;
+}
+
+.optionsContainer{
+	background-color: #333;
+}
+
+.effect{
+        color: #2dcac2;
+        background-color: #121212;
+        border: 1.5px solid #555;
+        box-shadow: 0 0 5px 0px #000000;
+}
+
+.effect::before{
+        background-color: #323232;
+}
+
+#overlay {
+        background-color: rgba(0, 0, 0, .8);
+}
+
+.modal{
+        background-color: #232323;
+}
+
+.modal-header .title {
+        background: -webkit-linear-gradient(#2dcac2, #2dcac2,white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.modal-header .close-button, .inputBox input, .inputBox textarea{
+        color: #eee;
+}
+
+.inputBox input[type="submit"]{
+        background: -webkit-linear-gradient(rgba(0,154,217), white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-color: #aaa;
+}
 
 }
 
@@ -41,31 +125,122 @@ body {
 
 
 body.lightBackground {
-        display: block;
-        background-color: #efefef;
+        background-color: #fffff9;
 }
 
-body.darkBackground {
-        background-color: #111;
+body.lightBackground .optionsContainer{
+	background-color: #efefe0;
 }
+
+body.lightBackground .effect{
+        color: #1e4b6e;
+        background-color: #efefe2;
+        border: 1.5px solid #bbb;
+        box-shadow: 0 0 6px 0px #ccc;
+	font-weight: bold;
+}
+
+body.lightBackground .effect::before{
+        background-color: #fffffa;
+}
+
+body.lightBackground #overlay {
+        background-color: rgba(0, 0, 0, .5);
+}
+
+body.lightBackground .modal{
+        background-color: #fffffa;
+        box-shadow: 0 0px 25px #444;
+}
+
+body.lightBackground .modal-header .title {
+        background: -webkit-linear-gradient(#1e4b6e, #1e4b6e, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+body.lightBackground .modal-header .close-button,
+body.lightBackground .inputBox input,
+body.lightBackground .inputBox textarea{
+        color: #000;
+}
+
+body.lightBackground .inputBox input[type="submit"]{
+        background: -webkit-linear-gradient(#1e4b6e, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-color: #ddd;
+}
+
+
+
+
+body.darkBackground {
+        background-color: #222;
+}
+
+body.darkBackground .optionsContainer{
+	background-color: #333;
+}
+
+body.darkBackground .effect{
+        color: #2dcac2;
+        background-color: #121212;
+        border: 1.5px solid #555;
+        box-shadow: 0 0 5px 0px #000000;
+}
+
+body.darkBackground .effect::before{
+        background-color: #323232;
+}
+
+body.darkBackground #overlay {
+        background-color: rgba(0, 0, 0, .8);
+}
+
+body.darkBackground .modal{
+        background-color: #232323;
+}
+
+body.darkBackground .modal-header .title {
+        background: -webkit-linear-gradient(#2dcac2, #2dcac2,white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+body.darkBackground .modal-header .close-button,
+body.darkBackground .inputBox input,
+body.darkBackground .inputBox textarea{
+        color: #eee;
+}
+
+body.darkBackground .inputBox input[type="submit"]{
+        background: -webkit-linear-gradient(rgba(0,154,217), white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-color: #aaa;
+}
+
+
+
 
 
 .optionsContainer{
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
         margin-top: 0.6rem;
-        padding-top: 0.7rem;
-        padding-bottom: 0.5rem;
-        width: 13.5rem;
-        background-color: #333;
-        border-radius: 0 13px 13px 0;
-        margin-left: -12rem;
-        transition: 0.5s;
+	padding-top: 0.7rem;
+	padding-bottom: 0.5rem;
+	width: 13.5rem;
+	border-radius: 0 13px 13px 0;
+	margin-left: -12.3rem;
+	transition: 0.5s;
+	z-index: 15;
 }
 
-.optionsContainer:hover{        
-        margin-left: 0%;
+.optionsContainer:hover{	
+	margin-left: 0%;
 }
 
 .switch {
@@ -130,7 +305,7 @@ input:checked + .slider:before {
         height: 26px;
         margin-top: calc(0rem - 1px);
         margin-left: 0.2rem;
-        margin-right: 0.5rem;
+	margin-right: 0.5rem;
         border: none;
         outline: none;
         background-color: inherit;
@@ -142,19 +317,19 @@ input:checked + .slider:before {
 }
 
 #loginPage{
-        margin-left: 0.6rem;
+	margin-left: 0.6rem;
 }
 
 #logout{
         cursor: pointer;
         height: 24px;
-        width: 30px;
+	width: 30px;
         -webkit-filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
         filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
 }
 
 #gotoSheet{
-        margin-left: 1.25rem;
+	margin-left: 1.25rem;
 }
 
 #goSheet{
@@ -165,18 +340,18 @@ input:checked + .slider:before {
 }
 
 .rightArr{
-        position: absolute;
-        margin-left: calc(100% - 1.5rem);
-        /*background-color: red;*/
-        height: 24px;
-        padding-left: 0.55rem;
+	position: absolute;
+	margin-left: calc(100% - 1.4rem);
+	/*background-color: red;*/
+	height: 24px;
+	padding-left: 0.55rem;
 }
 
 #takeOut{
-        margin-top: 3px;
+	margin-top: 3px;
         cursor: pointer;
         height: 18px;
-        width: 10px;
+	width: 10px;
         -webkit-filter: drop-shadow(0.5px 0px 0 rgba(117,117,117,1));
         filter: drop-shadow(0.5px 0px 0 rgba(117,117,117,1));
 }
@@ -215,11 +390,9 @@ input:checked + .slider:before {
 
 .effect{
         display: grid;
-        color: #2dcac2;
         width: 100%;
         justify-content: center;
         align-items: center;
-        background-color: #121212;
         position: absolute;
         display: block;
         top: 1px;
@@ -229,9 +402,7 @@ input:checked + .slider:before {
         text-align: center;
         border-radius: 9px 9px 9px 9px;
         z-index: 1;
-        border: 1.5px solid #555;
         font-size: 1rem;
-        box-shadow: 0 0 5px 0px #000000;
 }
 
 .effect::before{
@@ -242,7 +413,6 @@ input:checked + .slider:before {
         right: 2px;
         height: 45%;
         border-radius: 7px 7px 3px 3px;
-        background-color: #323232;
         z-index: -1;
 }
 
@@ -259,6 +429,7 @@ input:checked + .slider:before {
         height: 90%;
         top: 5%;
         left: 5%;
+	font-weight: bold;
 }
 
 
@@ -271,7 +442,6 @@ input:checked + .slider:before {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, .8);
         pointer-events: none;
         z-index: 5;
 }
@@ -287,15 +457,13 @@ input:checked + .slider:before {
         position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        transition: 200ms ease-in-out;
-        z-index: 10;
-        background-color: #232323;
-        border: 3px ridge;
-        border-color: rgba(0,154,217);
-        /*border-radius: 12px 12px 0 0;*/
         width: 500px;
         max-width: 80%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 200ms ease-in-out;
+        border: 3px ridge;
+        border-color: rgba(0,154,217);
+        z-index: 10;
 }
 
 .modal.active {
@@ -307,13 +475,9 @@ input:checked + .slider:before {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #eee;
 }
 
 .modal-header .title {
-        background: -webkit-linear-gradient(#2dcac2, #2dcac2,white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         margin: 0.5rem;
         font-size: 1.25rem;
         font-weight: 700;
@@ -325,8 +489,6 @@ input:checked + .slider:before {
         outline: none;
         background: none;
         font-size: 1.5rem;
-        color: #eee;
-        /*margin-right: 0.5rem;*/
         padding: 0 0.5rem 0 0.5rem;
 }
 
@@ -335,7 +497,6 @@ input:checked + .slider:before {
         height: 3px;
         border-radius: 50%;
         background: linear-gradient(90deg, rgba(0,154,217,1), #55ff06 100%);
-        box-shadow: 2px 2px 8px #000000;
 }
 
 .modal-body {
@@ -347,37 +508,17 @@ input:checked + .slider:before {
         display: none;
 }
 
-.formContainer{
-        position: fixed;
-        border: 1px solid black;
-        border-radius: 10px;
-        z-index: 10;
-        background-color: #333;
-        width: 500px;
-        max-width: 80%;
-        padding: 10px 15px;
-}
-
 .contactForm{
         position: relative;
         display: block;
         padding: 3% 5% 0 5%;
-        /*margin-top: 45%;*/
-        /*padding-top: 24rem;*/
-        background-color: #232323;
-        /*margin-bottom: 5%;*/
-        /*box-shadow: 0 50px 50px #000000;*/
         width: 100%;
         margin-left: 0%;
-        /*border: 3px ridge;
-        border-top: none;
-        border-color: rgba(0,154,217,1);*/
-        /*background-color: yellow;*/
+	background-color: inherit;
 }
 
 .formBox{
         position: relative;
-        /*display: flex;*/
         justify-content: space-between;
         flex-wrap: wrap;
         padding-top: 0px;
@@ -393,18 +534,16 @@ input:checked + .slider:before {
 }
 
 .two{
-        /*height: 5rem;*/
         width: 100%;
 }
 
 .inputBox input{
-        background-color: #232323;
+        background-color: inherit;
         width: auto;
         padding: 5% 0;
         resize: none;
         font-size: 1rem;
         font-weight: 300;
-        color: #eeeeee;
         border: none;
         border-bottom: 1px solid #777;
         outline: none;
@@ -414,15 +553,9 @@ input:checked + .slider:before {
         text-align: center;
         position: relative;
         cursor: pointer;
-        background: -webkit-linear-gradient(rgba(0,154,217), white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-color: #212121;
         max-width: 100%;
         padding: 8px 24px;
-        border: 2px ridge;
-        /*border-color: rgba(0,255,255);*/
-        border-color: #ddd;
+        border: 3px ridge;
         font-weight: 600;
         border-radius: 2px;
 }
@@ -437,14 +570,11 @@ input[type="submit"]:hover{
         resize: none;
         margin-left: -5px;
         padding: 5px;
-        background-color: #232323;
-        color: #eee;
+        background-color: inherit;
         outline: none;
         font-weight: normal;
         font-size: 1rem;
 }
-
-
 
 footer{
         position: absolute;
@@ -455,4 +585,3 @@ footer{
         font-size: 0.8rem;
         font-weight: 500;
 }
-
