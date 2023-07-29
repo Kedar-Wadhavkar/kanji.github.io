@@ -59,7 +59,7 @@ body{
         color: #000;
 }
 
-.inputBox input[type="submit"]{
+.inputBox #submit{
         background: -webkit-linear-gradient(#1e4b6e, black);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -111,7 +111,7 @@ body{
         color: #eee;
 }
 
-.inputBox input[type="submit"]{
+.inputBox #submit{
         background: -webkit-linear-gradient(rgba(0,154,217), white);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -165,7 +165,7 @@ body.lightBackground .inputBox textarea{
         color: #000;
 }
 
-body.lightBackground .inputBox input[type="submit"]{
+body.lightBackground .inputBox #submit{
         background: -webkit-linear-gradient(#1e4b6e, black);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -214,7 +214,7 @@ body.darkBackground .inputBox textarea{
         color: #eee;
 }
 
-body.darkBackground .inputBox input[type="submit"]{
+body.darkBackground .inputBox #submit{
         background: -webkit-linear-gradient(rgba(0,154,217), white);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -560,7 +560,7 @@ input:checked + .slider:before {
         outline: none;
 }
 
-.inputBox input[type="submit"]{
+.inputBox #submit{
         text-align: center;
         position: relative;
         cursor: pointer;
@@ -572,7 +572,7 @@ input:checked + .slider:before {
         margin-bottom: -6%;
 }
 
-input[type="submit"]:hover{
+#submit:hover{
         transform: scale(0.95);
 }
 

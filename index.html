@@ -101,40 +101,29 @@
 
         <div class = "hline"></div>
 
-        <iframe name = "hiddenConfirm"
-                id = "hiddenConfirm"
-                style = "display:none;"
-                onload = "if(submitted){
-                                        closeModal(modal)
-                                        submitted = false
-                                        clearForms()
-                                        }">
-        </iframe>
-
         <form class = "forms"
               id = "form1"
               method = "POST" 
-              action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScKp-XRzV8fDUGnpIf-lX2EjlcA8QTlGJe9mjVP5CkArEtV5A/formResponse"
-              autocomplete = "off"
-              target = "hiddenConfirm"
-              onsubmit = "submitted=true">
+              action = ""
+              autocomplete = "off">
 
                 <div class="contactForm">
                         <div class="formBox">
                                 <div class="inputBox one">
-                                        <input type="text" name="entry.169091002" placeholder="First Name here" required="">
+                                        <input type="text" name="your-name" placeholder="First Name here" required="">
                                 </div>
                                 <div class="inputBox one">
-                                        <input type="text" name="entry.304636504" placeholder="Last Name here" required="">
+                                        <input type="text" name="your-number" placeholder="Last Name here" required="">
                                 </div>
                                 <div class="inputBox one">
-                                        <input type="email" name="emailAddress" placeholder="Email ID here" required="">
+                                        <input type="email" name="your-email" placeholder="Email ID here" required="">
                                 </div>
                                 <div class="inputBox two">
-                                        <textarea form = "form1" name="entry.1316832838" placeholder="Feedback / Message here..." required=""></textarea>
+                                        <textarea form = "form1" name="message" placeholder="Feedback / Message here..." required=""></textarea>
                                 </div>                        
                                 <div class="inputBox three">
-                                        <input type="submit" name="submit" value="Send">
+                                        <!-- input type="submit" name="submit" value="Send"-->
+					<button type="submit" id="submit">Send</button>
                                 </div>
                         </div> 
                 </div>

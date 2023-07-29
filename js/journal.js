@@ -83,8 +83,6 @@ function closeModal(modal) {
 
 
 
-var submitted = false
-
 function clearForms() {
                         document.getElementById("form1").reset()
                         document.getElementById("form2").reset()
@@ -124,3 +122,36 @@ function unhide6() {
                         document.getElementById("formName").innerHTML = "Diary"
                         document.getElementById("form6").style.display = "block";
                         }
+
+
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwg64cqBGTCVtIevWqQaPftfJGhbLghpYeIGP-o9YHaGUQRIpoy-l6hSTbijqotS-nmRg/exec'
+
+const form = document.getElementById("form1");
+const btn = document.getElementById("submit");
+
+
+form.addEventListener('submit', e => {
+
+	e.preventDefault()
+	btn.disabled = true
+	btn.innerHTML = "Saving..."
+
+	console.log(form)
+
+	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+
+	.then(response => { 
+		btn.disabled = false
+		btn.innerHTML = "Submit"
+		clearForms
+	})
+	.then(() => { window.location.reload(); })
+
+	.catch(error => {
+		btn.disabled = false
+		btn.innerHTML = "Submit"
+		alert('Error!', error.message)
+	})
+})
