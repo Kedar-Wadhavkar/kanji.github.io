@@ -49,19 +49,13 @@ body{
         box-shadow: 0 0px 25px #444;
 }
 
-.modal-header .title,
-legend{
+.modal-header .title {
         background: -webkit-linear-gradient(#1e4b6e, #1e4b6e, black);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
 
-.modal-header .close-button,
-.formDate,
-.inputBox,
-.inputBox input,
-.inputBox textarea{
-        color-scheme: light;
+.modal-header .close-button, .inputBox input, .inputBox textarea{
         color: #000;
 }
 
@@ -107,21 +101,14 @@ body{
         background-color: #232323;
 }
 
-.modal-header .title,
-legend{
+.modal-header .title {
         background: -webkit-linear-gradient(#2dcac2, #2dcac2,white);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
 
-
-.modal-header .close-button,
-.formDate,
-.inputBox,
-.inputBox input,
-.inputBox textarea{
-        color-scheme: dark;
-        color: #fff;
+.modal-header .close-button, .inputBox input, .inputBox textarea{
+        color: #eee;
 }
 
 .inputBox #submit{
@@ -166,19 +153,15 @@ body.lightBackground .modal{
         box-shadow: 0 0px 25px #444;
 }
 
-body.lightBackground .modal-header .title,
-body.lightBackground legend{
+body.lightBackground .modal-header .title {
         background: -webkit-linear-gradient(#1e4b6e, #1e4b6e, black);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
 
 body.lightBackground .modal-header .close-button,
-body.lightBackground .formDate,
-body.lightBackground .inputBox,
 body.lightBackground .inputBox input,
 body.lightBackground .inputBox textarea{
-        color-scheme: light;
         color: #000;
 }
 
@@ -219,20 +202,16 @@ body.darkBackground .modal{
         background-color: #232323;
 }
 
-body.darkBackground .modal-header .title,
-body.darkBackground legend{
+body.darkBackground .modal-header .title {
         background: -webkit-linear-gradient(#2dcac2, #2dcac2,white);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
 
 body.darkBackground .modal-header .close-button,
-body.darkBackground .formDate,
-body.darkBackground .inputBox,
 body.darkBackground .inputBox input,
 body.darkBackground .inputBox textarea{
-        color-scheme: dark;
-        color: #fff;
+        color: #eee;
 }
 
 body.darkBackground .inputBox #submit{
@@ -479,24 +458,27 @@ input:checked + .slider:before {
 
 
 .modalParent{
+        /*position: absolute;*/
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        /*overflow-x: hidden;*/
 }
 
 .modal {
         position: absolute;
         top: 10%;
         bottom: 10%;
+        /*left: 50%;*/
         width: 500px;
-        max-width: 88%;
+        max-width: 85%;
         border: 3px ridge;
         border-color: rgba(0,154,217);
         z-index: 10;
         transform: translate(0%, 0%) scale(0);
         transition: 200ms ease-in-out;
-        height: auto;
+        max-height: 35rem;
         overflow: scroll;
 }
 
@@ -542,102 +524,40 @@ input:checked + .slider:before {
         display: block;
         padding: 0% 5% 0 5%;
         width: 100%;        
-        margin: 4% 0 5% 0;
-}
-
-.formDate{
-        display: block;
-        float: right;
-        margin-top: -1%;
-        margin-right: -2%;
-        font-weight: 500;
+        margin: 5% 0 5% 0;
         background-color: inherit;
-        outline: none;
-        border: none;
 }
 
 .formBox{
         position: relative;
+        justify-content: space-between;
+        flex-wrap: wrap;
         padding-top: 0px;
-        width: 106%;
-        margin-left: -3%;
-        margin-bottom: 5%;
-        padding: 0 1% 0 1%;
 }
 
-legend{
-        margin: 0% 0% 4% 3%;
-        padding: 0 2% 0 2%;
+.formBox .inputBox{
+        position: relative;
+        margin: 0 0 6% 0;
 }
 
-.inputBox{
-        display: inline-block;
+.one{
+        width: 60%;
+}
+
+.two{
         width: 100%;
-        float: left;
 }
 
 .inputBox input{
         background-color: inherit;
-        width: 30%;
-        padding: 2% 1%;
+        width: auto;
+        padding: 5% 0;
         resize: none;
         font-size: 1rem;
         font-weight: 300;
         border: none;
         border-bottom: 1px solid #777;
         outline: none;
-        margin-bottom: 2%;
-        margin-left: 2%;
-}
-
-/*
-.inputBox .perc{
-        position: absolute;
-        width: 25%;
-        right: 2.5%;
-}*/
-
-.opt{
-        width: 25%;
-}
-
-#form1 .inputBox,
-#form2 table .hobname{
-        margin-bottom: 5%;
-        padding-left: 1%;
-}
-
-#form1 .inputBox td,
-#form2 .inputBox td{
-        font-weight: 500;
-}
-
-#form1 .inputBox .opt label,
-#form2 .inputBox .hobopt label{
-        font-weight: 500;
-}
-
-#form2 table{
-        width: 100%;        
-}
-
-#form2 table .hobopt{
-        width: 20%;        
-}
-
-.inputBox textarea{
-        width: 98%;
-        height: 5rem;
-        resize: none;
-        margin-left: 1%;
-        margin-top: 2%;
-        margin-bottom: 1%;
-        padding: 1% 1.5%;
-        background-color: inherit;
-        outline: none;
-        font-weight: normal;
-        font-size: 1rem;
-        border-color: #888;
 }
 
 .inputBox #submit{
@@ -649,11 +569,23 @@ legend{
         border: 3px ridge;
         font-weight: 600;
         border-radius: 2px;
-        margin-bottom: 5%;
+        margin-bottom: -6%;
 }
 
 #submit:hover{
         transform: scale(0.95);
+}
+
+.inputBox textarea{
+        width: calc(100% + 5px);
+        height: 5rem;
+        resize: none;
+        margin-left: -5px;
+        padding: 5px;
+        background-color: inherit;
+        outline: none;
+        font-weight: normal;
+        font-size: 1rem;
 }
 
 footer{

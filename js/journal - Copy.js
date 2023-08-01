@@ -65,7 +65,12 @@ closeModalButtons.forEach(button => {
         button.addEventListener('click', () => {
                 const modal = button.closest('.modal')
                 closeModal(modal)
-                hideForms()
+                document.getElementById("form1").style.display = "none";
+                document.getElementById("form2").style.display = "none";
+                document.getElementById("form3").style.display = "none";
+                document.getElementById("form4").style.display = "none";
+                document.getElementById("form5").style.display = "none";
+                document.getElementById("form6").style.display = "none";
           })
 })
 
@@ -76,14 +81,6 @@ function closeModal(modal) {
 }
 
 
-function hideForms() {
-                        document.getElementById("form1").style.display = "none"
-                        document.getElementById("form2").style.display = "none"
-                        document.getElementById("form3").style.display = "none"
-                        document.getElementById("form4").style.display = "none"
-                        document.getElementById("form5").style.display = "none"
-                        document.getElementById("form6").style.display = "none"
-                        }
 
 
 function clearForms() {
@@ -97,37 +94,31 @@ function clearForms() {
 
 
 function unhide1() {
-                        hideForms
                         document.getElementById("formName").innerHTML = "Day Evaluation"
-                        document.getElementById("form1").style.display = "block"
+                        document.getElementById("form1").style.display = "block";
                         }
 
 function unhide2() {
-                        hideForms
                         document.getElementById("formName").innerHTML = "Hobbies, Sleep"
                         document.getElementById("form2").style.display = "block";
                         }
 
 function unhide3() {
-                        hideForms
                         document.getElementById("formName").innerHTML = "Gratitude, Memories"
                         document.getElementById("form3").style.display = "block";
                         }
 
 function unhide4() {
-                        hideForms
                         document.getElementById("formName").innerHTML = "Meals"
-                        document.getElementById("form4").style.display = "block"
+                        document.getElementById("form4").style.display = "block";
                         }
 
 function unhide5() {
-                        hideForms
                         document.getElementById("formName").innerHTML = "Expenses"
                         document.getElementById("form5").style.display = "block";
                         }
 
 function unhide6() {
-                        hideForms
                         document.getElementById("formName").innerHTML = "Diary"
                         document.getElementById("form6").style.display = "block";
                         }
@@ -143,24 +134,24 @@ const btn = document.getElementById("submit");
 
 form.addEventListener('submit', e => {
 
-        e.preventDefault()
-        btn.disabled = true
-        btn.innerHTML = "Saving..."
+	e.preventDefault()
+	btn.disabled = true
+	btn.innerHTML = "Saving..."
 
-        console.log(form)
+	console.log(form)
 
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
 
-        .then(response => { 
-                btn.disabled = false
-                btn.innerHTML = "Saved"
-                clearForms
-        })
-        .then(() => { window.location.reload(); })
+	.then(response => { 
+		btn.disabled = false
+		btn.innerHTML = "Submit"
+		clearForms
+	})
+	.then(() => { window.location.reload(); })
 
-        .catch(error => {
-                btn.disabled = false
-                btn.innerHTML = "Try again!"
-                alert('Error!', error.message)
-        })
+	.catch(error => {
+		btn.disabled = false
+		btn.innerHTML = "Submit"
+		alert('Error!', error.message)
+	})
 })
