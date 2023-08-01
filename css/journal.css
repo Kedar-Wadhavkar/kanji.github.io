@@ -602,23 +602,21 @@ legend{
 }
 
 #form1 .inputBox,
-#form2 table .hobname{
+#form2 .inputBox {
         margin-bottom: 5%;
-        padding-left: 1%;
+        padding-left: 1;
 }
 
 #form1 .inputBox td,
-#form2 .inputBox td{
-        font-weight: 500;
-}
-
+#form2 .inputBox td,
 #form1 .inputBox .opt label,
 #form2 .inputBox .hobopt label{
         font-weight: 500;
 }
 
+#form1 table,
 #form2 table{
-        width: 100%;        
+        width: 100%; 
 }
 
 #form2 table .hobopt{
