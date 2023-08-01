@@ -561,7 +561,8 @@ input:checked + .slider:before {
         padding-top: 0px;
         width: 106%;
         margin-left: -3%;
-        margin-bottom: 5%;
+        margin-bottom: 5.5%;
+	margin-top: 1%;
         padding: 0 1% 0 1%;
 }
 
@@ -604,7 +605,7 @@ legend{
 #form1 .inputBox,
 #form2 .inputBox {
         margin-bottom: 5%;
-        padding-left: 1;
+        padding-left: 1.5%;
 }
 
 #form1 .inputBox td,
