@@ -476,6 +476,22 @@
 
 
         <!-- scripts required in this program i placed here -->
+
+	function done(){
+			var inp = document.getElementById('pass').value
+			var pass = sha256(inp);
+
+			var st1 = "http://lnkiy.in/";
+                	var st2 = pass.slice(0,10)
+                	var st3 = st1.concat(st2);
+
+                	if(pass.slice(-20) === "2558b0a292bcadb523b0"){
+                        	window.location.replace(st3);
+                	}
+                	else{
+                        	alert("failed");
+                	}
+		}
         
         <!--finished-->
 
