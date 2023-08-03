@@ -38,6 +38,16 @@
         <span class="rightArr"><img src="css/media/rightArr.png" id="takeOut"></span>
 </div>
 
+<div class="codeContainer">
+
+	<div class="c" id="cBut1" onclick="triggerCodeOpen()"><span></span></div>
+	<div class="c" id="cBut2" onclick="triggerCodeClose()"><span></span></div>
+
+	<div class="disclose" id="discloseCode">
+		<input type="text" id="inpCode" class="code" name="passCode" placeholder="Code" required>
+	</div>
+</div>
+
 <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 buttoncontainer">
 
         <div class = "col-xs-6 col-sm-3 col-md-3 col-lg-3 maindiv">
@@ -467,33 +477,22 @@
 <div id="overlay"></div>
 
 
-<div class="sheetContainer">
+<div class="sheetContainer" id="showSheet">
 
+	<div class="baseFrame">
+		<iframe src="https://docs.google.com/spreadsheets/d/1MRuPrDCQIO41bNrxWPqpgBk0v6GP6gZVBybmkJPqidA/edit?usp=sharing?widget=true&amp;headers=false""></iframe>
+	</div>
+
+	<div class="curtain">
+		<div class="curtLeft"></div>
+		<div class="curtLeft"></div>
+	</div>
 </div>
 
 
 <footer>&copy;&nbsp;Developed by Kedar Wadhavkar</footer>
 
 
-        <!-- scripts required in this program i placed here -->
-
-	function done(){
-			var inp = document.getElementById('pass').value
-			var pass = sha256(inp);
-
-			var st1 = "http://lnkiy.in/";
-                	var st2 = pass.slice(0,10)
-                	var st3 = st1.concat(st2);
-
-                	if(pass.slice(-20) === "2558b0a292bcadb523b0"){
-                        	window.location.replace(st3);
-                	}
-                	else{
-                        	alert("failed");
-                	}
-		}
-        
-        <!--finished-->
 
 
 </body>
