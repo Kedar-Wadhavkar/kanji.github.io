@@ -1,172 +1,941 @@
-const body = document.querySelector('body');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
 
-var checkBox = document.getElementById("chkBox");
-var checkAuto = document.getElementById("checkAuto");
-
-
-if (localStorage.getItem("theme") === "auto") {
-        
-}
-else if (localStorage.getItem("theme") === "light") {
-        body.classList.add('lightBackground');
-        checkBox.checked = false;
-}
-else{
-        body.classList.add('darkBackground');
-        checkBox.checked = true;
+html{
+        scroll-behavior: smooth;
+        user-select: none;
 }
 
-function myFunction() {
-
-        if (checkBox.checked == false){
-                body.classList.remove('darkBackground');
-                body.classList.add('lightBackground');
-                localStorage.setItem("theme", "light");
-        }
-        else {
-                body.classList.add('darkBackground');
-                body.classList.remove('lightBackground');
-                localStorage.setItem("theme", "dark");
-        }
-}
-
-function myFunction2() {        
-        
-        localStorage.setItem("theme", "auto");
-
-        if (checkBox.checked == true){
-                body.classList.remove('darkBackground');
-        }
-        else{
-                body.classList.remove('lightBackground');
-        }
-}        
-
-
-
-
-
-
-
-
-
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
-})
-
-function openModal(modal) {
-        if (modal == null) return
-        modal.classList.add('active')
-        overlay.classList.add('active')
+*,
+*:after,
+*:before {
+        font-family: 'Merriweather', serif;
+        font-weight: 700;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        -webkit-tap-highlight-color: transparent;
 }
 
 
-closeModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-                const modal = button.closest('.modal')
-                closeModal(modal)
-                hideForms()
-          })
-})
 
-function closeModal(modal) {
-        if (modal == null) return
-        modal.classList.remove('active')
-        overlay.classList.remove('active')
+@media (prefers-color-scheme: light) {
+
+body{
+        background-color: #fffff9;
+}
+
+.optionsContainer{
+        background-color: #efefe0;
+}
+
+.codeContainer .c{
+	background-color: #efefe2;
+        border: 1.5px solid #bbb;
+        box-shadow: 0 0 6px 0px #ccc;
+}
+
+.codeContainer .c span{
+	background-color: #1e4b6e;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	text-shadow: rgba(245,245,245,0.5) 1px 2px 0.5px;
+}
+
+.disclose{
+	background-color: #efefe2;
+}
+
+.effect{
+        color: #1e4b6e;
+        background-color: #efefe2;
+        border: 1.5px solid #bbb;
+        box-shadow: 0 0 6px 0px #ccc;
+        font-weight: bold;
+}
+
+.effect::before{
+        background-color: #fffffa;
+}
+
+#overlay {
+        background-color: rgba(0, 0, 0, .5);
+}
+
+.modal{
+        background-color: #fffffa;
+        box-shadow: 0 0px 25px #444;
+}
+
+.modal-header .title,
+legend{
+        background: -webkit-linear-gradient(#1e4b6e, #1e4b6e, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.modal-header .close-button,
+.formDate,
+.inputBox,
+.inputBox input,
+.inputBox textarea,
+.inputBox select option{
+        color-scheme: light;
+        color: #000;
+}
+
+.inputBox select option{
+	background-color: #fffffa;
+	color: #000;
+}
+
+.inputBox #submit{
+        background: -webkit-linear-gradient(#1e4b6e, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-color: #ddd;
+}
+
 }
 
 
-function hideForms() {
-                        document.getElementById("form1").style.display = "none"
-                        document.getElementById("form2").style.display = "none"
-                        document.getElementById("form3").style.display = "none"
-                        document.getElementById("form4").style.display = "none"
-                        document.getElementById("form5").style.display = "none"
-                        document.getElementById("form6").style.display = "none"
-                        }
-
-
-function clearForms() {
-                        document.getElementById("form1").reset()
-                        document.getElementById("form2").reset()
-                        document.getElementById("form3").reset()
-                        document.getElementById("form4").reset()
-                        document.getElementById("form5").reset()
-                        document.getElementById("form6").reset()
-                        }
-
-
-function unhide1() {
-                        hideForms
-                        document.getElementById("formName").innerHTML = "Day Evaluation"
-                        document.getElementById("form1").style.display = "block"
-                        }
-
-function unhide2() {
-                        hideForms
-                        document.getElementById("formName").innerHTML = "Hobbies, Sleep"
-                        document.getElementById("form2").style.display = "block";
-                        }
-
-function unhide3() {
-                        hideForms
-                        document.getElementById("formName").innerHTML = "Gratitude, Memories"
-                        document.getElementById("form3").style.display = "block";
-                        }
-
-function unhide4() {
-                        hideForms
-                        document.getElementById("formName").innerHTML = "Meals"
-                        document.getElementById("form4").style.display = "block"
-                        }
-
-function unhide5() {
-                        hideForms
-                        document.getElementById("formName").innerHTML = "Expenses"
-                        document.getElementById("form5").style.display = "block";
-                        }
-
-function unhide6() {
-                        hideForms
-                        document.getElementById("formName").innerHTML = "Diary"
-                        document.getElementById("form6").style.display = "block";
-                        }
 
 
 
+@media (prefers-color-scheme: dark) {
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwg64cqBGTCVtIevWqQaPftfJGhbLghpYeIGP-o9YHaGUQRIpoy-l6hSTbijqotS-nmRg/exec'
+body{
+        background-color: #222;
+}
 
-const form = document.getElementById("form6");
-const btn = document.getElementById("submit");
+.optionsContainer{
+        background-color: #333;
+}
+
+.codeContainer .c{
+	background-color: #333;
+        border: 1.5px solid #555;
+        box-shadow: 0 0 6px 0px #000;
+}
+
+.codeContainer .c span{
+	background-color: #eee;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	text-shadow: rgba(0,0,0,0.5) 1px 2px 0.5px;
+}
+
+.disclose{
+	background-color: #333;
+}
+
+.effect{
+        color: #2dcac2;
+        background-color: #121212;
+        border: 1.5px solid #555;
+        box-shadow: 0 0 5px 0px #000000;
+}
+
+.effect::before{
+        background-color: #323232;
+}
+
+#overlay {
+        background-color: rgba(0, 0, 0, .8);
+}
+
+.modal{
+        background-color: #232323;
+}
+
+.modal-header .title,
+legend{
+        background: -webkit-linear-gradient(#2dcac2, #2dcac2,white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
 
 
-form.addEventListener('submit', e => {
+.modal-header .close-button,
+.formDate,
+.inputBox,
+.inputBox input,
+.inputBox textarea,
+.inputBox select option{
+        color-scheme: dark;
+        color: #eee;
+}
 
-        e.preventDefault()
-        btn.disabled = true
-        btn.innerHTML = "Saving..."
+.inputBox select option{
+	background-color: #232323;
+	color: #eee;
+}
 
-        console.log(form)
+.inputBox #submit{
+        background: -webkit-linear-gradient(rgba(0,154,217), white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-color: #aaa;
+}
 
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+}
 
-        .then(response => { 
-                btn.disabled = false
-                btn.innerHTML = "Saved"
-                clearForms
-        })
-        .then(() => { window.location.reload(); })
 
-        .catch(error => {
-                btn.disabled = false
-                btn.innerHTML = "Try again!"
-                alert('Error!', error.message)
-        })
-})
+
+
+
+body.lightBackground {
+        background-color: #fffff9;
+}
+
+body.lightBackground .optionsContainer{
+        background-color: #efefe0;
+}
+
+body.lightBackground .codeContainer .c{
+	background-color: #efefe2;
+        border: 1.5px solid #bbb;
+        box-shadow: 0 0 6px 0px #ccc;
+}
+
+body.lightBackground .codeContainer .c span{
+	background-color: #1e4b6e;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	text-shadow: rgba(245,245,245,0.5) 1px 2px 0.5px;
+}
+
+body.lightBackground .disclose{
+	background-color: #efefe2;
+}
+
+body.lightBackground .effect{
+        color: #1e4b6e;
+        background-color: #efefe2;
+        border: 1.5px solid #bbb;
+        box-shadow: 0 0 6px 0px #ccc;
+        font-weight: bold;
+}
+
+body.lightBackground .effect::before{
+        background-color: #fffffa;
+}
+
+body.lightBackground #overlay {
+        background-color: rgba(0, 0, 0, .5);
+}
+
+body.lightBackground .modal{
+        background-color: #fffffa;
+        box-shadow: 0 0px 25px #444;
+}
+
+body.lightBackground .modal-header .title,
+body.lightBackground legend{
+        background: -webkit-linear-gradient(#1e4b6e, #1e4b6e, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+body.lightBackground .modal-header .close-button,
+body.lightBackground .formDate,
+body.lightBackground .inputBox,
+body.lightBackground .inputBox input,
+body.lightBackground .inputBox textarea
+body.lightBackground select option{
+        color-scheme: light;
+        color: #000;
+}
+
+body.darkBackground .inputBox select option{
+	background-color: #fffffa;
+	color: #000;
+}
+
+body.lightBackground .inputBox #submit{
+        background: -webkit-linear-gradient(#1e4b6e, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-color: #ddd;
+}
+
+
+
+
+body.darkBackground {
+        background-color: #222;
+}
+
+body.darkBackground .optionsContainer{
+        background-color: #333;
+}
+
+body.darkBackground .codeContainer .c{
+	background-color: #333;
+        border: 1.5px solid #555;
+        box-shadow: 0 0 6px 0px #000;
+}
+
+body.darkBackground .codeContainer .c span{
+	background-color: #eee;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	text-shadow: rgba(0,0,0,0.5) 1px 2px 0.5px;
+}
+
+body.darkBackground .disclose{
+	background-color: #333;
+}
+
+body.darkBackground .effect{
+        color: #2dcac2;
+        background-color: #121212;
+        border: 1.5px solid #555;
+        box-shadow: 0 0 5px 0px #000000;
+}
+
+body.darkBackground .effect::before{
+        background-color: #323232;
+}
+
+body.darkBackground #overlay {
+        background-color: rgba(0, 0, 0, .8);
+}
+
+body.darkBackground .modal{
+        background-color: #232323;
+}
+
+body.darkBackground .modal-header .title,
+body.darkBackground legend{
+        background: -webkit-linear-gradient(#2dcac2, #2dcac2,white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+body.darkBackground .modal-header .close-button,
+body.darkBackground .formDate,
+body.darkBackground .inputBox,
+body.darkBackground .inputBox input,
+body.darkBackground .inputBox textarea{
+        color-scheme: dark;
+        color: #eee;
+}
+
+body.darkBackground .inputBox select option{
+	background-color: #232323;
+	color: #eee;
+}
+
+body.darkBackground .inputBox #submit{
+        background: -webkit-linear-gradient(rgba(0,154,217), white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-color: #aaa;
+}
+
+
+
+
+.body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.optionsContainer{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0.6rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.5rem;
+        width: 13.5rem;
+        border-radius: 0 13px 13px 0;
+        margin-left: -12.3rem;
+        transition: 0.5s;
+        z-index: 15;
+}
+
+.optionsContainer:hover{        
+        margin-left: 0%;
+}
+
+.switch {
+        margin-left: 0.8rem;
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+}
+
+.switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+}
+
+.slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #7F7F7F;
+        -webkit-transition: .4s;
+        transition: .4s;
+}
+
+.slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #eee;
+        -webkit-transition: .4s;
+        transition: .4s;
+}
+
+input:checked + .slider {
+        background-color: #7F7F7F;
+}
+
+input:checked + .slider:before {
+        -webkit-transform: translateX(16px);
+        -ms-transform: translateX(16px);
+        transform: translateX(16px);
+        background-color: #111;
+}
+
+.slider.round {
+        border-radius: 20px;
+}
+
+.slider.round:before {
+        border-radius: 50%;
+}
+
+#checkAuto{
+        width: 26px;
+        height: 26px;
+        margin-top: calc(0rem - 1px);
+        margin-left: 0.2rem;
+        margin-right: 0.5rem;
+        border: none;
+        outline: none;
+        background-color: inherit;
+        cursor: pointer;
+}
+
+#autoImg{
+        height: 26px;
+}
+
+#loginPage{
+        margin-left: 0.6rem;
+}
+
+#logout{
+        cursor: pointer;
+        height: 24px;
+        width: 30px;
+        -webkit-filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
+        filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
+}
+
+#gotoSheet{
+        margin-left: 1.25rem;
+}
+
+#goSheet{
+        cursor: pointer;
+        height: 24px;
+        -webkit-filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
+        filter: drop-shadow(0.5px 0.5px 0 rgba(117,117,117,1));
+}
+
+.rightArr{
+        position: absolute;
+        margin-left: calc(100% - 1.4rem);
+        /*background-color: red;*/
+        height: 24px;
+        padding-left: 0.55rem;
+}
+
+#takeOut{
+        margin-top: 3px;
+        cursor: pointer;
+        height: 18px;
+        width: 10px;
+        -webkit-filter: drop-shadow(0.5px 0px 0 rgba(117,117,117,1));
+        filter: drop-shadow(0.5px 0px 0 rgba(117,117,117,1));
+}
+
+
+
+
+.codeContainer{
+	position: absolute;
+	top: 0.8rem;
+	right: 0.8rem;
+	width: 25%;
+	overflow: hidden;
+}
+
+.codeContainer .c{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	float: right;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+	background-color: #efefe2;
+	width: 2rem;
+	height: 1rem;
+	border-radius: 10px 10px 10px 0;
+        border: 1.5px solid #bbb;
+        box-shadow: 0 0 6px 0px #ccc;
+	padding-bottom: 1.9rem;
+        cursor: pointer;
+}
+	
+#cBut1{
+	z-index: 2;
+}
+
+#cBut2{
+	right: -2rem;
+	z-index: 1;	
+}
+
+.codeContainer .c span{
+	font-size: 1.25rem;
+}
+
+.disclose{
+	position: relative;
+	float: right;
+	width: 100%;
+	height: 1.8rem;
+	margin-top: -2rem;
+	right: -100%;
+        transition: 0.6s;
+	border-radius: 10px;
+}
+
+.codeContainer .disclose .code{
+	outline: none;
+	border: none;
+	text-decoration: none;
+	position: absolute;
+	width: 95%;
+	margin-left: 3%;
+	padding-top: 0.4rem;
+	padding-left: 0.5rem;
+	background-color: inherit;
+	color: #777;
+}
+
+
+
+.buttoncontainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.3rem;
+}
+
+.maindiv{
+        position: relative;
+        display: block;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0.6rem 0.5rem 0.6rem 0.5rem;
+}
+
+.buttoneffect{
+        position: relative;
+        height: 4rem;
+        border-radius: 10px 10px 10px 10px;
+        align-items: center;
+        text-align: center;
+}
+
+.buttoneffect:hover {
+        cursor: pointer;
+        transform: scale(0.95);
+}
+
+.effect{
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        display: block;
+        top: 1px;
+        left: 1px;
+        right: 1px;
+        bottom: 1px;
+        text-align: center;
+        border-radius: 9px 9px 9px 9px;
+        z-index: 1;
+        font-size: 1rem;
+}
+
+.effect::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        height: 45%;
+        border-radius: 7px 7px 3px 3px;
+        z-index: -1;
+}
+
+.effect:hover {
+        cursor: pointer;
+}
+
+.htext{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        left: 5%;
+        font-weight: bold;
+}
+
+
+
+#overlay {
+        position: fixed;
+        opacity: 0;
+        transition: 200ms ease-in-out;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 5;
+}
+
+#overlay.active {
+        opacity: 1;
+        pointer-events: all;
+}
+
+
+.modalParent{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.modal {
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        width: 500px;
+        max-width: 88%;
+        border: 3px ridge;
+        border-color: rgba(0,154,217);
+        z-index: 10;
+        transform: translate(0%, 0%) scale(0);
+        transition: 200ms ease-in-out;
+        height: auto;
+        overflow: scroll;
+}
+
+.modal.active {
+        transform: translate(0%, 0%) scale(1);
+}
+
+.modal-header {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.modal-header .title {
+        margin: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+}
+
+.modal-header .close-button {
+        cursor: pointer;
+         border: none;
+        outline: none;
+        background: none;
+        font-size: 1.5rem;
+        padding: 0 0.5rem 0 0.5rem;
+}
+
+.hline{
+        margin: 0% 12% 0% 5%;
+        height: 3px;
+        border-radius: 50%;
+        background: linear-gradient(90deg, rgba(0,154,217,1), #55ff06 100%);
+}
+
+.forms{
+        display: none;
+}
+
+.contactForm{
+        position: relative;
+        display: block;
+        padding: 0% 5% 0 5%;
+        width: 100%;        
+        margin: 4% 0 5% 0;
+}
+
+.formDate{
+        display: block;
+        float: right;
+        margin-top: -1%;
+        margin-right: -2%;
+        font-weight: 500;
+        background-color: inherit;
+        outline: none;
+        border: none;
+}
+
+.formBox{
+        position: relative;
+        padding-top: 0px;
+        width: 106%;
+        margin-left: -3%;
+        margin-bottom: 5.5%;
+	margin-top: 1%;
+        padding: 0 1% 0 1%;
+}
+
+legend{
+        margin: 0% 0% 1.75% 3%;
+        padding: 0 2% 0 2%;
+}
+
+.inputBox{
+        display: inline-block;
+        width: 100%;
+        float: left;
+}
+
+.inputBox input{
+        background-color: inherit;
+        width: 30%;
+        padding: 2% 1%;
+        resize: none;
+        font-size: 1rem;
+        font-weight: 300;
+        border: none;
+        border-bottom: 1px solid #777;
+        outline: none;
+        margin-bottom: 2%;
+        margin-left: 2%;
+}
+
+.inputBox select{
+        background-color: inherit;
+        width: 30%;
+        padding: 2% 1%;
+        resize: none;
+        font-size: 1rem;
+        font-weight: 300;
+        border: none;
+        border-bottom: 1px solid #777;
+        outline: none;
+        margin-bottom: 2%;
+        margin-left: 2%;
+}
+
+/*
+.inputBox .perc{
+        position: absolute;
+        width: 25%;
+        right: 2.5%;
+}*/
+
+.opt{
+        width: 25%;
+}
+
+#form1 .inputBox{
+        margin-bottom: 5%;
+        padding-left: 1.5%;
+}
+
+#form2 .inputBox{
+        margin-top: 2%;
+        margin-bottom: 3%;
+        padding-left: 1.5%;
+}
+
+#form5 .inputBox{
+        margin-bottom: 3%;
+}
+
+#form1 #submit{
+        margin-left: -1.5%;
+}
+
+#form2 #submit{
+        margin-left: -1.5%;
+        margin-top: -2%;
+}
+
+#form1 .inputBox td,
+#form2 .inputBox td,
+#form1 .inputBox .opt label,
+#form2 .inputBox .hobopt label,
+#form5 .inputBox select,
+#form5 .inputBox select option{
+        font-weight: 500;
+}
+
+#form5 .inputBox select option{
+        font-size: 0.75rem;
+	z-index: 20;
+}
+
+#form1 table,
+#form2 table{
+        width: 100%; 
+}
+
+#form2 table .hobopt{
+        width: 20%;        
+}
+
+.inputBox textarea{
+        width: 98%;
+        height: 5rem;
+        resize: none;
+        margin-left: 1%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+        padding: 1% 1.5%;
+        background-color: inherit;
+        outline: none;
+        font-weight: normal;
+        font-size: 1rem;
+        border-color: #888;
+}
+
+#form5 textarea{
+        margin-bottom: 0%;	
+}
+
+#form6 textarea{
+        height: 10rem;
+}
+
+.inputBox #submit{
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        max-width: 100%;
+        padding: 8px 24px;
+        border: 3px ridge;
+        font-weight: 600;
+        border-radius: 2px;
+        margin-bottom: 5%;
+}
+
+#submit:hover{
+        transform: scale(0.95);
+}
+
+.sheetContainer{
+	position: absolute;
+	width: 100%;
+	top: 15rem;
+	bottom: 3rem;
+	/*height: 50rem;*/
+	/*background-color: grey;*/
+}
+
+.curtain{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 10%;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	width: 80%;
+	height: calc(100% - 4rem);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.curtLeft{
+	position: relative;
+	margin-left: 0%;
+	width: 50%;
+	height: 100%;
+	background-color: #fffff9;
+        transition: 0.5s;
+}
+
+.curtRight{
+	position: relative;
+	margin-right: 0%;
+	width: 50%;
+	height: 100%;
+	background-color: #fffff9;
+        transition: 0.5s;
+}
+
+.curtain:hover .curtLeft{
+	translate: -102% 0;
+}
+
+.curtain:hover .curtRight{
+	translate: 102% 0;
+}
+
+.baseFrame{
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	width: 80%;
+	height: calc(100% - 4rem);
+	background-color: white;
+}
+
+.baseFrame iframe{
+	width: 100%;
+	height: 100%;
+}
+
+footer{
+        position: absolute;
+        width: 100%;
+        bottom: 0.5rem;
+        text-align: center;
+        color: #7F7F7F;
+        font-size: 0.8rem;
+        font-weight: 500;
+}
