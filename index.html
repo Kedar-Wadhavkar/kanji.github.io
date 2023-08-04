@@ -31,7 +31,7 @@
 
         <button id="checkAuto" onclick="myFunction2()"><img src="css/media/auto.png" id="autoImg"></button>
 
-        <a href="#" id="loginPage"><img src="css/media/logout.png" id="logout"></a>
+        <a href="#" id="loginPage"><img src="css/media/logout.png" id="logout" onclick="curtainOff()"></a>
 
         <a href="#" id="gotoSheet"><img src="css/media/goto.png" id="goSheet"></a>
 
@@ -41,12 +41,12 @@
 
 <div class="codeContainer">
 
-	<div class="c" id="cBut1" onclick="triggerCodeOpen()"><span>c</span></div>
-	<div class="c" id="cBut2" onclick="triggerCodeClose()"><span>c</span></div>
+        <div class="c" id="cBut1" onclick="triggerCodeOpen()"><span>c</span></div>
+        <div class="c" id="cBut2" onclick="triggerCodeClose()"><span>c</span></div>
 
-	<div class="disclose" id="discloseCode">
-		<input type="text" id="inpCode" class="code" name="passCode" placeholder="Code" required>
-	</div>
+        <div class="disclose" id="discloseCode">
+                <input type="text" id="inpCode" class="code" name="passCode" placeholder="Code"  autocomplete="off" required>
+        </div>
 
 </div>
 
@@ -482,17 +482,18 @@
 
 <div class="sheetContainer" id="showSheet">
 
-	<div class="baseFrame">
-	
-<iframe src="https://docs.google.com/spreadsheets/d/1MRuPrDCQIO41bNrxWPqpgBk0v6GP6gZVBybmkJPqidA/edit?usp=sharing?&amp;rm=minimal&amp;single=true&amp;"></iframe>
+        <div class="baseFrame" id="frameSheet">        
+                <iframe src="#">
+                </iframe>
+        </div>
 
-	</div>
+        <div class="curtain" onclick="curtainOpen()">
 
-	<div class="curtain">
-		<div class="curtLeft"></div>
-		<div class="curtRight"></div>
-	</div>
-	
+                <div class="curt" id="curtLeft"></div>
+                <div class="curt" id="curtRight"></div>
+
+        </div>
+        
 
 </div>
 
@@ -501,58 +502,93 @@
 
 
         <!-- scripts required in this program i placed here -->
-	<script>
-	function done(){
-			var inp = document.getElementById('pass').value
-			var pass = sha256(inp);
+        <script>
+        function done(){
+                        var inp = document.getElementById('pass').value
+                        var pass = sha256(inp);
 
-			var st1 = "http://lnkiy.in/";
-                	var st2 = pass.slice(0,10)
-                	var st3 = st1.concat(st2);
+                        var st1 = "http://lnkiy.in/";
+                        var st2 = pass.slice(0,10)
+                        var st3 = st1.concat(st2);
 
-                	if(pass.slice(-20) === "2558b0a292bcadb523b0"){
-                        	window.location.replace(st3);
-                	}
-                	else{
-                        	alert("failed");
-                	}
-		}
+                        if(pass.slice(-20) === "2558b0a292bcadb523b0"){
+                                window.location.replace(st3);
+                        }
+                        else{
+                                alert("failed");
+                        }
+                }
         </script>
         <!--finished-->
 
 
 <script src="js/sha.js"></script>
 <script>
-function triggerCodeOpen(){
-	
-	document.getElementById("discloseCode").style.right = "0%";
-	document.getElementById("cBut1").style.zIndex = "1";
-	document.getElementById("cBut2").style.zIndex = "2";
-}
 
-function triggerCodeClose(){
-	
-	document.getElementById("discloseCode").style.right = "-100%";
-	document.getElementById("cBut1").style.zIndex = "2";
-	document.getElementById("cBut2").style.zIndex = "1";
-
-	var inp = document.getElementById("inpCode").value
-
-        var pass = sha256(inp);
-
-	var st1 = "http://lnkiy.in/";
-        var st2 = pass.slice(0,10)
-
-        if(pass.slice(-20) === "2558b0a292bcadb523b0"){
-		document.getElementById("showSheet").style.backgroundColor = "grey"
-        	
+        function triggerCodeOpen(){
+        
+                document.getElementById("discloseCode").style.right = "0%";
+                document.getElementById("cBut1").style.zIndex = "1";
+                document.getElementById("cBut2").style.zIndex = "2";
+                setTimeout(() => document.getElementById("inpCode").focus(), 500);
         }
 
-	document.getElementById("inpCode").value = ""
-}
-</script>
+        function triggerCodeClose(){
+        
+                document.getElementById("discloseCode").style.right = "-100%";
+                document.getElementById("cBut1").style.zIndex = "2";
+                document.getElementById("cBut2").style.zIndex = "1";
 
-	
+                var inp = document.getElementById("inpCode").value
+                var pass = sha256(inp);
+                var st1 = "http://lnkiy.in/";
+                var st2 = pass.slice(0,10)
+
+                if(pass.slice(-20) === "2558b0a292bcadb523b0"){
+                        document.getElementById("showSheet").style.display = "block"                
+                }
+
+                document.getElementById("inpCode").value = ""
+        }
+
+        var a = "closed"
+
+        function curtainOpen(){
+                document.getElementById("curtLeft").style.transition = "0.6s";
+                document.getElementById("curtRight").style.transition = "0.6s";
+                document.getElementById("curtLeft").style.transform = "translate(-102%, 0)";
+                document.getElementById("curtRight").style.transform = "translate(102%, 0)";
+                setTimeout(() => document.getElementById("curtLeft").style.transition = "0s", 600);
+                setTimeout(() => document.getElementById("curtRight").style.transition = "0s", 600);
+                a = "opened"
+        }
+
+
+        function curtainClose(){
+                document.getElementById("curtLeft").style.transition = "0.6s";
+                document.getElementById("curtRight").style.transition = "0.6s";
+                document.getElementById("curtLeft").style.transform = "translate(0, 0)";
+                document.getElementById("curtRight").style.transform = "translate(0, 0)";
+                setTimeout(() => document.getElementById("curtLeft").style.transition = "0s", 600);
+                setTimeout(() => document.getElementById("curtRight").style.transition = "0s", 600);
+                a = "closed"
+        }
+
+        document.addEventListener('mouseup', function(e) {
+                    var frame = document.getElementById('frameSheet');
+                    if ((a === "opened") && !frame.contains(e.target)) {
+                        curtainClose()
+                    }
+        });
+
+
+        function curtainOff(){
+                document.getElementById("showSheet").style.display = "none";
+                
+        }
+
+
+</script>
 
 
 </body>

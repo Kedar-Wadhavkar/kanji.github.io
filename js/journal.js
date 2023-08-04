@@ -44,6 +44,12 @@ function myFunction2() {
 
 
 
+
+
+
+
+
+
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 
@@ -137,7 +143,7 @@ function unhide6() {
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwg64cqBGTCVtIevWqQaPftfJGhbLghpYeIGP-o9YHaGUQRIpoy-l6hSTbijqotS-nmRg/exec'
 
-const form = document.getElementById("form1");
+const form = document.getElementById("form6");
 const btn = document.getElementById("submit");
 
 
