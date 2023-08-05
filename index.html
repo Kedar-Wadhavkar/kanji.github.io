@@ -519,14 +519,16 @@
 
                 var inp = document.getElementById("inpCode").value
                 var pass = sha256(inp);
-                var st1 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQQ-w6w0ERP";
-                var st2 = "1EpeTkz6wtl_KDqFb-E6iUgFzRCNG-Uyt2xTmz5JNnBL9uxooRMg5QrDgooaxJl/pubhtml?widget=true&amp;chrome=false&amp;headers=false"
+                var st1 = "https://docs.google.com/spreadsheets/d/1MRuPrDCQIO41bNrxWPqpgBk0v6GP6gZV";
+                var st2 = "JPqidA/pubhtml?widget=true&amp;chrome=false&amp;headers=false"
                 var st3 = st1.concat(inp).concat(st2);
 
-                if(pass.slice(-20) === "6ce910b3980df97413dc"){
+                if(pass.slice(-20) === "8db46d1145a346f6317b"){
                         document.getElementById("showSheet").style.display = "block"
     			var ifram = document.getElementById("sheet");
+    			var goSheet = document.getElementById("gotoSheet");
     			ifram.setAttribute("src", st3);
+    			goSheet.setAttribute("href", st3);
                 }
 
                 document.getElementById("inpCode").value = ""
