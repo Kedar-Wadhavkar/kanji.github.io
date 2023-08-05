@@ -483,7 +483,7 @@
 <div class="sheetContainer" id="showSheet">
 
         <div class="baseFrame" id="frameSheet">
-		<iframe id="sheet" style="display:none;" onload="this.style.display = 'block';">
+		<iframe id="sheet">
 		</iframe>
         </div>
 
@@ -524,11 +524,10 @@
                 var st3 = st1.concat(st2);
 
                 if(pass.slice(-20) === "2558b0a292bcadb523b0"){
-                        document.getElementById("showSheet").style.display = "block"                
+                        document.getElementById("showSheet").style.display = "block"
+    			var ifram = document.getElementById("sheet");
+    			ifram.setAttribute("src", st3);
                 }
-
-    		var ifram = document.getElementById("sheet");
-    		ifram.setAttribute("src", st3);
 
                 document.getElementById("inpCode").value = ""
         }
