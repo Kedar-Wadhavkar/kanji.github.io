@@ -521,14 +521,16 @@
                 var pass = sha256(inp);
                 var st1 = "https://docs.google.com/spreadsheets/d/1MRuPrDCQIO41bNrxWPqpgBk0v6GP6gZV";
                 var st2 = "JPqidA/pubhtml?widget=true&amp;chrome=false&amp;headers=false"
-                var st3 = st1.concat(inp).concat(st2);
+		var st3 = "JPqidA/edit?usp=sharing"
+                var st4 = st1.concat(inp).concat(st2);
+                var st5 = st1.concat(inp).concat(st3);
 
                 if(pass.slice(-20) === "8db46d1145a346f6317b"){
                         document.getElementById("showSheet").style.display = "block"
     			var ifram = document.getElementById("sheet");
     			var goSheet = document.getElementById("gotoSheet");
-    			ifram.setAttribute("src", st3);
-    			goSheet.setAttribute("href", st3);
+    			ifram.setAttribute("src", st4);
+    			goSheet.setAttribute("href", st5);
                 }
 
                 document.getElementById("inpCode").value = ""
