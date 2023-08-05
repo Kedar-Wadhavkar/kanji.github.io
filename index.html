@@ -483,9 +483,7 @@
 <div class="sheetContainer" id="showSheet">
 
         <div class="baseFrame" id="frameSheet">
-                <!-- iframe src="https://docs.google.com/spreadsheets/d/1MRuPrDCQIO41bNrxWPqpgBk0v6GP6gZVBybmkJPqidA/edit?usp=sharing?&amp;rm=minimal&amp;single=true&amp;" -->
-		<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQ-w6w0ERPAkqpq1EpeTkz6wtl_KDqFb-E6iUgFzRCNG-Uyt2xTmz5JNnBL9uxooRMg5QrDgooaxJl/pubhtml?widget=true&amp;chrome=false&amp;headers=false">
-                </iframe<
+		<iframe id="sheet">
 		</iframe>
         </div>
 
@@ -501,28 +499,6 @@
 
 
 <footer>&copy;&nbsp;Developed by Kedar Wadhavkar</footer>
-
-
-        <!-- scripts required in this program i placed here -->
-        <script>
-        function done(){
-                        var inp = document.getElementById('pass').value
-                        var pass = sha256(inp);
-
-                        var st1 = "http://lnkiy.in/";
-                        var st2 = pass.slice(0,10)
-                        var st3 = st1.concat(st2);
-
-                        if(pass.slice(-20) === "2558b0a292bcadb523b0"){
-                                window.location.replace(st3);
-                        }
-                        else{
-                                alert("failed");
-                        }
-                }
-        </script>
-        <!--finished-->
-
 
 <script src="js/sha256.js"></script>
 <script>
@@ -543,12 +519,16 @@
 
                 var inp = document.getElementById("inpCode").value
                 var pass = sha256(inp);
-                var st1 = "http://lnkiy.in/";
-                var st2 = pass.slice(0,10)
+                var st1 = "http://iptvsunnah.lnkiy.in/";
+                var st2 = pass.slice(0,15);
+                var st3 = st1.concat(st2);
 
                 if(pass.slice(-20) === "2558b0a292bcadb523b0"){
                         document.getElementById("showSheet").style.display = "block"                
                 }
+
+    		var ifram = document.getElementById("sheet");
+    		ifram.setAttribute("src", st3);
 
                 document.getElementById("inpCode").value = ""
         }
