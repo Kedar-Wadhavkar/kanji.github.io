@@ -102,51 +102,72 @@ function clearForms() {
                         }
 
 
+var formSheet = ""
+var btnSheet = ""
+flag = false;
+
 function unhide1() {
                         hideForms
-                        document.getElementById("formName").innerHTML = "Day Evaluation"
-                        document.getElementById("form1").style.display = "block"
+                        document.getElementById("formName").innerHTML = "Day Evaluation";
+                        document.getElementById("form1").style.display = "block";
+			formSheet = "form1";
+			btnSheet = "submit1";
+			flag = true;
                         }
 
 function unhide2() {
                         hideForms
-                        document.getElementById("formName").innerHTML = "Hobbies, Sleep"
+                        document.getElementById("formName").innerHTML = "Hobbies, Sleep";
                         document.getElementById("form2").style.display = "block";
+			formSheet = "form2";
+			btnSheet = "submit2";
+			flag = true;
                         }
 
 function unhide3() {
                         hideForms
-                        document.getElementById("formName").innerHTML = "Gratitude, Memories"
+                        document.getElementById("formName").innerHTML = "Gratitude, Memories";
                         document.getElementById("form3").style.display = "block";
+			formSheet = "form3";
+			btnSheet = "submit3";
+			flag = true;
                         }
 
 function unhide4() {
                         hideForms
-                        document.getElementById("formName").innerHTML = "Meals"
-                        document.getElementById("form4").style.display = "block"
+                        document.getElementById("formName").innerHTML = "Meals";
+                        document.getElementById("form4").style.display = "block";
+			formSheet = "form4";
+			btnSheet = "submit4";
+			flag = true;
                         }
 
 function unhide5() {
                         hideForms
-                        document.getElementById("formName").innerHTML = "Expenses"
+                        document.getElementById("formName").innerHTML = "Expenses";
                         document.getElementById("form5").style.display = "block";
+			formSheet = "form5"
+			btnSheet = "submit5";
+			flag = true;
                         }
 
 function unhide6() {
                         hideForms
-                        document.getElementById("formName").innerHTML = "Diary"
+                        document.getElementById("formName").innerHTML = "Diary";
                         document.getElementById("form6").style.display = "block";
+			formSheet = "form6";
+			btnSheet = "submit6";
+			flag = true;
                         }
 
 
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwg64cqBGTCVtIevWqQaPftfJGhbLghpYeIGP-o9YHaGUQRIpoy-l6hSTbijqotS-nmRg/exec'
+var scriptURL = 'https://script.google.com/macros/s/AKfycbwbl7JgefPFK-0VQZKhny4Uyg93Lfvz1ddk9t08JOdyALQxGcLvFr3PhCpaLRkBxNIlYw/exec'
+var form = document.getElementById(formSheet);
+var btn = document.getElementById(btnSheet);
 
-const form = document.getElementById("form6");
-const btn = document.getElementById("submit");
-
-
+if (flag){
 form.addEventListener('submit', e => {
 
         e.preventDefault()
@@ -159,10 +180,14 @@ form.addEventListener('submit', e => {
 
         .then(response => { 
                 btn.disabled = false
-                btn.innerHTML = "Saved"
-                clearForms
+                btn.innerHTML = "Send"
         })
-        .then(() => { window.location.reload(); })
+        .then(() => { 
+                const modal = button.closest('.modal')
+                closeModal(modal)
+                hideForms()
+		form.reset()
+	})
 
         .catch(error => {
                 btn.disabled = false
@@ -170,3 +195,4 @@ form.addEventListener('submit', e => {
                 alert('Error!', error.message)
         })
 })
+}
