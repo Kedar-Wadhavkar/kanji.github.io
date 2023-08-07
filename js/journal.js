@@ -102,8 +102,8 @@ function clearForms() {
                         }
 
 
-var formSheet = ""
-var btnSheet = ""
+var formSheet = "";
+var btnSheet = "";
 flag = false;
 
 function unhide1() {
@@ -155,19 +155,21 @@ function unhide6() {
                         hideForms
                         document.getElementById("formName").innerHTML = "Diary";
                         document.getElementById("form6").style.display = "block";
-			formSheet = "form6";
-			btnSheet = "submit6";
+			formSheet = "#form6";
+			btnSheet = "#submit6";
 			flag = true;
                         }
 
 
 
 
-var scriptURL = 'https://script.google.com/macros/s/AKfycbwbl7JgefPFK-0VQZKhny4Uyg93Lfvz1ddk9t08JOdyALQxGcLvFr3PhCpaLRkBxNIlYw/exec'
-var form = document.getElementById(formSheet);
-var btn = document.getElementById(btnSheet);
 
 if (flag){
+
+var scriptURL = 'https://script.google.com/macros/s/AKfycbyDJu1d0JmNXm0YGICyXqHTnHCdB1Lo6hYXIB4o3c387EjU1ZPiEY-Y3SwXKdm4dWZDRA/exec';
+var form = document.querySelector(formSheet);
+var btn = document.querySelector(btnSheet);
+
 form.addEventListener('submit', e => {
 
         e.preventDefault()
@@ -177,7 +179,6 @@ form.addEventListener('submit', e => {
         console.log(form)
 
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-
         .then(response => { 
                 btn.disabled = false
                 btn.innerHTML = "Send"
@@ -195,4 +196,9 @@ form.addEventListener('submit', e => {
                 alert('Error!', error.message)
         })
 })
+
+var formSheet = "";
+var btnSheet = "";
+flag = false;
+
 }
