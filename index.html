@@ -2,638 +2,92 @@
 <html lang = "en">
 
 <head>
-        <meta charset = "UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset = "UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
-
-        <title>DevApp</title>
-        <link rel = "icon" href = "media/logo.png" type = "image/x-icon">
-
-        <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <link rel = "stylesheet" href = "addPlay.css">
-
+	<title>Keddy-Kanji</title>
+	<link rel = "icon" href =  "css/media/K.png" type = "image/x-icon">
+	
+	<link rel = "stylesheet" href = "css/index.css">
 </head>
 
 <body>
 
+<div class = "upper">
 
-<div class="mainContainerFull">
+	<div class = "lefthalf">
+		<span>よう</span>
+	</div>jm k
 
-        <div class = "bar" onclick="openSearch(this)">
-                <input type="text" name="" id="myInput" placeholder=" Search.." onkeyup="searchFun()" autocomplete="off">
-                <img src="media/search.png" class="mag">
-        </div>
+	<div class = "righthalf">
+		<span>こそ !</span>
+	</div>
+</div>
 
+<div class = "midcontainer">
 
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+<div class = "scrolldiv">
 
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
+	<table id="rad">
+  <tr>
+    <th>へん</th>    <th><img src = "css/media/hen1.png"></th>    <th></th>
+  </tr>
+  <tr>
+    <td>つくり</td>    <td><img src = "css/media/tsukuri.png"></td>    <td></td>
+  </tr>
+  <tr>
+    <td>かんむり</td>    <td><img src = "css/media/kanmuri.png"></td>    <td></td>
+  </tr>
+  <tr>
+    <td>あし</td>    <td><img src = "css/media/ashi.png"></td>    <td></td>
+  </tr>
+  <tr>
+    <td>たれ</td>    <td><img src = "css/media/tare.png"></td>    <td></td>
+  </tr>
+  <tr>
+    <td>にょう</td>    <td><img src = "css/media/nyou.png"></td>    <td></td>
+  </tr>
+  <tr>
+    <td>かまえ</td>    <td><img src = "css/media/kunigamae1.png"></td>    <td></td>
+  </tr>
+  <tr>
+    <td></td>    <td><img src = "css/media/gyougamae.png"></td>    <td></td>
+  </tr>
+  <tr>
+    <td></td>    <td><img src = "css/media/keigamae.png"></td>    <td></td>
+  </tr>
+  <tr>
+    <td></td>    <td><img src = "css/media/hakogamae.png"></td>    <td></td>
+  </tr>
+  <tr>
+    <td></td>    <td><img src = "css/media/tsutsumigamae.png"></td>    <td></td>
+  </tr>
+<tr>
+    <td></td>    <td><img src = "css/media/kigamae.png"></td>    <td></td>
+  </tr>
+<tr>
+    <td></td>    <td><img src = "css/media/mongamae.png"></td>    <td></td>
+  </tr>
+</table>
 
-  <div id="sidebarMenu">
-
-                        <table class="createPlaylistFirst" onclick="addPlaylist(this)">
-                                <tr>
-                                                <td rowspan="2">
-                                                                <button id="addPlaylist">+</button>
-                                                </td>
-                                                <td>
-                                                                Create new playlist
-                                                </td>
-                                </tr>
-                        </table>
-
-                        <div class="showPlaylistSongs">
-                        </div>
-
-  </div>
-
-        
-        <div id="tabs">
-
-                <div class="navigation" >
-                        <ul>
-                                <li class="list activeNav">
-                                        <a class="listHead" href="#tabs-1">
-                                                <span class="icon">G</span>
-                                                <span class="title">ग्रंथ</span>
-                                        </a>
-                                </li>
-                                <li class="list">
-                                        <a class="listHead" href="#tabs-2">
-                                                <span class="icon">S</span>
-                                                <span class="title">स्तोत्र</span>
-                                        </a>
-                                </li>
-                                <li class="list">
-                                        <a class="listHead">
-                                                <span class="icon">J</span>
-                                                <span class="title">जप</span>
-                                        </a>
-                                </li>
-                                <li class="list">
-                                        <a class="listHead">
-                                                <span class="icon">P</span>
-                                                <span class="title">प्रार्थना</span>
-                                        </a>
-                                </li>
-                                <li class="list">
-                                        <a class="listHead">
-                                                <span class="icon">A</span>
-                                                <span class="title">आरती</span>
-                                        </a>
-                                </li>
-                                <li class="list">
-                                        <a class="listHead">
-                                                <span class="icon">B</span>
-                                                <span class="title">भक्तिगीत</span>
-                                        </a>
-                                </li>
-                        </ul>
-                </div>
-
-                <div class="container" id="tabs-1">
-                        <table id="myTable">
-
-                                <tr>
-                                        <td>
-                                                <details id="details1">
-
-                                                        <summary class="mainSummary">
-                                                                <div for="detail-one" class = "effect">
-                                                                        <span class="htext">BhagwadGita</span>
-                                                                        <button class="addSavedPlaylist"><img src="media/add_playlist.png"></button>
-                                                                        <button class="addPlayingPlaylist"><img src="media/play_add.png"></button>
-                                                                        <button class="playNow"><img src="media/play.png"></button>
-                                                                </div>
-                                                        </summary>
-
-                                                        <div class="tog">
-
-                                                                <div class="cont">
-                                                                        <div class="innerCont">
-
-                                                                                <div class="small" onclick = "unhide1(this)">1</div>
-                                                                                <div class="small smallload" onclick = "unhide2(this)">2</div>
-                                                                                <div class="small" onclick = "unhide3(this)">3</div>
-                                                                                <div class="small" onclick = "unhide4(this)">4</div>
-                                                                                <div class="small" onclick = "unhide5(this)">5</div>
-                                                                                <div class="small" onclick = "unhide6(this)">6</div>
-                                                                                <div class="small" onclick = "unhide7(this)">7</div>
-                                                                                <div class="small" onclick = "unhide8(this)">8</div>
-                                                                                <div class="small" onclick = "unhide9(this)">9</div>
-                                                                                <div class="small" onclick = "unhide10(this)">10</div>
-                                                                                <div class="small" onclick = "unhide11(this)">11</div>
-                                                                                <div class="small" onclick = "unhide12(this)">12</div>
-                                                                                <div class="small" onclick = "unhide13(this)">13</div>
-                                                                                <div class="small" onclick = "unhide14(this)">14</div>
-                                                                                <div class="small" onclick = "unhide15(this)">15</div>
-                                                                                <div class="small" onclick = "unhide16(this)">16</div>
-                                                                                <div class="small" onclick = "unhide17(this)">17</div>
-                                                                                <div class="small smalllast" onclick = "unhide18(this)">18</div>
-
-                                                                        </div>
-                                                                </div>
-
-                                                                <div class="cont2 chap1">
-
-                                                                        <div class="chapName">1. Arjun Vishad Yog</div>
-
-                                                                        <div class="tableDiv">
-
-                                                                                <div class = "row">
-                                                                                        <button value="1001001001" onclick="addFunction(this.value)">1.01</button>
-                                                                                        <button value="1001001002" onclick="addFunction(this.value)">1.02</button>
-                                                                                        <button value="1001001003" onclick="addFunction(this.value)">1.03</button>
-                                                                                        <button value="1001001004" onclick="addFunction(this.value)">1.04</button>
-                                                                                        <button value="1001001005" onclick="addFunction(this.value)">1.05</button>
-                                                                                </div>
-                                                                                <div class = "row">
-                                                                                        <button>1.06</button>
-                                                                                        <button>1.07</button>
-                                                                                        <button>1.08</button>
-                                                                                        <button>1.09</button>
-                                                                                        <button>1.10</button>
-                                                                                </div>
-                                                                                <div class = "row">
-                                                                                        <button>1.11</button>
-                                                                                        <button>1.12</button>
-                                                                                        <button>1.13</button>
-                                                                                        <button>1.14</button>
-                                                                                        <button>1.15</button>
-                                                                                </div>
-                                                                                <div class = "row">
-                                                                                        <button>1.16</button>
-                                                                                        <button>1.17</button>
-                                                                                        <button>1.18</button>
-                                                                                        <button>1.19</button>
-                                                                                        <button>1.20</button>
-                                                                                </div>
-
-                                                                        </div>
-                                                                </div>
-
-                                                                <div class="cont2 chap2 chapload">
-
-                                                                        <div class="chapName">2. Sankhya Yog</div>
-
-                                                                        <div class="tableDiv">
-
-                                                                                <div class = "row">
-                                                                                        <button>2.01</button>
-                                                                                        <button>2.02</button>
-                                                                                        <button>2.03</button>
-                                                                                        <button>2.04</button>
-                                                                                        <button>2.05</button>
-                                                                                </div>
-                                                                                <div class = "row">
-                                                                                        <button>2.06</button>
-                                                                                        <button>2.07</button>
-                                                                                        <button>2.08</button>
-                                                                                        <button>2.09</button>
-                                                                                        <button>2.10</button>
-                                                                                </div>
-                                                                                <div class = "row">
-                                                                                        <button>2.11</button>
-                                                                                        <button>2.12</button>
-                                                                                        <button>2.13</button>
-                                                                                        <button>2.14</button>
-                                                                                        <button>2.15</button>
-                                                                                </div>
-                                                                                <div class = "row">
-                                                                                        <button>2.16</button>
-                                                                                        <button>2.17</button>
-                                                                                        <button>2.18</button>
-                                                                                        <button>2.19</button>
-                                                                                        <button>2.20</button>
-                                                                                </div>
-
-                                                                        </div>
-                                                                </div>
-
-                                                        </div>
-
-                                                </details>
-                                        </td>
-                                </tr>
-                                
-                        </table>
-                </div>
-
-                <div class="container" id="tabs-2">
-                        <table id="myTable">
-
-                                <tr>
-                                        <td>                
-                                                <div class="mainSummary">
-                                                        <div for="detail-one" class = "effect">
-                                                                <span class="htext">Shiv Tandav Stotra</span>
-                                                                <button class="addSavedPlaylist"><img src="media/add_playlist.png"></button>
-                                                                <button class="addPlayingPlaylist" value="1002000000" onclick="addFunction(this.value)"><img src="media/play_add.png"></button>
-                                                                <button class="playNow"><img src="media/play.png"></button>
-                                                        </div>
-                                                </div>
-                                        </td>
-                                </tr>
-
-                        </table>
-                </div>
-
-        </div>
-
-
-        <div class="mobile-slider-container" id="refreshThis">
-
-                <div class="controlDiv">
-                        <button class="loopPlaylistBut" onclick="playlistLoop()"><img src="media/repeat.png"></button>
-                        <button class="prevPlayBut" onclick="prevPlay()"><img src="media/play_previous.png"></button>
-                        <button class="playPlaylist" onclick="startPlaylist()"><img id="playPlaylistImg" src="media/play.png"></button>
-                        <button class="nextPlayBut" onclick="nextPlay()"><img src="media/play_next.png"></button>
-                        <button class="clearPlaylistBut" onclick="clearPlaylist()"><img src="media/delete.png"></button>
-                </div>
-
-                <div class="mobile-slider-line">
-                        <div class="slider-line"></div>
-                </div>
-                                
-                <div id="nowWindow">
-
-                        <div class="lyricsCont">
-                                <div class="lyricsWindow"></div>
-                        </div>
-
-                        <div class="currAudName">
-                        </div>
-
-                        <button class="lyricsBut" onclick="lyricsBut()"><img src="media/lyrics.png"></button>
-                        <button for="cars" class="playBackBut" onclick="playBackBut()"><img src="media/play_speed.png"></button>
-                        <select id="speed" onchange="changePlaySpeed(this.value)">
-                                <option class="opt" value="0.25">0.25 X</option>
-                                <option class="opt" value="0.50">0.50 X</option>
-                                <option class="opt" value="0.75">0.75 X</option>
-                                <option class="opt" value="1.00" selected >normal</option>
-                                <option class="opt" value="1.25">1.25 X</option>
-                                <option class="opt" value="1.50">1.50 X</option>
-                                <option class="opt" value="1.75">1.75 X</option>
-                                <option class="opt" value="2.00">2.00 X</option>
-                        </select>
-
-                        <div class="nowAudCont">
-                                <div class="nowAud" id="hereAud">
-                                </div>
-                        </div>
-
-                        <div class="nowAudControlDiv">
-                                <button class="loopNowAud" onclick="nowAudLoop()"><img src="media/rep_once.png"></button>
-                                <button class="prevFifBut" onclick="prevFifteen()"><img src="media/bef_minus.png"></button>
-                                <button class="playNowAud" onclick="startPlaylist()"><img id="playNowAudImg" src="media/play_black.png"></button>
-                                <button class="nextFifBut" onclick="nextFifteen()"><img src="media/next_plus.png"></button>
-                                <button class="closeNowAud" onclick="closeNowAud()"><img src="media/close_black.png"></button>
-                        </div>
-
-                </div>
-
-                <div class="playingPlaylistItems" id="listWithHandle">
-                </div>
-
-        </div>
-
-        <div class="modalParent">
-
-                <div class="modal" id="modal">
-
-                                <div class="modal-header">
-                                                                <div class="title" id="formName">Form Name</div>
-                                                                <button data-close-button class="close-button">&times;</button>
-                                </div>
-
-                                <div class = "hline">
-                                </div>
-
-                                <div id="addPlaylistForm" style="color: #fff;">
-
-                                        <!-- <input type="text" class="addPlaylistName" placeholder="Name" maxlength="10" required style="color: #fff;"/> -->
-                                        <!-- <form id="createPlaylistForm">
-                                                        <fieldset class="formBox">
-                                                                <legend>Playlist details</legend>
-                                                                                <div class="inputBox">
-                                                                                                <input type="text" class="createPlaylistName" placeholder="Name" maxlength="25" required>
-                                                                                                <input type="text" class="createPlaylistDesc" placeholder="Description" maxlength="35" required>
-                                                                                </div>
-                                                        </fieldset>
-                                                        <button type="submit" class="subBtn">Save</button> -->
-                                                        <!-- <button class="subBtn" onclick="createPlaylist(this)">Save</button> -->
-                                        <!-- </form> -->
-                                </div>
-
-                                <div class="showPlaylistsHere">
-                                </div>
-                </div>
-        </div>
-
-        <!-- <div id="playlist" onclick="downloadPlaylist(this.id)" style="background-color: #ddd;height: 20px;width: 20px;display: flex;justify-content: center;align-items: center;margin: 1rem;border-radius: 2px;">
-                        !
-        </div> -->
-
-        <div id="overlay"></div>
-
+</div>
 </div>
 
 
+<div class = "bottomcontainer">
+	<div class = "together">
+		<button onclick = "location.href='radicals.html'" class = "but1" ontouchstart="botimgdown1();" ontouchend="botimgup1();"><div class = "topbdr"></div><span id = "i1" class = "butImg"><img src = "css/media/radical.png"></span><br/><span class = "butName">Radicals</span></button>
 
-<script src="Sortable.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="script.js"></script>
-<script src="playlistData.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+		<button onclick = "location.href='levels.html'" class = "but2" ontouchstart="botimgdown2();" ontouchend="botimgup2();"><div class = "topbdr"></div><span id = "i2" class = "butImg"><img src = "css/media/level.png"></span><br/><span class = "butName">Levels</span></button>
 
+		<button onclick = "location.href='list.html'" class = "but3" ontouchstart="botimgdown3();" ontouchend="botimgup3();"><div class = "topbdr"></div><span id = "i3" class = "butImg"><img src = "css/media/list.png" class = "lisimg"></span><br/><span class = "butName">List</span></button>
+	</div>
+</div>
 
 
-
-<script>
-
-$( function() {
-        $( "#tabs" ).tabs();
-} );
-
-
-function openSearch(){
-        document.getElementById("myInput").focus();
-};
-
-const navList = document.querySelectorAll(".list");
-function addActToList(){
-        navList.forEach((item) =>
-        item.classList.remove('activeNav'));
-        this.classList.add('activeNav');
-};
-navList.forEach((item) => 
-item.addEventListener('click', addActToList));
-
-
-
-function addEvLis(form){
-
-                form.addEventListener('submit', e => {
-
-                        var btn = document.querySelector(".subBtn");
-
-                        e.preventDefault();
-                        btn.disabled = true;
-                        btn.innerHTML = "Saving...";
-
-                        createPlaylistName = document.querySelector(".createPlaylistName");
-                        createPlaylistDesc = document.querySelector(".createPlaylistDesc");
-                        
-                        var updatedSavedPlaylistsDict = JSON.parse(localStorage.getItem("savedPlaylistsDictionary"));
-                        var nowSavedList = updatedSavedPlaylistsDict["savedPlaylistsList"];
-                        var nextPlaylistId = "P" + (parseInt(nowSavedList.at(nowSavedList.length-1).slice(-3))+1);
-
-                        nowSavedList.push(nextPlaylistId);
-                        updatedSavedPlaylistsDict["savedPlaylistsList"] = nowSavedList;
-
-                        updatedSavedPlaylistsDict[nextPlaylistId] = 
-                        {
-                                "Name":createPlaylistName.value,
-                                "Description":createPlaylistDesc.value,
-                                "SavedListAudList":[]
-                        }
-
-                        localStorage.setItem("savedPlaylistsDictionary", JSON.stringify(updatedSavedPlaylistsDict));
-
-                        addPlaylistFace(updatedSavedPlaylistsDict, nextPlaylistId);
-                        
-                        btn.disabled = false;
-                        btn.innerHTML = "Save";
-                        form.reset();
-                        closeModal(modal);
-
-                }, { once: true });
-
-};
-
-function addPlaylistFace(savedPlaylistsDictionary, thisSavedPlaylist){
-
-        const savedPlaylistsFaces = document.querySelector(".showPlaylistSongs");
-
-        const tableMain = document.createElement("table");
-        tableMain.classList.add("playlistTable");
-        tableMain.paramSavedplaylistName = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
-        tableMain.paramSavedplaylistId = thisSavedPlaylist;
-        tableMain.addEventListener("click", openModal, false);
-        tableMain.addEventListener("click", showPlaylists, false);
-        savedPlaylistsFaces.appendChild(tableMain);
-
-        const tr11 = document.createElement("tr");
-        tableMain.appendChild(tr11);
-
-        const td11 = document.createElement("td");
-        td11.rowSpan = 2;
-        tr11.appendChild(td11);
-        const but11 = document.createElement("button");
-        but11.classList.add("playlistBullets");
-        but11.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Name"].charAt(0);
-        td11.appendChild(but11);
-
-        const td12 = document.createElement("td");
-        td12.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
-        tr11.appendChild(td12);
-
-        const tr12 = document.createElement("tr");
-        tableMain.appendChild(tr12);
-        
-        const td21 = document.createElement("td");
-        td21.classList.add("playlistDescription");
-        td21.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Description"];
-        tr12.appendChild(td21);
-
-        // create div to display audio divs
-        const showSavedPlaylistAud = document.querySelector(".showPlaylistsHere");
-        const hiderest = document.createElement("div");
-        hiderest.classList.add("hideRest");
-        hiderest.setAttribute("audfromplaylistid", thisSavedPlaylist);
-        hiderest.setAttribute("mutationhere", "");
-        showSavedPlaylistAud.appendChild(hiderest);
-
-
-};
-
-
-
-var sort;
-function sortIt(thisSortingDiv){
-        sort = Sortable.create(document.querySelector("#" + thisSortingDiv), {
-                        handle: '.my-handle',
-                        animation: 150
-        });
-};
-
-// this is specially for now playing playlist
-const targetNode1 = document.querySelector('.playingPlaylistItems');
-const config1 = {childList: true};
-const callback1 = mutations => {
-  mutations.forEach(mutation => {
-    if (mutation.type === 'childList') {
-                        const playlist = $('.playingPlaylistItems > div').map((i, div) => parseInt(div.id)).get();
-                        localStorage.setItem('playlist', JSON.stringify(playlist));
-    }
-  });
-}
-const observer1 = new MutationObserver(callback1);
-observer1.observe(targetNode1, config1);
-
-// this is specially for saved playlists
-const callback2 = mutations => {
-                          mutations.forEach(mutation => {
-                                    if (mutation.type === 'childList') {
-                                                                const playlist = $('[mutationhere="yes"] > div').map((i, div) => parseInt(div.id)).get();
-                                                                var savedPlaylistIdSet = document.querySelector('[mutationhere="yes"]').getAttribute("audfromplaylistid");
-                                                                var updatedSavedPlaylistsDict = JSON.parse(localStorage.getItem("savedPlaylistsDictionary"));
-                                                                updatedSavedPlaylistsDict[savedPlaylistIdSet]["SavedListAudList"] = playlist;
-                                                                localStorage.setItem("savedPlaylistsDictionary", JSON.stringify(updatedSavedPlaylistsDict));
-                                    }
-                          });
-                }
-const observer2 = new MutationObserver(callback2);
-
-
-function addPlaylist(){
-
-                if (document.querySelector("#createPlaylistForm")){
-                        document.querySelector("#createPlaylistForm").remove();
-                }
-        
-                document.getElementById("modal").classList.add('active');
-                document.getElementById("overlay").classList.add('active');
-
-                document.getElementById("formName").innerHTML = "Create a Playlist";
-
-                document.querySelector(".showPlaylistsHere").style.display = "none";
-
-                var appendHereForm = document.getElementById("addPlaylistForm");
-                const playlistForm = document.createElement("form");
-                playlistForm.id = "createPlaylistForm";
-                appendHereForm.appendChild(playlistForm);
-                
-                const playlistFormFieldset = document.createElement("fieldset");
-                playlistFormFieldset.classList.add("formBox");
-                playlistForm.appendChild(playlistFormFieldset);
-
-                const formLegend = document.createElement("legend");
-                formLegend.innerHTML = "Playlist details";
-                playlistFormFieldset.appendChild(formLegend);
-
-                const formInputsDiv = document.createElement("div");
-                formInputsDiv.classList.add("inputBox");
-                playlistFormFieldset.appendChild(formInputsDiv);
-
-                const formInputName = document.createElement("input");
-                formInputName.type = "text";
-                formInputName.classList.add("createPlaylistName");
-                formInputName.placeholder = "Name";
-                formInputName.maxLength = "20";
-                formInputName.required = "true";
-                formInputsDiv.appendChild(formInputName);
-
-                const formInputDesc = document.createElement("input");
-                formInputDesc.type = "text";
-                formInputDesc.classList.add("createPlaylistDesc");
-                formInputDesc.placeholder = "Description";
-                formInputDesc.maxLength = "25";
-                formInputDesc.required = "true";
-                formInputsDiv.appendChild(formInputDesc);
-
-                const subFormBtn = document.createElement("button");
-                subFormBtn.type = "submit";
-                subFormBtn.classList.add("subBtn");
-                subFormBtn.innerHTML = "Save";
-                playlistForm.appendChild(subFormBtn);
-
-                addEvLis(document.querySelector("#createPlaylistForm"));
-
-                appendHereForm.style.display = "";
-
-};
-
-function showPlaylists(particularPlaylistId){
-                
-                document.getElementById("addPlaylistForm").style.display = "none";
-                document.querySelector(".showPlaylistsHere").style.display = "";
-
-                const savedPlaylists = document.querySelectorAll(".hideRest");
-                savedPlaylists.forEach(savedPlaylist => {
-                                savedPlaylist.removeAttribute('id');
-                                savedPlaylist.setAttribute("mutationhere", "");
-                });
-
-                sort.destroy();
-
-                // var makeChangesPlaylist = document.querySelector("[audFromPlaylistId=" + particularPlaylistId + "]");
-                var makeChangesPlaylist = document.querySelector("[audfromplaylistid=" + particularPlaylistId.currentTarget.paramSavedplaylistId + "]");
-                makeChangesPlaylist.id = "listWithHandle2";
-                makeChangesPlaylist.setAttribute("mutationhere", "yes");
-                sortIt("listWithHandle2");
-                makeChangesPlaylist.style.display = "block";
-                
-                const targetNode2 = document.querySelector('#listWithHandle2');
-                const config2 = {childList: true};
-                observer2.observe(targetNode2, config2);
-};
-
-
-
-function openModal(savedPlaylist) {
-
-document.getElementById("modal").classList.add('active');
-document.getElementById("overlay").classList.add('active');
-document.getElementById("formName").innerHTML = savedPlaylist.currentTarget.paramSavedplaylistName;
-
-};
-
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-closeModalButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                                const modal = button.closest('.modal')
-                                closeModal(modal)
-                })
-})
-
-function closeModal(modal) {
-
-                sort.destroy();
-
-                if (modal == null) return
-                modal.classList.remove('active')
-                overlay.classList.remove('active')
-
-                const savedPlaylists = document.querySelectorAll(".hideRest");
-                savedPlaylists.forEach(savedPlaylist => {
-                                savedPlaylist.removeAttribute('id');
-                                savedPlaylist.style.display = "none";
-                });
-                
-                observer2.disconnect();
-
-                sortIt("listWithHandle");
-};
-
-
-</script>
-
-
-
-
-
-
+	<script src = "js/index.js"></script>
 
 </body>
+
 </html>
