@@ -1,0 +1,1285 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
+html{
+        scroll-behavior: smooth;
+        user-select: none;
+}
+
+*,
+*:after,
+*:before {
+        font-family: 'Merriweather', serif;
+        font-weight: 700;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        -webkit-tap-highlight-color: transparent;
+}
+
+body {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+}
+
+element.style {
+        bottom: 20px !important;
+        right: 34.175px !important;
+}
+
+#shadow-root{
+        display: none;
+}
+
+
+/* ----------------------- MAIN ENTIRE CONTAINER REPLACING BODY ----------------------- */
+.mainContainerFull{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #191919;
+        /* background: linear-gradient(180deg, #191919 0%, #292929 100%); */
+        overflow: hidden;
+}
+/* ----------------------- MAIN ENTIRE CONTAINER END ----------------------- */
+
+
+
+
+
+/* ----------------------- NAVIGATION BAR LEFT ----------------------- */
+
+.navigation{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 45px;
+        overflow-x: hidden;
+        background-color: #333;
+        transition: width 250ms;
+        z-index: 30;
+}
+
+.navigation ul{
+        width: 100%;
+        padding-left: 5px;
+        padding-top: 60px;
+        margin-left: 0;
+}
+
+.navigation ul li{
+        list-style: none;
+        width: 100%;
+        height: 45px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        margin-bottom: 0.8rem;
+        cursor: pointer;
+}
+
+.activeNav{
+        background-color: #191919;
+}
+
+.listHead{
+        position: relative;
+        display: flex;
+        width: 100%;
+        text-decoration: none;
+        color: #eee;
+}
+
+.activeNav .listHead::before{
+        content: '';
+        position: absolute;
+        top: -40px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 15px 15px 0 #191919;
+        z-index: -100;
+}
+
+.activeNav .listHead::after{
+        content: '';
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 15px -15px 0 #191919;
+        z-index: -100;
+}
+
+.listHead .icon{
+        position: absolute;
+        display: block;
+        padding-top: 7px;
+        width: 35px;
+        height: 45px;
+        margin-right: 10px;
+        font-size: 1.5rem;
+        opacity: 0.5;
+        text-align: center;
+}
+
+.activeNav .listHead .icon{
+        opacity: 1;
+        color: #2dcac2;
+        text-shadow: -1px -1px #000;
+}
+
+.listHead .title{
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 45px;
+        padding-left: 10px;
+        margin-left: 50px;
+        font-size: 1.1rem;
+        opacity: 0.5;
+        z-index: 100;
+}
+
+.activeNav .listHead .title{
+        opacity: 1;
+}
+
+/* ----------------------- NAVIGATION BAR LEFT END ----------------------- */
+
+
+
+
+
+/* ----------------------- SEARCH BAR ----------------------- */
+
+#myInput{
+        display: block;
+        position: fixed;
+        height: 40px;
+  top: 10px;
+        width: 40px;
+        margin-left: 17%;
+        font-size: 0.95rem;
+        border-radius: 5px 5px 5px 5px;
+        border-radius: 20px;
+        padding-left: 18px;
+        font-weight: bold;
+        background-color: #333;
+        outline: none;
+        border: none;
+        /* border: 2px inset rgb(45, 202, 194, 0.4); */
+        color: #eee;
+        transition: width 0.3s;
+}
+
+.mag{
+        position: absolute;
+        width: 20px;
+        top: 20px;
+        filter: invert(0.6);
+        margin-left: calc(17% + 10px);
+}
+
+#myInput::placeholder {
+          color: transparent;
+}
+
+#myInput:focus::placeholder {
+        color: #777;
+}
+
+#myInput:focus{
+        z-index: 10;
+        width: 60%;
+}
+
+#myInput:focus .mag{
+        left: 0;
+        right: 27.5%;
+}
+/* ----------------------- SEARCH BAR END ----------------------- */
+
+
+
+
+
+/* ----------------------- TABS BASED CONTAINERS ----------------------- */
+
+.container{
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: 4rem;
+        border-top: 1px solid #222;
+        bottom: 115px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+}
+
+#myTable{
+        width: calc(90% - 45px);
+        margin-left: calc(45px + 1.25%);
+         border-collapse: separate;
+  border-spacing: 0px 14px;
+}
+
+.mainSummary{
+        display: block;
+        position: relative;
+        list-style: none;
+        height: 4rem;
+        width: 100%;
+        margin-left: 4.75%;
+        padding: 4px;
+        outline: none;
+        border: none;
+        border-radius: 10px 10px 10px 10px;
+        background-color: transparent;
+        align-items: center;        
+        cursor: pointer;
+}
+
+.tog{
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-left: 5%;
+        transition: height 500ms;
+}
+
+.cont{
+        padding: 4px;
+        margin: 0;
+}
+
+.innerCont{
+        position: absolute;
+        width: 99.5%;
+        margin-left: -2px;
+        padding-right: 3px;
+        white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.innerCont::-webkit-scrollbar {
+        display: none;
+}
+
+.small{
+        top: 20px;
+        display: inline-block;
+        padding: 10px 0 10px 0;
+        width: 15%;
+        background-color: #111;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+        color: #eee;
+        border: 2px solid #444;
+        border-bottom: none;
+}
+
+.smallload{
+        border: none;
+        background-color: #000;
+}
+
+.smalllast{
+        margin-right: -5px;
+}
+
+.cont2{
+        display: none;
+        margin-top: 38px;
+        padding: 0 4px 4px 4px;
+        background-color: #000;
+        padding-bottom: 1rem;
+        border-width: 2px;
+        border-style: inset;
+        border-color: #000 #444 #444 #000;
+        box-shadow: inset -2px -2px 8px 0 #444;
+}
+
+.chapload{
+        display: block;
+}
+
+.chapName{
+        padding: 10px 0 6px 0;
+        color: #2dcac2;
+        text-align: center;
+}
+
+.cont2 .tableDiv{
+        position: relative;
+        display: block;
+        margin-top: 5px;
+        padding-top: 0.5rem;
+        overflow: scroll;
+}
+
+.row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3.5%;
+}
+
+.row button{
+        width: 15%;
+        padding: 10px 0 12px 0;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        color: #eee;
+        background-color: #1f1f1f;
+        border-color: #2dcac2;
+        box-shadow: -1px -1px 2px rgba(45,202,194),
+                     3px 3px 6px rgba(0,0,0,1);
+}
+
+.row button:nth-child(n+1){
+        margin-left: 3%;
+}
+
+.row button:first-child{
+        margin-left: 5%;
+}
+
+.row button:nth-child(5){
+        margin-right: 5%;
+}
+
+.row:last-child{
+        margin-bottom: 6px;
+}
+
+.effect{
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        display: block;
+        top: 1px;
+        left: 1px;
+        right: 1px;
+        bottom: 1px;
+        border-radius: 9px 9px 9px 9px;
+        z-index: 1;
+        font-size: 1rem;
+}
+
+.effect::before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        height: 45%;
+        border-radius: 7px 7px 3px 3px;
+        z-index: -1;
+}
+
+.effect:hover {
+        cursor: pointer;
+}
+
+.htext{
+        position: absolute;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: calc(90% - 110px);
+        height: 90%;
+        top: 5%;
+        left: 5%;
+        font-weight: bold;
+}
+
+.effect{
+        color: #2dcac2;
+        background-color: #000;
+        border: 1.5px solid #555;
+        box-shadow: 0 0 5px 0px #000000;
+        text-shadow: -2px -2px #111;
+}
+
+.effect::before{
+        background-color: #323232;
+}
+
+.playNow,
+.addPlayingPlaylist,
+.addSavedPlaylist{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        float: right;
+        background-color: #000;
+        outline: none;
+        height: 31px;
+        width: 31px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin: 1rem 0.3rem 0 0;
+        border-radius: 50%;
+        border: 2px solid #000;
+}
+
+.playNow img,
+.addPlayingPlaylist img,
+.addSavedPlaylist img{
+        height: 22px;
+        width: 22px;
+        opacity: 0.8;
+}
+
+.addSavedPlaylist{
+        margin: 1rem 1rem 0 0;
+}
+
+.addSavedPlaylist img{
+        height: 18px;
+        width: 18px;
+        margin-top: 2px;
+        margin-left: -1px;
+}
+
+.addPlayingPlaylist img{
+        margin-left: 3px;
+}
+
+.playNow img{
+        height: 20px;
+        width: 20px;
+        margin-top: 1px;
+        margin-left: 3px;
+}
+
+/* ----------------------- TABS BASED CONTAINERS END ----------------------- */
+
+
+
+
+
+/* ----------------------- SAVED PLAYLISTS CONTAINER ----------------------- */
+
+.formBox{
+        position: relative;
+        width: 91%;
+        padding: 0 1% 0 1%;
+        display: block;
+        border: 2px solid #555;
+        margin: 1rem;
+}
+
+.formBox legend{
+        margin: 0% 0% 1% 3%;
+        padding: 0 2% 0 2%;
+        background: -webkit-linear-gradient(#2dcac2, #2dcac2,white);
+        background-clip: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bolder;
+        font-size: 1.05rem;
+}
+
+.inputBox input {
+        background-color: inherit;
+        width: 80%;
+        padding: 2% 1%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #777;
+        margin: 3%;
+        color: #eee;
+        font-weight: normal;
+        font-size: 1rem;
+}
+
+.subBtn {
+        background: -webkit-linear-gradient(#2dcac2, white);
+        background-clip: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: 1px solid #aaa;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        max-width: 100%;
+        padding: 6px 15px;
+        border-radius: 2px;
+        margin: 0% 0 5% 5%;
+        font-weight: bolder;
+        font-size: 1rem;
+}
+
+.showPlaylistsHere{
+        overflow: hidden;
+        width: 100%;
+}
+
+.hideRest{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        overflow-y: scroll;
+        margin-bottom: 1rem;
+        top: 5rem;
+}
+
+#sidebarMenu {
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 85%;
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out;
+        background: linear-gradient(180deg, #333 0%, #111 100%);
+        z-index: 110;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+        transform: translateX(0);
+}
+
+input[type=checkbox] {
+        transition: all 0.4s;
+        box-sizing: border-box;
+        display: none;
+}
+
+.sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: absolute;
+        z-index: 110;
+        height: 100%;
+        width: 100%;
+        top: 22px;
+        right: 15px;
+        height: 22px;
+        width: 22px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle {
+        right:calc(85% + 15px);
+}
+
+input[type="checkbox"]:checked ~ #overlay {
+        z-index: 105;
+        opacity: 1;
+        pointer-events: all;
+}
+
+.spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 3px;
+        background-color: #ccc;
+        border-radius: 2px;
+        float: right;
+}
+
+.horizontal {
+        width: 85%;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        /* float: left; */
+        margin-top: 3px;
+        background-color: #2dcac2;
+}
+
+.diagonal.part-1 {
+        width: 70%;
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        /* float: left; */
+}
+
+.diagonal.part-2 {
+        width: 100%;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        /* float: left; */
+        margin-top: 3px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        width: 100%;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+}
+
+/* ----------------------- SAVED PLAYLISTS CONTAINER END ----------------------- */
+
+
+
+
+
+/* ----------------------- SCROLL UP PLAYLIST CONTAINER ----------------------- */
+
+.mobile-slider-container {
+        position: absolute;
+        width: 96%;
+        left: 2%;
+        height: 100px;
+        bottom:0;
+        background-color: #000;
+        border-radius: 30px 30px 0 0;
+        z-index: 50;
+        border: 2.5px ridge #777;
+        border-bottom: none;
+}
+  
+.mobile-slider-line {
+        top: 0px;
+        height: 30px;
+        width: 100%;
+        /*background-color: rgba(128, 128, 128, 0.452);*/
+        position: absolute;
+        left: 0;
+        right: 0;
+        border-radius: 20px 20px 0 0;
+}
+
+.slider-line {
+        position: absolute;
+        top: 2.5px;
+        height: 3px;
+        width: 35px;
+        background-color: #666;
+        opacity: 0.7;
+        left: 0;
+        right: 0;
+        margin: 5px auto;
+        border-radius: 1px;
+        /*border-bottom: 1px ridge #999;*/
+}
+
+.controlDiv{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1.7rem 1rem 0.3rem 1rem;
+        padding-bottom: 0.7rem;
+        border-bottom: 1px solid #333;
+}
+
+.controlDiv button{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin: 0 1.2rem 0 1.2rem;
+        width: 20px;
+        opacity: 0.8;
+}
+
+.controlDiv button img{
+        width: 20px;
+        height: 20px;
+}
+
+#nowWindow{
+        display: block;
+        width: 100%;
+}
+
+.lyricsCont{
+        width: 96%;
+        margin-left: 2%;
+        background-color: #222;
+        padding: 1rem;
+        height: 15rem;
+        /*margin-top: 30px;*/
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 0.5rem;
+}
+
+.lyricsWindow{
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        color: #eee;
+        font-weight: normal;
+        font-size: 1.1rem;
+}
+
+.currAudName{
+        color: #2dcac2;
+        /*background-color: #555;*/
+        margin: 0 1rem 0.3rem 1rem;
+        text-align: center;
+        height: 1.9rem;
+        padding: 0.3rem;
+}
+
+.lyricsBut{
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1.1rem 1rem 0 calc(2% + 15px);
+        outline: none;
+        border: none;
+        background-color: transparent;
+        height: 24px;
+        width: 24px;
+}
+
+.lyricsBut img{
+        opacity: 0.8;
+        width: 20px;
+        height: 20px;
+}
+
+.nowAudCont{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #f1f3f4;
+        width: 96%;
+        margin-left: 2%;
+        border-radius: 10px 10px 0 0;
+        height: 60px;
+        border: 2.5px solid #2dcac2;
+        border-bottom: none;
+}
+
+.nowAud{
+        display: block;
+        margin-left: 35px;
+        /*width: calc(96% - 40px);*/
+        width: 100%;
+}
+
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-volume-slider {
+        width: 0px !important;
+        display: none !important;
+}
+
+audio::-webkit-media-controls-current-time-display{
+        font-size: 0.8rem;
+} 
+
+audio::-webkit-media-controls-volume-slider-container{
+        -webkit-appearance: none !important;
+}
+
+audio::-webkit-media-controls-play-button{
+        display: none;
+}
+
+audio::-webkit-media-controls-timeline{
+        margin-left: 30px;
+        position: absolute;
+        width: calc(99% - 145px);
+}
+
+audio::-webkit-media-controls-current-time-display{
+        font-family: 'Merriweather', serif !important;
+        font-weight: 700 !important;
+                                color: #000;
+                                margin-top: -0.2rem;
+}
+
+.timeRem{
+        display: block;
+        position: absolute;
+        margin-top: -3rem;
+        z-index: 10;
+        /*right: calc(4.5% + 40px);*/
+        right: calc(2% + 50px);
+        font-size: 0.78rem;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+        color: #333;
+}
+
+.nowAud audio{
+        margin: 0;
+        width: 100%;
+        /*background-color: yellow;*/
+}
+
+.nowAudControlDiv{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: absolute;
+        background-color: #f1f3f4;
+        width: 96%;
+        margin-left: 2%;
+        border-radius: 0 0 10px 10px;
+        z-index: 10;
+        margin-top: -1rem;
+        padding-bottom: 1rem;
+        border: 2.5px solid #2dcac2;
+        border-top: none;
+}
+
+.nowAudControlDiv button{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 1rem 0 1rem;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        height: 24px;
+        width: 28px;
+}
+
+.nowAudControlDiv button img{
+        opacity: 0.8;
+        width: 24px;
+        height: 24px;
+}
+
+.nowAudControlDiv button:nth-child(2) img{
+        opacity: 1;
+        margin-top: -2px;
+        width: 29px;
+        height: 29px;
+}
+
+.nowAudControlDiv button:nth-child(3) img{
+        margin-top: 2px;
+        width: 20px;
+        height: 20px;
+}
+
+.nowAudControlDiv button:nth-child(4) img{
+        opacity: 1;
+        margin-top: -1px;
+        width: 26px;
+        height: 26px;
+}
+
+.nowAudControlDiv button:nth-child(5) img{
+        margin-top: 4px;
+        width: 16px;
+        height: 16px;
+}
+
+.playBackBut{
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        float: right;
+        margin-top: 1.1rem;
+        right: calc(2% + 15px);
+        outline: none;
+        border: none;
+        background-color: transparent;
+        height: 24px;
+        width: 24px;
+        z-index: 1;
+        user-select: none;
+        cursor: pointer;
+        opacity: 0.3;
+}
+
+.playBackBut img{
+        opacity: 0.8;
+        width: 20px;
+        height: 20px;
+}
+
+#speed{
+        position: absolute;
+        appearance: none;
+        outline: none;
+        border: none;
+        user-select: none;
+        -webkit-padding-start: 12px;
+        -webkit-padding-end: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        display: none;
+        border: 1.5px solid #2dcac2;
+        z-index: 11;
+        margin-top: 2.8rem;
+        right: calc(2%);
+        background-color: #f1f3f4;
+}
+
+#speed .opt{
+        text-align: center;
+        border-top: none;
+        border-bottom: none;
+        padding: 2px;
+        color: #222;
+}
+
+#speed .opt:checked{
+        border: 1px solid #aaa;
+        font-weight: bold;
+        color: #000;
+}
+
+#speed .opt:first-child{
+        margin-top: 4px;
+}
+
+
+
+.playingPlaylistItems{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        overflow-y: scroll;
+        margin-bottom: 1rem;
+}
+
+.placeholder {
+        background-color: #edf2f7;
+        border: 2px dashed #cbd5e0;
+        margin-bottom: 1rem;
+}
+
+.list-group-item-common {
+        padding: 0.7rem 0.4rem 0.7rem 0.4rem;
+        background-color: #232323;
+        margin-bottom: 0.5rem;
+        width: 96%;
+        margin-left: 2%;
+        border-radius: 3px;
+}
+
+.list-group-item-common:last-child{
+        margin-bottom: 0;
+}
+
+.playBut{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin-left: -3px;
+        margin-right: 10px;
+}
+
+.playBut img{
+        height: 20px;
+        width: 20px;
+        opacity: 0.8;
+}
+
+.closeBut{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        float: right;
+        /* margin-right: -0.3rem; */
+}
+
+.closeBut img{
+        height: 16px;
+        width: 16px;
+        opacity: 0.8;
+}
+
+.audInfo{
+        color: #eee;
+}
+
+.audInfo div{
+        font-weight: bold;
+}
+
+.audName{
+        /*color: #2dcac2;*/
+        margin-bottom: 0.3rem;
+}
+
+.audDur{
+        font-weight: normal !important;
+        font-size: 0.9rem;
+}
+
+.my-handle {
+        cursor: move;
+        cursor: -webkit-grabbing;
+        opacity: 0.4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        float: right;
+        margin-right: -0.2rem;
+        width: 26px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-left: 1px solid #333;
+}
+
+.my-handle img{
+        height: 24px;
+        width: 24px;
+        opacity: 0.8;
+}
+
+
+.list-group-item-common table{
+        width: 100%;
+}
+
+.list-group-item-common table tr td:nth-child(1){
+        width: 10%;
+        padding-left: calc((10% - 24px) / 2);
+}
+
+.list-group-item-common table tr td:nth-child(2){
+        width: 70%;
+}
+
+.list-group-item-common table tr td:nth-child(3){
+        float: right;
+        margin-right: 5px;
+        margin-top: calc(1rem - 3px);
+        width: 16px;
+}
+
+.list-group-item-common table tr td:nth-child(4){
+        width: 24px !important;
+}
+
+
+.showPlaylistsHere .list-group-item-common table tr td:nth-child(1){
+        width: 70%;
+}
+  
+.showPlaylistsHere .list-group-item-common table tr td:nth-child(2){
+        margin-top: calc(1rem - 3px);
+}
+
+.showPlaylistsHere .list-group-item-common table tr td:nth-child(3){
+        width: 32px !important;
+        margin-top: calc(1rem - 6px);
+        float: right;
+        margin-right: -0.1rem;
+}
+
+
+.createPlaylistFirst{
+        margin-top: 5%;
+        width: 84%;
+        margin-left: 5%;
+        text-align: left;
+        color: #eee;
+        padding: 5px;
+}
+
+.addMove{
+        margin-left: -20%;
+}
+
+#addPlaylist{
+        width: 40px;
+        height: 40px;
+        background-color: #222;
+        outline: none;
+        border: 2px dashed #999;
+        color: #fff;
+        font-size: 1.3rem;
+}
+
+.showPlaylistSongs{
+        width: 93%;
+        margin-left: 3%;
+        height: 86%;
+        margin-top: 4%;
+}
+
+.showPlaylistSongs table{
+        width: 96% !important;
+        margin-left: 2%;
+        margin-top: 0.6rem;
+        margin-bottom: 0.6rem;
+        border: 0.5px solid #222;
+        padding: 5px;
+        font-weight: 300;
+}
+
+.showPlaylistSongs table:nth-child(1){        
+        margin-top: 0rem;
+}
+
+.showPlaylistSongs table:last-child{        
+        margin-bottom: 0rem;
+}
+
+.playlistBullets{
+        width: 40px;
+        height: 40px;
+        background-color: #222;
+        outline: none;
+        border: 2px solid #2dcac2;
+        color: #eee;
+        font-size: 1.05rem;
+}
+
+.showPlaylistSongs table tr{
+        text-align: left;
+        color: #eee;
+}
+
+.showPlaylistSongs table tr:nth-child(1) td:nth-child(1){
+        width: 60px;
+}
+
+.createPlaylistFirst tr td:nth-child(1){
+        width: 60px;
+}
+
+.playlistDescription{
+        font-weight: 200;
+        /* color: #eee; */
+}
+
+.hideRest{
+        display: none;
+}
+
+
+
+
+
+/* ----------------------- OVERLAY AND MODAL ----------------------- */
+
+#overlay {
+        position: fixed;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 90;
+}
+
+#overlay.active {
+        opacity: 1;
+        pointer-events: all;
+}
+
+.modalParent{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.modal {
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        width: 500px;
+        max-width: 92%;
+        border: 3px ridge;
+        border-color: rgba(0,154,217);
+        z-index: 120;
+        transform: translate(0%, 0%) scale(0);
+        transition: 0.2s ease-in-out;
+        height: auto;
+        overflow: scroll;
+                                overflow: hidden;
+}
+
+.modal.active {
+        transform: translate(0%, 0%) scale(1);
+}
+
+.modal-header {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.modal-header .title {
+        margin: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+}
+
+.modal-header .close-button {
+        cursor: pointer;
+         border: none;
+        outline: none;
+        background: none;
+        font-size: 1.5rem;
+        padding: 0 0.5rem 0 0.5rem;
+}
+
+.hline{
+        margin: 0% 12% 0% 5%;
+        height: 3px;
+        border-radius: 50%;
+        background: linear-gradient(90deg, rgba(0,154,217,1), #55ff06 100%);
+}
+
+#overlay {
+        background-color: rgba(0, 0, 0, .8);
+}
+
+.modal{
+        background-color: #000;
+}
+
+.modal-header .title{
+                                background-clip: text;
+        background: -webkit-linear-gradient(#2dcac2, #2dcac2,white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.modal-header .close-button{
+        color-scheme: dark;
+        color: #eee;
+}
+
+/* ----------------------- OVERLAY AND MODAL ----------------------- */
+
+
