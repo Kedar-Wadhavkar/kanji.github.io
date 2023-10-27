@@ -1,4 +1,3 @@
-
 window.onload = function(e){
 
         const rwList = document.querySelectorAll(".row");
@@ -98,7 +97,7 @@ window.onload = function(e){
                         td1.appendChild(playButton);
 
                         const imgPlay = document.createElement("img");
-                        imgPlay.src = "media/play.png";
+                        imgPlay.src = "css/media/play.png";
                         playButton.appendChild(imgPlay);
 
 
@@ -115,7 +114,7 @@ window.onload = function(e){
                         spanAudInfo.appendChild(divAudName);
         
                         const crAudio = document.createElement("audio");
-                        crAudio.src = 'media/' + id + '.mp3';
+                        crAudio.src = 'css/media/' + id + '.mp3';
                         crAudio.type = "audio/mp3";
                         crAudio.controls = false;
                         crAudio.controlsList = "nodownload noplaybackrate"; //
@@ -139,7 +138,7 @@ window.onload = function(e){
                         td3.appendChild(closeButton);
 
                         const imgClose = document.createElement("img");
-                        imgClose.src = "media/close.png";
+                        imgClose.src = "css/media/close.png";
                         closeButton.appendChild(imgClose);
 
 
@@ -152,7 +151,7 @@ window.onload = function(e){
                         td4.appendChild(spanSort);
 
                         const imgSort = document.createElement("img");
-                        imgSort.src = "media/sort.png";
+                        imgSort.src = "css/media/sort.png";
                         spanSort.appendChild(imgSort);
 
                 }
@@ -197,130 +196,147 @@ window.onload = function(e){
 
         var savedPlaylistsDictionary = JSON.parse(localStorage.getItem("savedPlaylistsDictionary"));
         
-        for (const thisSavedPlaylist of savedPlaylistsDictionary["savedPlaylistsList"]){
+        if((savedPlaylistsDictionary != null)){
 
-                        // create face divs of saved playlists
-                        const savedPlaylistsFaces = document.querySelector(".showPlaylistSongs");
+                for (const thisSavedPlaylist of savedPlaylistsDictionary["savedPlaylistsList"]){
 
-                        const tableMain = document.createElement("table");
-                        tableMain.classList.add("playlistTable");
-                        tableMain.paramSavedplaylistName = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
-                        tableMain.paramSavedplaylistId = thisSavedPlaylist;
-                        tableMain.addEventListener("click", openModal, false);
-                        tableMain.addEventListener("click", showPlaylists, false);
-                        savedPlaylistsFaces.appendChild(tableMain);
+                                // create face divs of saved playlists
+                                const savedPlaylistsFaces = document.querySelector(".showPlaylistSongs");
 
-                        const tr11 = document.createElement("tr");
-                        tableMain.appendChild(tr11);
+                                const tableMain = document.createElement("table");
+                                tableMain.classList.add("playlistTable");
+                                tableMain.paramSavedplaylistName = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
+                                tableMain.paramSavedplaylistId = thisSavedPlaylist;
+                                tableMain.addEventListener("click", openModal, false);
+                                tableMain.addEventListener("click", showPlaylists, false);
+                                savedPlaylistsFaces.appendChild(tableMain);
 
-                        const td11 = document.createElement("td");
-                        td11.rowSpan = 2;
-                        tr11.appendChild(td11);
-                        const but11 = document.createElement("button");
-                        but11.classList.add("playlistBullets");
-                        but11.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Name"].charAt(0);
-                        td11.appendChild(but11);
+                                const tr11 = document.createElement("tr");
+                                tableMain.appendChild(tr11);
 
-                        const td12 = document.createElement("td");
-                        td12.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
-                        tr11.appendChild(td12);
+                                const td11 = document.createElement("td");
+                                td11.rowSpan = 2;
+                                tr11.appendChild(td11);
+                                const but11 = document.createElement("button");
+                                but11.classList.add("playlistBullets");
+                                but11.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Name"].charAt(0);
+                                td11.appendChild(but11);
 
-                        const tr12 = document.createElement("tr");
-                        tableMain.appendChild(tr12);
-                        
-                        const td21 = document.createElement("td");
-                        td21.classList.add("playlistDescription");
-                        td21.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Description"];
-                        tr12.appendChild(td21);
+                                const td12 = document.createElement("td");
+                                td12.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
+                                tr11.appendChild(td12);
 
-                        // create div to display audio divs
-                        const showSavedPlaylistAud = document.querySelector(".showPlaylistsHere");
-                        const hiderest = document.createElement("div");
-                        hiderest.classList.add("hideRest");
-                        hiderest.setAttribute("audfromplaylistid", thisSavedPlaylist);
-                        hiderest.setAttribute("mutationhere", "");
-                        showSavedPlaylistAud.appendChild(hiderest);
-
-                        // create playlist divs of saved playlists
-                        var playlistSaved = savedPlaylistsDictionary[thisSavedPlaylist]["SavedListAudList"];
-
-                        if((playlistSaved != null) && (playlistSaved.length > 0)){ 
+                                const tr12 = document.createElement("tr");
+                                tableMain.appendChild(tr12);
                                 
-                                const grpList = document.querySelector("[audFromPlaylistId=" + thisSavedPlaylist + "]");
+                                const td21 = document.createElement("td");
+                                td21.classList.add("playlistDescription");
+                                td21.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Description"];
+                                tr12.appendChild(td21);
 
-                                for (const id of playlistSaved){
-                        
-                                        const div = document.createElement("div");
-                                        div.id = id;
-                                        div.classList.add("list-group-item-common");
-                                        grpList.appendChild(div);
-                        
-                                        const table = document.createElement("table");
-                                        div.appendChild(table);
+                                // create div to display audio divs
+                                const showSavedPlaylistAud = document.querySelector(".showPlaylistsHere");
+                                const hiderest = document.createElement("div");
+                                hiderest.classList.add("hideRest");
+                                hiderest.setAttribute("audfromplaylistid", thisSavedPlaylist);
+                                hiderest.setAttribute("mutationhere", "");
+                                showSavedPlaylistAud.appendChild(hiderest);
 
-                                        const tr = document.createElement("tr");
-                                        table.appendChild(tr);
+                                // create playlist divs of saved playlists
+                                var playlistSaved = savedPlaylistsDictionary[thisSavedPlaylist]["SavedListAudList"];
 
+                                if((playlistSaved != null) && (playlistSaved.length > 0)){ 
+                                        
+                                        const grpList = document.querySelector("[audFromPlaylistId=" + thisSavedPlaylist + "]");
 
-                                        const td2 = document.createElement("td");
-                                        tr.appendChild(td2);
+                                        for (const id of playlistSaved){
+                                
+                                                const div = document.createElement("div");
+                                                div.id = id;
+                                                div.classList.add("list-group-item-common");
+                                                grpList.appendChild(div);
+                                
+                                                const table = document.createElement("table");
+                                                div.appendChild(table);
 
-                                        const spanAudInfo = document.createElement("span");
-                                        spanAudInfo.classList.add("audInfo");
-                                        td2.appendChild(spanAudInfo);
-
-                                        const divAudName = document.createElement("div");
-                                        divAudName.classList.add("audName");
-                                        divAudName.innerHTML = playlistData.filter(a => a.id == id)[0].name;
-                                        spanAudInfo.appendChild(divAudName);
-                        
-                                        const crAudio = document.createElement("audio");
-                                        crAudio.src = 'media/' + id + '.mp3';
-                                        crAudio.type = "audio/mp3";
-                                        crAudio.controls = false;
-                                        crAudio.controlsList = "nodownload noplaybackrate"; //
-                                        crAudio.paramAudId = id;
-                                        spanAudInfo.appendChild(crAudio);
-                        
-                                        const divAudDur = document.createElement("div");
-                                        divAudDur.classList.add("audDur");
-                                        divAudDur.innerHTML = playlistData.filter(a => a.id == id)[0].duration;
-                                        spanAudInfo.appendChild(divAudDur);
+                                                const tr = document.createElement("tr");
+                                                table.appendChild(tr);
 
 
-                                        const td3 = document.createElement("td");
-                                        tr.appendChild(td3);
-                        
-                                        const closeButton = document.createElement("button");
-                                        closeButton.classList.add("closeBut");
-                                        closeButton.value = id;
-                                        closeButton.addEventListener("click", remFunction2, false);
-                                        closeButton.paramId = id;
-                                        closeButton.paramCurrentSavedPlaylistId = thisSavedPlaylist;
-                                        td3.appendChild(closeButton);
+                                                const td2 = document.createElement("td");
+                                                tr.appendChild(td2);
 
-                                        const imgClose = document.createElement("img");
-                                        imgClose.src = "media/close.png";
-                                        closeButton.appendChild(imgClose);
+                                                const spanAudInfo = document.createElement("span");
+                                                spanAudInfo.classList.add("audInfo");
+                                                td2.appendChild(spanAudInfo);
+
+                                                const divAudName = document.createElement("div");
+                                                divAudName.classList.add("audName");
+                                                divAudName.innerHTML = playlistData.filter(a => a.id == id)[0].name;
+                                                spanAudInfo.appendChild(divAudName);
+                                
+                                                const crAudio = document.createElement("audio");
+                                                crAudio.src = 'css/media/' + id + '.mp3';
+                                                crAudio.type = "audio/mp3";
+                                                crAudio.controls = false;
+                                                crAudio.controlsList = "nodownload noplaybackrate";
+                                                crAudio.paramAudId = id;
+                                                spanAudInfo.appendChild(crAudio);
+                                
+                                                const divAudDur = document.createElement("div");
+                                                divAudDur.classList.add("audDur");
+                                                divAudDur.innerHTML = playlistData.filter(a => a.id == id)[0].duration;
+                                                spanAudInfo.appendChild(divAudDur);
 
 
-                                        const td4 = document.createElement("td");
-                                        tr.appendChild(td4);
+                                                const td3 = document.createElement("td");
+                                                tr.appendChild(td3);
+                                
+                                                const closeButton = document.createElement("button");
+                                                closeButton.classList.add("closeBut");
+                                                closeButton.value = id;
+                                                closeButton.addEventListener("click", remFunction2, false);
+                                                closeButton.paramId = id;
+                                                closeButton.paramCurrentSavedPlaylistId = thisSavedPlaylist;
+                                                td3.appendChild(closeButton);
 
-                                        const spanSort = document.createElement("span");
-                                        spanSort.classList.add("my-handle");
-                                        spanSort.setAttribute('aria-hidden', 'true');
-                                        td4.appendChild(spanSort);
+                                                const imgClose = document.createElement("img");
+                                                imgClose.src = "css/media/close.png";
+                                                closeButton.appendChild(imgClose);
 
-                                        const imgSort = document.createElement("img");
-                                        imgSort.src = "media/sort.png";
-                                        spanSort.appendChild(imgSort);
 
-                                }
+                                                const td4 = document.createElement("td");
+                                                tr.appendChild(td4);
 
-                        };
+                                                const spanSort = document.createElement("span");
+                                                spanSort.classList.add("my-handle");
+                                                spanSort.setAttribute('aria-hidden', 'true');
+                                                td4.appendChild(spanSort);
+
+                                                const imgSort = document.createElement("img");
+                                                imgSort.src = "css/media/sort.png";
+                                                spanSort.appendChild(imgSort);
+
+                                        };
+
+                                };
+
+                                const playlistOptionToSave = document.querySelector(".saveToPlaylist");
+                                const addToPlaylistBut = document.createElement("button");
+                                addToPlaylistBut.value = thisSavedPlaylist;
+                                addToPlaylistBut.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
+                                addToPlaylistBut.paramPlaylistName = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
+                                addToPlaylistBut.addEventListener("click", saveToThisPlaylist, false);
+                                playlistOptionToSave.appendChild(addToPlaylistBut);
+                };
+
+        }
+        else{
+                savedPlaylistsDictionary = {
+                        "savedPlaylistsList":[]
+                }
+                localStorage.setItem("savedPlaylistsDictionary", JSON.stringify(savedPlaylistsDictionary));
         };
-
 
 };
 
@@ -459,10 +475,14 @@ function unhide18(ele) {
 
 document.addEventListener('mouseup', function(e) {
 
-        var det1 = document.getElementById('details1');
-        if (!det1.contains(e.target)) {
-                det1.removeAttribute("open");
-        }
+        var det = document.querySelectorAll('#details1');
+        det.forEach((det1) => {
+                if (!det1.contains(e.target)) {
+                        det1.removeAttribute("open");
+                        det1.querySelector(".tog").style.display = "";
+                        document.querySelector(".playlistOptionToSave").style.display = "";
+                };
+        });
         
         var elem = document.getElementById('speed');
         var topElem = document.querySelector(".playBackBut");
@@ -470,59 +490,218 @@ document.addEventListener('mouseup', function(e) {
                 topElem.style.opacity = '';
                 elem.style.display = '';
                 plBack = 1;
-        }
+        };
 
         var nav = document.querySelector('.navigation');
         if (!nav.contains(e.target)) {
                 nav.style.width = "";
                 document.querySelector(".bar").style.visibility = "";
-                document.querySelector(".container").style.visibility = "";
-        }
+                document.querySelector(".contBinder").style.visibility = "";
+        };
 
 });
 
 
 
+// // search from specific element inner html
+// const searchFun = () =>{
 
+//         var filter = document.getElementById('myInput').value.toUpperCase();
 
-// search from specific element inner html
-const searchFun = () =>{
+//         var myTable = document.getElementById('myTable');
+//         var trList = myTable.getElementsByTagName('tr');
 
-        let filter = document.getElementById('myInput').value.toUpperCase();
-
-        let myTable = document.getElementById('myTable');
-        let trList = myTable.getElementsByTagName('tr');
-
-        for(const tr of trList){
+//         for(const tr of trList){
         
-                let td = tr.getElementsByTagName('td')[0];
-                // let td2 = tr.getElementsByTagName('td')[1];
+//                 var td = tr.getElementsByTagName('td')[0];
+//                 // var td2 = tr.getElementsByTagName('td')[1];
 
-                if(td){//||td2){
-                        let textValue = td.textContent || td.innerHTML;
-                        // let textValue2 = td2.textContent || td2.innerHTML;
+//                 if(td){//||td2){
+//                         var textValue = td.textContent || td.innerHTML;
+//                         // var textValue2 = td2.textContent || td2.innerHTML;
 
-                        if(textValue.indexOf(filter) > -1){
-                                tr.style.display = "";
-                        }
-                        // else if(textValue2.toUpperCase().indexOf(filter) > -1){
-                        //         tr.style.display = "";
-                        // }
-                        else{
-                                tr.style.display = "none";
-                        }
-                }
-        }
+//                         if(textValue.indexOf(filter) > -1){
+//                                 tr.style.display = "";
+//                         }
+//                         // else if(textValue2.toUpperCase().indexOf(filter) > -1){
+//                         //         tr.style.display = "";
+//                         // }
+//                         else{
+//                                 tr.style.display = "none";
+//                         }
+//                 }
+//         }
+// };
+
+
+
+function refreshSaveToPlaylistOptions(savedPlaylistsDictionary){
+
+        for (const thisSavedPlaylist of savedPlaylistsDictionary["savedPlaylistsList"]){
+                const playlistOptionToSave = document.querySelector(".saveToPlaylist");                
+                const addToPlaylistBut = document.createElement("button");
+                addToPlaylistBut.value = thisSavedPlaylist;
+                addToPlaylistBut.innerHTML = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
+                addToPlaylistBut.paramPlaylistName = savedPlaylistsDictionary[thisSavedPlaylist]["Name"];
+                addToPlaylistBut.addEventListener("click", saveToThisPlaylist, false);
+                playlistOptionToSave.appendChild(addToPlaylistBut);
+        };
+
 };
 
 
+let nameOfAudToAdd;
+let idOfAudToAdd;
+let GMode;
 
 
+function pushToPlaylist(aud){
+
+        var mode;
+        var audId = aud.value;
+        var appendToParent;
+
+        if (!aud.hasAttribute('mode')) {
+                mode = aud.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[1].childNodes[1].querySelector('[def="selectedMode"]').value;
+                appendToParent = aud.parentElement.parentElement.parentElement.parentElement.parentElement;
+        }
+        else{
+                appendToParent = aud.parentElement.parentElement.parentElement;
+
+                if (aud.getAttribute('mode') == 'addSavedPlaylist') {
+                        mode = "addSavedPlaylist";
+                }
+                else if (aud.getAttribute('mode') == 'addPlayingPlaylist') {
+                        mode = "addPlayingPlaylist";
+                }
+                else if (aud.getAttribute('mode') == 'playNow') {
+                        mode = "playNow";
+                };
+        };        
+
+        switch (mode) {
+
+                case "addSavedPlaylist":
+                        idOfAudToAdd = audId;
+                        nameOfAudToAdd = playlistData.filter(a => a.id == audId)[0].name;
+                        var playlistOptionToSave = document.querySelector(".playlistOptionToSave");
+                        $(playlistOptionToSave).appendTo(appendToParent);
+                        playlistOptionToSave.style.display = "block";
+                        // document.querySelector(".tog").style.display = "none";
+                        aud.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector('.tog').style.display = "none";
+                        break;
+
+                case "addPlayingPlaylist":
+                        addFunction(audId);
+                        break;
+
+                case "playNow":
+                        addFunction(audId);
+                        whenPlayed(audId);
+        };
+        
+};
 
 
+function saveToThisPlaylist(thisPlaylist){
+
+        const changeAlert = document.querySelector(".savedMsgHere");
+        const showThisHere = document.createElement("div");        
+        changeAlert.appendChild(showThisHere);
+
+        document.querySelector(".playlistOptionToSave").style.display = "";
+        thisPlaylist.currentTarget.parentElement.parentElement.parentElement.querySelector('.tog').style.display = "";
+
+        var savedPlaylistsDict = JSON.parse(localStorage.getItem("savedPlaylistsDictionary"));        
+        savedPlayId = thisPlaylist.currentTarget.value;
+        if (savedPlaylistsDict[savedPlayId]["SavedListAudList"].includes(parseInt(idOfAudToAdd))){
+                showThisHere.innerHTML = '* ' + thisPlaylist.currentTarget.paramPlaylistName + ' already contains ' + nameOfAudToAdd;
+        }
+        else{
+                savedPlaylistsDict[savedPlayId]["SavedListAudList"].push(parseInt(idOfAudToAdd));
+                showThisHere.innerHTML = '* Saved ' + nameOfAudToAdd + ' to ' + thisPlaylist.currentTarget.paramPlaylistName;
+                createSavedAudDiv(savedPlayId,parseInt(idOfAudToAdd));
+        };
+        localStorage.setItem("savedPlaylistsDictionary", JSON.stringify(savedPlaylistsDict));
+
+        setTimeout(() => {showThisHere.remove();
+                nameOfAudToAdd, idOfAudToAdd = "";
+        }, 2000);
+
+};
 
 
+function createSavedAudDiv(thisSavedPlaylist, id){
 
+        const grpList = document.querySelector("[audFromPlaylistId=" + thisSavedPlaylist + "]");
+
+        const div = document.createElement("div");
+        div.id = id;
+        div.classList.add("list-group-item-common");
+        grpList.appendChild(div);
+
+        const table = document.createElement("table");
+        div.appendChild(table);
+
+        const tr = document.createElement("tr");
+        table.appendChild(tr);
+
+
+        const td2 = document.createElement("td");
+        tr.appendChild(td2);
+
+        const spanAudInfo = document.createElement("span");
+        spanAudInfo.classList.add("audInfo");
+        td2.appendChild(spanAudInfo);
+
+        const divAudName = document.createElement("div");
+        divAudName.classList.add("audName");
+        divAudName.innerHTML = playlistData.filter(a => a.id == id)[0].name;
+        spanAudInfo.appendChild(divAudName);
+
+        const crAudio = document.createElement("audio");
+        crAudio.src = 'css/media/' + id + '.mp3';
+        crAudio.type = "audio/mp3";
+        crAudio.controls = false;
+        crAudio.controlsList = "nodownload noplaybackrate";
+        crAudio.paramAudId = id;
+        spanAudInfo.appendChild(crAudio);
+
+        const divAudDur = document.createElement("div");
+        divAudDur.classList.add("audDur");
+        divAudDur.innerHTML = playlistData.filter(a => a.id == id)[0].duration;
+        spanAudInfo.appendChild(divAudDur);
+
+
+        const td3 = document.createElement("td");
+        tr.appendChild(td3);
+
+        const closeButton = document.createElement("button");
+        closeButton.classList.add("closeBut");
+        closeButton.value = id;
+        closeButton.addEventListener("click", remFunction2, false);
+        closeButton.paramId = id;
+        closeButton.paramCurrentSavedPlaylistId = thisSavedPlaylist;
+        td3.appendChild(closeButton);
+
+        const imgClose = document.createElement("img");
+        imgClose.src = "css/media/close.png";
+        closeButton.appendChild(imgClose);
+
+
+        const td4 = document.createElement("td");
+        tr.appendChild(td4);
+
+        const spanSort = document.createElement("span");
+        spanSort.classList.add("my-handle");
+        spanSort.setAttribute('aria-hidden', 'true');
+        td4.appendChild(spanSort);
+
+        const imgSort = document.createElement("img");
+        imgSort.src = "css/media/sort.png";
+        spanSort.appendChild(imgSort);
+
+};
 
 
 
@@ -590,11 +769,15 @@ sliderLine.on("touchend", function(e) {
 
         if (startPosY > endPosY) {
                 slideUp(0, 1);
+                document.getElementById("overlay").style.zIndex = 45;
+                document.getElementById("overlay").classList.add('active');
                 document.querySelector(".playPlaylist").style.visibility = "hidden";
         }
 
         else if (startPosY < endPosY) {
-                slideUp(0, -1);
+                slideUp(0, -1);                
+                document.getElementById("overlay").style.zIndex = "";
+                document.getElementById("overlay").classList.remove('active');
                 setTimeout(() => {
                         document.querySelector(".playPlaylist").style.visibility = "";
                         if (lyricsState){
@@ -649,12 +832,13 @@ sliderNavContainer.on("touchmove", function(e) {
 
         currentPosX = e.changedTouches[0].screenX;
 
-        if (startPosX > currentPosX) {                
+        if (startPosX > currentPosX) {
                 slideRight(currentH - (startPosX - currentPosX));
         }
         else if (startPosX < currentPosX) {
                 document.querySelector(".bar").style.visibility = "hidden";
-                document.querySelector(".container").style.visibility = "hidden";
+                document.querySelector(".contBinder").style.visibility = "hidden";
+                // document.querySelectorAll(".container").forEach((item) => item.style.visibility = "hidden");
                 slideRight(currentH + (currentPosX - startPosX));
         }
 });
@@ -669,7 +853,8 @@ sliderNavContainer.on("touchend", function(e) {
                 setTimeout(() => {
                         // document.querySelector(".title").style.visibility = "";
                 document.querySelector(".bar").style.visibility = "hidden";
-                document.querySelector(".container").style.visibility = "hidden";
+                document.querySelector(".contBinder").style.visibility = "hidden";
+                // document.querySelectorAll(".container").forEach((item) => item.style.visibility = "hidden");
                 }, 350);        
         }
 
@@ -677,20 +862,13 @@ sliderNavContainer.on("touchend", function(e) {
                 slideRight(0, -1);
                 setTimeout(() => {
                         document.querySelector(".bar").style.visibility = "";
-                        document.querySelector(".container").style.visibility = "";
+                        document.querySelector(".contBinder").style.visibility = "";
+                        // document.querySelectorAll(".container").forEach((item) => item.style.visibility = "");
                 }, 350);        
         };
 });
 
 // ---------------------------- END ----------------------------------
-
-
-
-
-
-
-
-
 
 
 
@@ -739,7 +917,7 @@ function addFunction(btnValue){
                 td1.appendChild(playButton);
 
                 const imgPlay = document.createElement("img");
-                imgPlay.src = "media/play.png";
+                imgPlay.src = "css/media/play.png";
                 playButton.appendChild(imgPlay);
 
 
@@ -756,7 +934,7 @@ function addFunction(btnValue){
                 spanAudInfo.appendChild(divAudName);
         
                 const crAudio = document.createElement("audio");
-                crAudio.src = 'media/' + id + '.mp3';
+                crAudio.src = 'css/media/' + id + '.mp3';
                 crAudio.type = "audio/mp3";
                 crAudio.controls = false;
                 crAudio.controlsList = "nodownload noplaybackrate"; //
@@ -780,7 +958,7 @@ function addFunction(btnValue){
                 td3.appendChild(closeButton);
 
                 const imgClose = document.createElement("img");
-                imgClose.src = "media/close.png";
+                imgClose.src = "css/media/close.png";
                 closeButton.appendChild(imgClose);
 
 
@@ -793,7 +971,7 @@ function addFunction(btnValue){
                 td4.appendChild(spanSort);
 
                 const imgSort = document.createElement("img");
-                imgSort.src = "media/sort.png";
+                imgSort.src = "css/media/sort.png";
                 spanSort.appendChild(imgSort);
 
                 playlist.push(id);
@@ -839,33 +1017,6 @@ function remFunction2(remBut){
 
 
 
-// this is specially for now playing playlist
-// const targetNode1 = document.querySelector('.playingPlaylistItems');
-// const config1 = {childList: true};
-// const callback1 = mutations => {
-//   mutations.forEach(mutation => {
-//     if (mutation.type === 'childList') {
-//                         const playlist = $('.playingPlaylistItems > div').map((i, div) => parseInt(div.id)).get();
-//                         localStorage.setItem('playlist', JSON.stringify(playlist));
-//     }
-//   });
-// }
-// const observer1 = new MutationObserver(callback1);
-// observer1.observe(targetNode1, config1);
-
-// this is reserved for all saved playlists
-// const targetNode2 = document.querySelector('#savedPlaylistWithHandle');
-// const config2 = {childList: true};
-
-
-// const targetNode2 = document.querySelector('#savedPlaylistWithHandle');
-// const config2 = {childList: true};
-// const observer2 = new MutationObserver(callback1);
-// observer2.observe(targetNode1, config2);
-
-
-
-
 
 
 function whenPlayed(playAud){
@@ -881,7 +1032,14 @@ function whenPlayed(playAud){
         prevDiv.style.display = "";
         
         var grpList = document.getElementById("listWithHandle");
-        const id = playAud.currentTarget.paramId;
+
+        var id;
+        try {
+                id = playAud.currentTarget.paramId;
+        }
+        catch(err) {
+                id = playAud;
+        }
 
         var parent = document.getElementById(id);
         parent.style.display = "none";
@@ -919,7 +1077,7 @@ function playNext() {
                 var audio = parent.childNodes[0].childNodes[0].childNodes[1].childNodes[0].childNodes[1];
 
                 var nowAud = document.getElementById("hereAud");
-                var cloneAud = audio.cloneNode(true);                
+                var cloneAud = audio.cloneNode(true);
                 nowAud.appendChild(cloneAud);
                 cloneAud.id = "cloneAud";
                 cloneAud.controls = true;
@@ -952,8 +1110,8 @@ function playNext() {
                 document.querySelector(".lyricsBut").style.display = "";
                 transAudio.play();
                 playlistStartState = 1;
-                document.getElementById("playPlaylistImg").src = "media/pause.png";
-                document.getElementById("playNowAudImg").src = "media/pause_black.png";
+                document.getElementById("playPlaylistImg").src = "css/media/pause.png";
+                document.getElementById("playNowAudImg").src = "css/media/pause_black.png";
 
         }
         else{
@@ -1002,8 +1160,8 @@ function delParent(){
 
                         playlistStartState = 0;
 
-                        document.getElementById("playPlaylistImg").src = "media/play.png";
-                        document.getElementById("playNowAudImg").src = "media/play_black.png";
+                        document.getElementById("playPlaylistImg").src = "css/media/play.png";
+                        document.getElementById("playNowAudImg").src = "css/media/play_black.png";
                 };
                 
         };
@@ -1063,15 +1221,15 @@ function startPlaylist(){
                         document.querySelector(".closeNowAud").style.opacity = "1";
                         document.querySelector(".clearPlaylistBut").style.opacity = "0.8";
 
-                        document.getElementById("playPlaylistImg").src = "media/pause.png";
-                        document.getElementById("playNowAudImg").src = "media/pause_black.png";
+                        document.getElementById("playPlaylistImg").src = "css/media/pause.png";
+                        document.getElementById("playNowAudImg").src = "css/media/pause_black.png";
                         transAudio.play();
                         playlistStartState = 1;
                 }
                 else{
                         transAudio.pause();
-                        document.getElementById("playPlaylistImg").src = "media/play.png";
-                        document.getElementById("playNowAudImg").src = "media/play_black.png";
+                        document.getElementById("playPlaylistImg").src = "css/media/play.png";
+                        document.getElementById("playNowAudImg").src = "css/media/play_black.png";
                         playlistStartState = 0;
                 }
         }
@@ -1143,7 +1301,7 @@ function prevPlay(){
                         td1.appendChild(playButton);
 
                         const imgPlay = document.createElement("img");
-                        imgPlay.src = "media/play.png";
+                        imgPlay.src = "css/media/play.png";
                         playButton.appendChild(imgPlay);
 
 
@@ -1160,7 +1318,7 @@ function prevPlay(){
                         spanAudInfo.appendChild(divAudName);
         
                         const crAudio = document.createElement("audio");
-                        crAudio.src = 'media/' + id + '.mp3';
+                        crAudio.src = 'css/media/' + id + '.mp3';
                         crAudio.type = "audio/mp3";
                         crAudio.controls = false;
                         crAudio.controlsList = "nodownload noplaybackrate"; // 
@@ -1184,7 +1342,7 @@ function prevPlay(){
                         td3.appendChild(closeButton);
 
                         const imgClose = document.createElement("img");
-                        imgClose.src = "media/close.png";
+                        imgClose.src = "css/media/close.png";
                         closeButton.appendChild(imgClose);
 
 
@@ -1197,7 +1355,7 @@ function prevPlay(){
                         td4.appendChild(spanSort);
 
                         const imgSort = document.createElement("img");
-                        imgSort.src = "media/sort.png";
+                        imgSort.src = "css/media/sort.png";
                         spanSort.appendChild(imgSort);
 
 
@@ -1221,8 +1379,8 @@ function prevPlay(){
                                         transAudio.currentTime = 0
                                         transAudio.play();
                                         playlistStartState = 1;
-                                        document.getElementById("playPlaylistImg").src = "media/pause.png";
-                                        document.getElementById("playNowAudImg").src = "media/pause_black.png";
+                                        document.getElementById("playPlaylistImg").src = "css/media/pause.png";
+                                        document.getElementById("playNowAudImg").src = "css/media/pause_black.png";
                                 }
 
                                 else{
@@ -1298,7 +1456,7 @@ function prevPlay(){
                                 td1.appendChild(playButton);
 
                                 const imgPlay = document.createElement("img");
-                                imgPlay.src = "media/play.png";
+                                imgPlay.src = "css/media/play.png";
                                 playButton.appendChild(imgPlay);
 
 
@@ -1315,7 +1473,7 @@ function prevPlay(){
                                 spanAudInfo.appendChild(divAudName);
         
                                 const crAudio = document.createElement("audio");
-                                crAudio.src = 'media/' + id + '.mp3';
+                                crAudio.src = 'css/media/' + id + '.mp3';
                                 crAudio.type = "audio/mp3";
                                 crAudio.controls = false;
                                 crAudio.controlsList = "nodownload noplaybackrate"; //
@@ -1339,7 +1497,7 @@ function prevPlay(){
                                 td3.appendChild(closeButton);
 
                                 const imgClose = document.createElement("img");
-                                imgClose.src = "media/close.png";
+                                imgClose.src = "css/media/close.png";
                                 closeButton.appendChild(imgClose);
 
 
@@ -1352,7 +1510,7 @@ function prevPlay(){
                                 td4.appendChild(spanSort);
 
                                 const imgSort = document.createElement("img");
-                                imgSort.src = "media/sort.png";
+                                imgSort.src = "css/media/sort.png";
                                 spanSort.appendChild(imgSort);
 
 
@@ -1447,8 +1605,8 @@ function clearPlaylist(){
                 document.querySelector(".lyricsWindow").innerHTML = "";
                 document.querySelector(".currAudName").innerHTML = "";
 
-                document.getElementById("playPlaylistImg").src = "media/play.png";
-                document.getElementById("playNowAudImg").src = "media/play_black.png";
+                document.getElementById("playPlaylistImg").src = "css/media/play.png";
+                document.getElementById("playNowAudImg").src = "css/media/play_black.png";
                 
                 document.querySelector(".lyricsBut").style.display = "none";
 
@@ -1514,17 +1672,15 @@ function nowAudLoop(){
 
 function prevFifteen(){
 
-        var transAudio = document.getElementById("cloneAud");
-        
+        var transAudio = document.getElementById("cloneAud");        
         if (transAudio){
-
-                if ((transAudio.currentTime - 1) <= 0){
+                if ((transAudio.currentTime - 10) <= 0){
                         transAudio.currentTime = 0;
                 }
                 else{
-                        transAudio.currentTime -= 1;
-                }
-        }
+                        transAudio.currentTime -= 10;
+                };
+        };
 };
 
 
@@ -1532,16 +1688,14 @@ function prevFifteen(){
 
 function nextFifteen(){
 
-        var transAudio = document.getElementById("cloneAud");
-        
+        var transAudio = document.getElementById("cloneAud");        
         if (transAudio){
-
-                if ((transAudio.currentTime + 1) >= transAudio.duration){
+                if ((transAudio.currentTime + 10) >= transAudio.duration){
                 }
                 else{
-                        transAudio.currentTime += 1;
-                }
-        }
+                        transAudio.currentTime += 10;
+                };
+        };
 };
 
 
@@ -1558,8 +1712,8 @@ function closeNowAud(){
                 document.querySelector(".lyricsWindow").innerHTML = "";
                 document.querySelector(".currAudName").innerHTML = "";
                 
-                document.getElementById("playPlaylistImg").src = "media/play.png";
-                document.getElementById("playNowAudImg").src = "media/play_black.png";
+                document.getElementById("playPlaylistImg").src = "css/media/play.png";
+                document.getElementById("playNowAudImg").src = "css/media/play_black.png";
 
                 document.querySelector(".lyricsBut").style.display = "none";
 
@@ -1662,10 +1816,6 @@ function playBackBut(){
 
 
 
-
-
-
-
 function downloadPlaylist(filename) {
 
         var getPlaylist = JSON.parse(localStorage.getItem(filename));
@@ -1685,3 +1835,5 @@ function downloadPlaylist(filename) {
   document.body.removeChild(element);
 
 }
+
+

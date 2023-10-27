@@ -1,12 +1,14 @@
-var playlistData = [
+let playlistData;
+
+playlistData = [
 {
 "id":"1001001001",
 "name":"Gita Chapter1 Verse1",
-"tags":"",
+"tags":"vyasbhagwadgitaverse1chapter1geeta",
 "duration":"02:36",
 "lyrics":"",
 "author":"Ved Vyaas",
-"info":""
+"info":"text"
 },
 
 {
@@ -16,7 +18,7 @@ var playlistData = [
 "duration":"05:08",
 "lyrics":"",
 "author":"Ved Vyaas",
-"info":""
+"info":"text"
 },
 
 {
@@ -26,7 +28,7 @@ var playlistData = [
 "duration":"03:44",
 "lyrics":"",
 "author":"Ved Vyaas",
-"info":""
+"info":"text"
 },
 
 {
@@ -36,7 +38,7 @@ var playlistData = [
 "duration":"02:58",
 "lyrics":"",
 "author":"Ved Vyaas",
-"info":""
+"info":"text"
 },
 
 {
@@ -46,13 +48,13 @@ var playlistData = [
 "duration":"07:49",
 "lyrics":"",
 "author":"Ved Vyaas",
-"info":""
+"info":"text"
 },
 
 {
 "id":"1002000000",
 "name":"Shiv Tandav Stotra",
-"tags":"",
+"tags":"shivtandavstotraravan",
 "duration":"10:06",
 "lyrics":`
 जटाटवीगलज्जलप्रवाहपावितस्थले <br>
@@ -76,6 +78,84 @@ var playlistData = [
 मनो विनोदमद्‍भुतं बिभर्तु भूतभर्तरि ॥४॥ <br>
 `,
 "author":"Dashanand Ravan",
-"info":""
+"info":"stotra"
+},
+
+{
+  "id":"1021000000",
+  "name":"गणपती अथर्वशीर्ष",
+  "tags":"ganpatiatharvashirsha",
+  "duration":"02:40",
+  "lyrics":"",
+  "author":"Ved Vyaas",
+  "info":"stotra"
 }
+
 ];
+
+
+var filteredListSearchResult = [];
+
+function searchFun(){
+
+        var filter = document.getElementById('myInput').value.toUpperCase();
+        // var filter = document.getElementById('myInput').value;
+  searchResultContainer = document.querySelector("#searchResults");
+  searchResultContainer.style.display = "block";
+
+  if (filter.length > 0){
+
+    for (i = 0; i < Object.keys(playlistData).length; i++){
+
+      if (playlistData[i].tags.toUpperCase().includes(filter)) {
+      
+        if (!filteredListSearchResult.includes(playlistData[i].id)){
+        
+          if (playlistData[i].info == "stotra"){
+            var searchResult = document.querySelector("[findThis='" + playlistData[i].id + "']");
+            var cloneSearchResult = searchResult.cloneNode(true);
+            searchResultContainer.querySelector("#myTable").appendChild(cloneSearchResult);
+            filteredListSearchResult.push(playlistData[i].id);
+          };
+        };
+      }
+      else{
+        if (filteredListSearchResult.includes(playlistData[i].id)){
+          filteredListSearchResult = filteredListSearchResult.filter(item => item !== playlistData[i].id);
+          searchResultContainer.querySelector("[findThis='" + playlistData[i].id + "']").remove();
+        };
+      };
+    };
+  }
+  else{
+    filteredListSearchResult = [];
+    var parent = searchResultContainer.querySelector("#myTable")
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    };
+  };
+
+};
+
+function focusOff(){
+  var filter = document.getElementById('myInput').value.toUpperCase();
+
+  if (filter.length == 0){
+    document.querySelector("#searchResults").style.display = "";
+    document.querySelector("#myInput").style.border = "none";
+  }
+  else{
+    document.querySelector("#myInput").style.border = "2px solid #2dcac2";
+  };
+
+};
+
+function focusOn(){
+
+  document.querySelector("#myInput").style.border = "none";
+  document.querySelector("#searchResults").style.display = "block";
+
+};
+
+
+

@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(fonts/Merriweather.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F, U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116, U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB, U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF, U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* @font-face {
+        font-family: marathiFont;
+        src: url(css/fonts/Siddhanta.ttf);
+} */
 
 html{
         scroll-behavior: smooth;
@@ -9,6 +21,7 @@ html{
 *:after,
 *:before {
         font-family: 'Merriweather', serif;
+        /* font-family: marathiFont; */
         font-weight: 700;
         box-sizing: border-box;
         padding: 0;
@@ -57,7 +70,7 @@ element.style {
         width: 45px;
         overflow-x: hidden;
         background-color: #333;
-        transition: width 250ms;
+        transition: width 200ms;
         z-index: 30;
 }
 
@@ -172,7 +185,7 @@ element.style {
         outline: none;
         border: none;
         /* border: 2px inset rgb(45, 202, 194, 0.4); */
-        color: #eee;
+        color: transparent;
         transition: width 0.3s;
 }
 
@@ -193,8 +206,9 @@ element.style {
 }
 
 #myInput:focus{
-        z-index: 10;
         width: 60%;
+        color: #eee;
+        z-index: 10;
 }
 
 #myInput:focus .mag{
@@ -218,13 +232,16 @@ element.style {
         bottom: 115px;
         overflow-x: hidden;
         overflow-y: scroll;
+        /* background-color: #191919; */
+        padding-top: 4px;
 }
 
 #myTable{
         width: calc(90% - 45px);
         margin-left: calc(45px + 1.25%);
          border-collapse: separate;
-  border-spacing: 0px 14px;
+  border-spacing: 0px 10px;
+
 }
 
 .mainSummary{
@@ -237,10 +254,80 @@ element.style {
         padding: 4px;
         outline: none;
         border: none;
-        border-radius: 10px 10px 10px 10px;
         background-color: transparent;
         align-items: center;        
         cursor: pointer;
+}
+
+.playlistOptionToSave{
+        display: none;
+        position: relative;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-left: 5%;
+        margin-bottom: 0.5rem;
+        padding: 0.4rem 0 0.8rem 0;
+        background-color: #000;
+        border-radius: 5px;
+}
+
+.playlistOptionToSave div:first-child{
+        width: 100%;
+        text-align: center;
+        color: #eee;
+        font-size: 0.9rem;
+        font-weight: normal;
+        padding: 4px 0 6px 0;
+}
+
+.saveToPlaylist{
+        max-height: 10rem;
+        overflow-x: hidden;
+        overflow-y: scroll;
+}
+
+.saveToPlaylist button{
+        display: block;
+        position: relative;
+        width: 80%;
+        margin: 0.5rem auto 0.6rem 10%;
+        text-align: left;
+        padding: 0.5rem;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        color: #eee;
+        background-color: #1f1f1f;
+        border-color: #2dcac2;
+        box-shadow: -1px -1px 2px rgba(45,202,194),
+                     3px 3px 6px rgba(0,0,0,1);
+}
+
+.saveToPlaylist button:last-child{
+        margin-bottom: 0.1rem;
+}
+
+.savedMsgHere{
+        display: block;
+        position: absolute;
+        width: 80%;
+        left: calc(8% + 30px);
+        bottom: 110px;
+        background-color: #333;
+        border-radius: 5px;
+        z-index: 1000;
+}
+
+.savedMsgHere div{
+        position: relative;
+        font-size: 0.8rem;
+        font-weight: normal;
+        color: #eee;
+        margin: 0.5rem 0 0.5rem 0;
+        padding: 0 0.5rem 0 0.5rem;
 }
 
 .tog{
@@ -372,9 +459,8 @@ element.style {
         left: 1px;
         right: 1px;
         bottom: 1px;
-        border-radius: 9px 9px 9px 9px;
+        border-radius: 6px;
         z-index: 1;
-        font-size: 1rem;
 }
 
 .effect::before{
@@ -384,7 +470,7 @@ element.style {
         left: 2px;
         right: 2px;
         height: 45%;
-        border-radius: 7px 7px 3px 3px;
+        border-radius: 4px 4px 2px 2px;
         z-index: -1;
 }
 
@@ -401,15 +487,16 @@ element.style {
         height: 90%;
         top: 5%;
         left: 5%;
+        font-size: 1.05rem;
         font-weight: bold;
 }
 
 .effect{
         color: #2dcac2;
-        background-color: #000;
+        background-color: #090909;
         border: 1.5px solid #555;
         box-shadow: 0 0 5px 0px #000000;
-        text-shadow: -2px -2px #111;
+        text-shadow: -1px -1px #111;
 }
 
 .effect::before{
@@ -430,9 +517,11 @@ element.style {
         width: 31px;
         padding-top: 2px;
         padding-bottom: 2px;
-        margin: 1rem 0.3rem 0 0;
+        margin: 1rem 0.1rem 0 0;
         border-radius: 50%;
         border: 2px solid #000;
+        filter: none;
+        scale: 0.95;
 }
 
 .playNow img,
@@ -440,18 +529,18 @@ element.style {
 .addSavedPlaylist img{
         height: 22px;
         width: 22px;
-        opacity: 0.8;
+        opacity: 0.4;
 }
 
 .addSavedPlaylist{
-        margin: 1rem 1rem 0 0;
+        margin: 1rem 0.8rem 0 0;
 }
 
 .addSavedPlaylist img{
-        height: 18px;
+        height: 18.5px;
         width: 18px;
         margin-top: 2px;
-        margin-left: -1px;
+        margin-left: 0px;
 }
 
 .addPlayingPlaylist img{
@@ -463,6 +552,17 @@ element.style {
         width: 20px;
         margin-top: 1px;
         margin-left: 3px;
+}
+
+button[def="selectedMode"] img{
+        opacity: 0.8;
+        filter: sepia(10000%) saturate(10000%) hue-rotate(125deg);
+}
+
+#searchResults{
+        display: none;
+        z-index: 20;
+        background-color: #191919;
 }
 
 /* ----------------------- TABS BASED CONTAINERS END ----------------------- */
@@ -564,7 +664,7 @@ input[type=checkbox] {
         box-sizing: border-box;
         cursor: pointer;
         position: absolute;
-        z-index: 110;
+        z-index: 40;
         height: 100%;
         width: 100%;
         top: 22px;
@@ -575,6 +675,7 @@ input[type=checkbox] {
 
 input[type="checkbox"]:checked ~ .sidebarIconToggle {
         right:calc(85% + 15px);
+        z-index: 110;
 }
 
 input[type="checkbox"]:checked ~ #overlay {
@@ -814,8 +915,8 @@ audio::-webkit-media-controls-timeline{
 audio::-webkit-media-controls-current-time-display{
         font-family: 'Merriweather', serif !important;
         font-weight: 700 !important;
-                                color: #000;
-                                margin-top: -0.2rem;
+        color: #000;
+        margin-top: -0.2rem;
 }
 
 .timeRem{
